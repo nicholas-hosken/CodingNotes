@@ -5,94 +5,93 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 	<title>Coding Notes</title>
 <!-- InstanceEndEditable -->
-	<!-- InstanceBeginEditable name="head" -->
+	<link href="css/mainstyles.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+<!-- InstanceBeginEditable name="head" -->
 	<!-- InstanceEndEditable -->
 </head>
 
 <body>
-	<div id="topcodingnav">
-    	<a href="codehome.html">
-        	<p>Home</p>
-      	</a>
-        <a href="htmlcss.html">
-        	<p>HTML & CSS</p>
-       	</a>
-        <a href="javascript.html">
-        	<p>JavaScript</p>
-       	</a>
-  		<a href="jquery.html">
-        	<p>jQuery</p>
-       	</a>
-        <a href="bootsrap.html">
-        	<p>Bootstrap</p>
-       	</a>
-        <a href="github.html">
-        	<p>GitHub</p>
-       	</a>
-        <a href="php.html">
-        	<p>PHP</p>
-       	</a>
-        <a href="python.html">
-        	<p>Python</p>
-       	</a>
-        <a href="ruby.html">
-        	<p>Ruby</p>
-       	</a>
-        <a href="glossary.html">
-        	<p>Glossary</p>
-       	</a> 	
-    </div>
+	<div id="wrapper">	
+    	<div id="topcodingnav">
+            <ul>				<!--Need to center?-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="htmlcss.html">HTML & CSS</a></li>
+                <li><a href="bootsrap.html">Bootstrap</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="glossary.html">Glossary</a></li> 
+            </ul>	
+        </div>
 <!-- InstanceBeginEditable name="content" -->
-<div id="githubcontent">
+<div id="content">
     <h1>Github</h1>
-    <h2>Github cmd line commands</h2>
-    <a href="https://www.youtube.com/watch?v=0fKg7e37bQE" target="_blank">
-        <p>Instructional Video</p>
-    </a>
-    
-    <p>First you will want to make a new repository at github.com and copy the HTTPS clone URL on the right</p>
-    
-    <h3>git</h3>
-    <p>You can get a full list of git commands and what they do by simply typing: git</p>
-    <p>For a list of subcommands type: git help -a</p>
-    <p>For concept guides type: git help -g</p>
-    
-    <h3>dir (List Directories)</h3>
-    <p>Simply type dir to list all directories within your current directory</p>
-    
-    <h3>cd (Change Directory)</h3>
-    <p>To change down into a directory type: cd [filename]. To change up into a directory simply type: cd..</p>
-    <em>To change drive letters type: "[driveletter]:" Example: D:</em>
-    
-    <h3>git clone (Clones current code from github.com to your PC)</h3>
-    <p>To get a copy of the repository onto your pc, access the directory to want to put it in and type: git clone [HTTPS clone URL]</p>
-    <p>When using the Gitshell app, you can right click to paste</p>
-    
-    <h3>git status</h3>
-    <p>This command compares file tree in directory with file tree on Github and returns differences. Whether complete missing files or just simple 
-    modifications on a file.</p>
-    
-    <h3>git add</h3>
-    <p>git add [filename] tells the cmd that we want this file to be committed in the next git commit. git add -a will add everything in the directory.</p>
-    
-    <h3>git commit</h3>
-    <p>This command tells the cmd that we want this file to be sent to the repository in the next git push. Typing -m "[message]" tells cmd that we want to 
-    add a message to the commit. This message will be added to readme.txt in the repository on github.com.</p>
-    <p>(example: git commit -m "This is a message")</p>
-    <p>If you commit without a message you will get a pop up on the cmd; this is for multiline messages. To exit this pop up you will need to press Esc and 
-    type: :wq</p>
-    
-    <h3>git push</h3>
-    <p>This command will take all files which have been committed and sync them up with the repository on github.com. Other developers can now use git pull to
-     gain access to these files</p>
-     
-    <h3>git pull</h3>
-    <p>This command will essentially clone all files on the github.com repository file tree that you dont currently have in the directory on your PC.</p>
-    
-    <h3>git reset</h3>
-    <p>Removes everything which is waiting to be either committed or pushed.</p>
+    <a href="https://www.youtube.com/watch?v=0fKg7e37bQE" target="_blank">Instructional Video</a>
+   	<div class="point">   
+        <p>First you will want to make a new repository at github.com and copy the HTTPS clone URL on the right</p>
+    </div>
+    <div class="point">    
+        <h3>git</h3>
+        <p>You can get a full list of git commands and what they do by simply typing: git</p>
+        <p>For a list of subcommands type: git help -a</p>
+        <p>For concept guides type: git help -g</p>
+   	</div>
+    <div class="point">        
+        <h3>dir (List Directories)</h3>
+        <p>Simply type dir to list all directories within your current directory</p>
+   	</div>
+    <div class="point">                
+        <h3>cd (Change Directory)</h3>
+        <p>To change down into a directory type: cd [filename]. To change up into a directory simply type: cd..</p>
+        <em>To change drive letters type: "[driveletter]:" Example: D:</em>
+   	</div>
+    <div class="point">                
+        <h3>git clone (Clones current code from github.com to your PC)</h3>
+        <p>To get a copy of the repository onto your pc, access the directory to want to put it in and type: git clone [HTTPS clone URL]</p>
+        <p>When using the Gitshell app, you can right click to paste</p>
+   	</div>
+    <div class="point">                
+        <h3>git status</h3>
+        <p>This command compares file tree in directory with file tree on Github and returns differences. Whether complete missing files or just simple 
+        modifications on a file.</p>
+   	</div>
+    <div class="point">               
+        <h3>git add</h3>
+        <p>git add [filename] tells the cmd that we want this file to be committed in the next git commit. git add -a will add everything in the directory.
+        </p>
+   	</div>
+    <div class="point">                
+        <h3>git commit</h3>
+        <p>This command tells the cmd that we want this file to be sent to the repository in the next git push. Typing -m "[message]" tells cmd that we want 
+        to add a message to the commit. This message will be added to readme.txt in the repository on github.com.</p>
+        <p>(example: git commit -m "This is a message")</p>
+        <p>If you commit without a message you will get a pop up on the cmd; this is for multiline messages. To exit this pop up you will need to press Esc 
+        and type: :wq</p>
+   	</div>
+    <div class="point">        
+        <h3>git push</h3>
+        <p>This command will take all files which have been committed and sync them up with the repository on github.com. Other developers can now use git 
+        pull to gain access to these files</p>
+   	</div>
+    <div class="point">        
+        <h3>git pull</h3>
+        <p>This command will essentially clone all files on the github.com repository file tree that you dont currently have in the directory on your PC.</p>
+   	</div>
+    <div class="point">        
+        <h3>git reset</h3>
+        <p>Removes everything which is waiting to be either committed or pushed.</p>
+	</div>
 </div>
 
 <!-- InstanceEndEditable -->
+	</div>
 </body>
 <!-- InstanceEnd --></html>

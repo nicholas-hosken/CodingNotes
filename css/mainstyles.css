@@ -1,10 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+* {
+	padding:0px;
+	margin:0px auto;
+	border:none;
+}
 
-<body>
-</body>
-</html>
+body {
+	background-color:#63C;
+}
+
+p,
+a,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding:0px 5px;
+}
+
+#topcodingnav ul {
+	list-style-type:none;
+	background-color:#609;
+}
+
+#topcodingnav ul li	{	
+	display:inline;
+	padding:5px 40px 5px 5px;
+}
+
+#topcodingnav a {
+	color:#6F9;
+	text-decoration:none;
+}
+
+#wrapper {
+	width:900px;
+	margin:10px auto;
+	background-color:#69C;
+}
+
+.point {
+	margin:20px 0px;
+}

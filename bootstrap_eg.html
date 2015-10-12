@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<title>Bootstrap Example</title>
+   		<meta charset="utf-8">
+    	<!-- Makes site responsive on mobiles -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <style>
+			.xx	{
+				background-color:#0F0;
+				border:1px solid #000;
+				height:100px;
+			}
+		</style>
+  	</head>
+  	<body>
+  		<div class="container">
+        	<h1>This div is using the .container class</h1>
+        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit a ligula id volutpat. Ut purus augue, bibendum ac magna 
+            in, pharetra dignissim turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla 			
+            facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin at odio sem. 	
+            Maecenas erat ante, dapibus id odio eget, vestibulum scelerisque sapien. Aenean est sem, tincidunt sed interdum quis, feugiat 
+            vitae ante. Praesent eget urna lacus.</p>
+      	</div>
+  		<div class="container-fluid">
+        	<h1>This div is using the .container-fluid class</h1>
+        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit a ligula id volutpat. Ut purus augue, bibendum ac magna 
+            in, pharetra dignissim turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla 			
+            facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin at odio sem. 	
+            Maecenas erat ante, dapibus id odio eget, vestibulum scelerisque sapien. Aenean est sem, tincidunt sed interdum quis, feugiat 
+            vitae ante. Praesent eget urna lacus.</p>
+      	</div>
+ 
+        <div class="container">
+            <h1>The below uses the .col-md-4</h1>
+            <div class="row">
+                <div class="col-md-4 xx"></div>
+                <div class="col-md-4 xx">Minimize the screen to see these in action</div>
+                <div class="col-md-4 xx"></div>
+            </div>
+		</div>
+        
+        <div class="container">
+            <h1>"small"</h1>
+            <h4>This is a heading <small>with a small tag.</small></h4>
+		</div>
+        
+        <div class="container">
+            <h1>"mark"</h1>
+            <p>Use the mark element to <mark>highlight</mark> text.</p>
+		</div>
+        
+        <div class="container">
+            <h1>Abbreviations "abbr"</h1>
+            <p>The abbr element is used to mark up an abbreviation or acronym:</p>
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        </div>
+        
+        <div class="container">
+            <h1>"blockquote" and "footer"</h1>
+            <p>The blockquote element is used to present content from another source:</p>
+            <blockquote>
+				<p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and 	
+                is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+    			<footer>From WWF's website</footer>
+  			</blockquote>
+		</div>
+        
+        <div class="container">
+            <h1>.blockquote-reverse</h1>
+            <p>To show the quote on the right use the class .blockquote-reverse:</p>
+            <blockquote class="blockquote-reverse">
+                <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and 
+                is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+                <footer>From WWF's website</footer>
+            </blockquote>
+        </div>
+        
+        <div class="container">
+            <h1>Description Lists "dl" in congunction with "dt" and "dd"</h1>    
+            <p>The dl element indicates a description list:</p>
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>- black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>- white cold drink</dd>
+                </dl>     
+        </div>
+        
+        <div class="container">
+            <h1>Code Snippets "code"</h1>
+            <p>Inline snippets of code should be embedded in the "code" element:</p>
+            <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+        </div>
+        
+        <div class="container">
+            <h1>Keyboard Inputs "kbd"</h1>
+            <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+            <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+        </div>
+        
+        <div class="container">
+            <h2>Contextual Colors: .text-muted .text-primary .text-success .text-info .text-warning .text-danger</h2>
+            <p>Use the contextual classes to provide "meaning through colors":</p>
+            <p class="text-muted">This text is muted.</p>
+            <p class="text-primary">This text is important.</p>
+            <p class="text-success">This text indicates success.</p>
+            <p class="text-info">This text represents some information.</p>
+            <p class="text-warning">This text represents a warning.</p>
+            <p class="text-danger">This text represents danger.</p>
+        </div>
+    
+    	<div class="container">
+            <h2>Contextual Backgrounds: .bg-primary .bg-success .bg-info .bg-warning .bg-danger</h2>
+            <p>Use the contextual background classes to provide "meaning through colors":</p>
+            <p class="bg-primary">This text is important.</p>
+            <p class="bg-success">This text indicates success.</p>
+            <p class="bg-info">This text represents some information.</p>
+            <p class="bg-warning">This text represents a warning.</p>
+            <p class="bg-danger">This text represents danger.</p>
+        </div>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+  	</body>
+</html>

@@ -122,6 +122,318 @@
             <p class="bg-warning">This text represents a warning.</p>
             <p class="bg-danger">This text represents danger.</p>
         </div>
+        
+        <div class="container">
+        	<h1>.visible-??</h1>
+            <div class="visible-lg">
+                <p>This is only visible on lg screens</p>
+            </div>
+      	</div>
+        <div class="container">
+        	<h1>.hidden-??</h1>
+            <div class="hidden-xs">
+                <p>This is not visible on xs screens</p>
+            </div>
+       	</div>
+        
+        <div class="container">
+            <h1>.lead</h1>
+            <p class="lead">This paragraph stands out.</p>
+            <p>This is a regular paragraph.</p>
+        </div>        
+        
+        <div class="container">
+            <h1>.small</h1>
+            <p class="small">This paragraph is smaller.</p>
+            <p>This is a regular paragraph.</p>
+        </div>        
+        
+        <div class="container">
+        	<div class="col-lg-6" style="border:1px dotted #000">
+                <h1>.text-left .text-right .text-center .text-justify .text-nowrap</h1>
+                <p class="text-left">Left-aligned text.</p>
+                <p class="text-right">Right-aligned text.</p>      
+                <p class="text-center">Center-aligned text.</p>
+                <p class="text-justify">Justified text. Justified text. Justified text. Justified text. Justified text. Justified text. Justified text.</p>
+                <p class="text-nowrap">No wrap text. No wrap text. No wrap text. No wrap text. No wrap text. No wrap text. No wrap text. 
+                No wrap text.</p>
+           	</div>   
+        </div>        
+
+        <div class="container">
+            <h1>.text-lowercase .text-uppercase .text-capitalize</h1>
+            <p class="text-lowercase">Lowercased text.</p>
+            <p class="text-uppercase">Uppercased text.</p>      
+            <p class="text-capitalize">Capitalized text.</p>
+        </div>        
+        
+        <div class="container">
+            <h1>.list-unstyled <small>Removes the default list-style and left margin on list items (immediate children only - can be nested):</small></h1>
+            <ul class="list-unstyled">
+                <li>Coffee</li>
+                <li>Tea
+                    <ul>
+                        <li>Black tea</li>
+                        <li>Green tea</li>
+                    </ul>
+                </li>
+                <li>Milk</li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h1>.list-inline <small>Places all list items on a single line.</small></h1>
+                <ul class="list-inline">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+        </div>
+        
+        <div class="container">
+            <h1>.dl-horizontal <small>Use this class to line up the description list side-by-side when the browser window expands:</small></h1>
+                <dl class="dl-horizontal">
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+                </dl>     
+            <p><strong>Tip:</strong> Try to resize the browser window to see the behaviour of the description list.</p>      
+        </div>
+        
+        <div class="container">
+            <h1>.pre-scrollable</h1>    
+             
+            <p>For multiple lines of code, use the pre element:</p>
+            <pre>Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks.</pre>
+            
+            <p>If you add the .pre-scrollable class, the pre element gets a max-height of 350px and provides a y-axis scrollbar:</p>
+            <pre class="pre-scrollable">Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks.</pre>
+        </div>
+        
+        <div class="container">
+            <h2>.table <small>adds basic styling (light padding and only horizontal dividers) to a table:</small></h2>            
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        
+        <div class="container">
+            <h2>.table-striped <small>adds zebra-stripes to a table:</small></h2>            
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        
+        <div class="container">
+            <h2>.table-bordered <small>class adds borders to a table:</small></h2>            
+				<table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>        
+    	</div>
+        
+       	<div class="container">
+            <h2>.table-hover <small>class enables a hover state on table rows:</small></h2>            
+				<table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>        
+    	</div>
+        
+        <div class="container">
+            <h2>.table-condensed <small>class makes a table more compact by cutting cell padding in half:</small></h2>            
+				<table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>        
+    	</div>
+
+        <div class="container">
+            <h2>Contextual Classes</h2>
+            <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and 
+            .danger.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="success">
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                    </tr>
+                    <tr class="info">
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <h2>.table-responsive <small>class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on 
+            anything larger than 768px wide, there is no difference</small></h2>
+            <div class="table-responsive">          
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Anna</td>
+                            <td>Pitt</td>
+                            <td>35</td>
+                            <td>New York</td>
+                            <td>USA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+        
+        
+        
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->

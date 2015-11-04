@@ -14,9 +14,19 @@
 				border:1px solid #000;
 				height:100px;
 			}
+			
+			body > div {
+				padding-bottom:15px;
+				border-bottom:1px solid #000;
+			}
+			
+			.nb {
+				color:#0F0;
+			}
 		</style>
   	</head>
   	<body>
+<!--
   		<div class="container">
         	<h1>This div is using the .container class</h1>
         	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit a ligula id volutpat. Ut purus augue, bibendum ac magna 
@@ -483,12 +493,12 @@
           </div>
         </div>
         
-        <!-- 16:9 aspect ratio -->
+        <p class="hidden-lg">16:9 aspect ratio</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/V-G9Qfau6GA"></iframe>
         </div>
         
-        <!-- 4:3 aspect ratio -->
+        <p class="hidden-lg">4:3 aspect ratio</p>
         <div class="embed-responsive embed-responsive-4by3">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/nsVGhnZz6GM" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -661,8 +671,579 @@
             <button type="button" class="btn btn-success disabled">Disabled Primary</button>
         </div>
 
+        <div class="container">
+            <h2>.btn-group <small>class can be used on a </small>div <small>to group series together on a single line.</h2>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.btn-group-** <small>to size all buttons in a button group.</small></h2>
+            <h3>Large Buttons:</h3>
+            <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+            <h3>Extra Small Buttons:</h3>
+            <div class="btn-group btn-group-xs">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+        </div>
         
+        <div class="container">
+            <h2>.btn-group-vertical <small>class creates a vertical button group:</h2>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.btn-group-justified <small>will cause the buttons to span the entire width of the screen</small></h2>
+            <div class="btn-group btn-group-justified">
+                <a href="#" class="btn btn-primary">Apple</a>
+                <a href="#" class="btn btn-primary">Samsung</a>
+                <a href="#" class="btn btn-primary">Sony</a>
+            </div>
+            <h2><small>Note:For </small><code>button</code> <small>elements, you must wrap each button in a .btn-group class:</small></h2>
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+	                <button type="button" class="btn btn-primary">Apple</button>
+                </div>
+                <div class="btn-group">
+    	            <button type="button" class="btn btn-primary">Samsung</button>
+                </div>
+                <div class="btn-group">
+        	        <button type="button" class="btn btn-primary">Sony</button>
+                </div>            
+            </div>
+        </div>
         
+        <div class="container">
+            <h2>Nesting Button Groups</h2>
+            <p>Nest button groups to create drop down menus:</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
+                	    Sony <span class="caret"></span>
+                    </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Tablet</a></li>
+                            <li><a href="#">Smartphone</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Split Buttons</h2>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Sony</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Tablet</a></li>
+                        <li><a href="#">Smartphone</a></li>
+                    </ul>
+            </div>
+        </div>
+		
+        <div class="container">
+            <h2>.glyphicon <small>class must be used in conjunction with the</small>glyphicon-***** <small>class</small></h2>
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp">
+                        Complete glyph reference list
+                    </a>
+                </h4>
+            
+            <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>    
+            
+            <p>Envelope icon as a link:
+                <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+            </p>
+            
+            <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+            <p>Search icon on a button:
+            	<button type="button" class="btn btn-default">
+            		<span class="glyphicon glyphicon-search"></span> Search
+            	</button>
+            </p>
+            <p>Search icon on a styled button:
+            <button type="button" class="btn btn-info">
+            <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+            </p>
+            	
+            <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>      
+            <p>Print icon on a styled link button:
+            	<a href="#" class="btn btn-success btn-lg">
+            		<span class="glyphicon glyphicon-print"></span> Print 
+           	 	</a>
+            </p> 
+        </div>
+        
+        <div class="container">
+            <h2><small>Use the </small>.badge <small>class within <code>span </code>elements to create badges:</small></h2>
+            <a href="#">News <span class="badge">5</span></a><br>
+            <a href="#">Comments <span class="badge">10</span></a><br>
+            <a href="#">Updates <span class="badge">2</span></a>
+            <h2><small>Badges can also be used inside other elements, such as buttons:</small></h2>
+              <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+              <button type="button" class="btn btn-success">Success <span class="badge">3</span></button>    
+              <button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>        
+        </div>
+        
+        <div class="container">
+            <h2><small>Use the </small>.label class,  <small>followed by one of the six contextual classes </small>.label-default, .label-primary, 
+            .label-success, .label-info, .label-warning <small>or </small>.label-danger, <small>within a <code>span </code>element to create a label:</small>
+            </h2>
+            <h1>Example <span class="label label-default">New</span></h1>
+            <h2>Example <span class="label label-default">New</span></h2>
+            <h3>Example <span class="label label-default">New</span></h3>
+            <h4>Example <span class="label label-default">New</span></h4>
+            <h5>Example <span class="label label-default">New</span></h5>
+            <h6>Example <span class="label label-default">New</span></h6>
+            <p>Contextual classes can also be used to colour the label:</p>  
+                <span class="label label-default">Default Label</span>
+                <span class="label label-primary">Primary Label</span>
+                <span class="label label-success">Success Label</span>
+                <span class="label label-info">Info Label</span>
+                <span class="label label-warning">Warning Label</span>
+                <span class="label label-danger">Danger Label</span>
+        </div>       
+
+        <div class="container">
+            <h2><small>To create a default progress bar, add a </small>.progress <small>class to a <code>div </code>element.</small></h2>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2><small>Remove the </small>.sr-only <small>class from the progress bar to show a visible percentage:</small></h2>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  70%
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+          	<h2><small>contextual classes that can be used with progress bars are:</small>.progress-bar-success, .progress-bar-info, .progress-bar-warning
+			.progress-bar-danger</h2>
+          	<p>The contextual classes colors the progress bars:</p> 
+          	<div class="progress">
+            	<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+              		40% Complete (success)
+            	</div>
+          	</div>
+          	<div class="progress">
+            	<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+              	50% Complete (info)
+            	</div>
+          	</div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    60% Complete (warning)
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                70% Complete (danger)
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>.progress-bar-striped <small>class adds stripes to the progress bars:</small></h2> 
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" 
+                aria-valuemax="100" style="width:40%">
+                    40% Complete (success)
+                </div>
+            </div>
+        </div>     
+        
+        <div class="container">
+        	<h2><small>Add class </small>.active <small>to animate the progress bar:</small></h2>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" 
+                style="width:40%">
+                	40%
+                </div>
+            </div>
+     	</div>
+        
+        <div class="container">
+            <h2><small>Create a stacked progress bar by placing multiple bars into the same div with class </small>.progress:</h2> 
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+                    Free Space
+                </div>
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%">
+                    Warning
+                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">
+                    Danger
+                </div>
+            </div>
+        </div>        
+
+        <div class="container">
+            <h2>.pagination <small>class provides pagination links:</small></h2>                  
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>        
+        
+        <div class="container">
+            <h2>.active <small>class lets the user know which page he/she is on:</small></h2>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>        
+        
+        <div class="container">
+            <h2><small>Add class </small>.disabled <small>if a page is disabled for some reason:</small></h2>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="disabled"><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h2><small>Add class </small>.pagination-lg <small>for larger blocks or .pagination-sm for smaller blocks:</small></h2>
+            <ul class="pagination pagination-lg">
+            	<li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <ul class="pagination pagination-sm">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h2>.pager <small>class provides previous and next buttons (links):</small></h2>                 
+            <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>        
+        
+        <div class="container">
+            <h2><small>The </small>.previous <small>and </small>.next <small>classes align each link to the sides of the page:</small></h2>                 
+            <ul class="pager">
+                <li class="previous"><a href="#">Previous</a></li>
+                <li class="next"><a href="#">Next</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+        	<h3>For a complete reference of all navigation classes, see the
+            <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp">Bootstrap Navigation Reference</a>.</h3>
+       	</div>
+                 
+        <div class="container">
+            <h2><small>To create a basic list group, use an <code>ul</code> element with class </small>.list-group, <small>and <code>li</code> elements with 
+            class </small>.list-group-item:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">First item</li>
+                <li class="list-group-item">Second item</li>
+                <li class="list-group-item">Third item</li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h2>List Group With Badges</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><span class="badge">12</span> New</li>
+                <li class="list-group-item"><span class="badge">5</span> Deleted</li>  
+                <li class="list-group-item"><span class="badge">3</span> Warnings</li>  
+            </ul>
+        </div>
+        
+        <div class="container">
+        <h2><small>To create a list group with linked items, use <code>div</code> instead of <code>ul</code> and <code>a</code> instead of <code>li</code>:
+        </small></h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">First item</a>
+                <a href="#" class="list-group-item">Second item</a>
+                <a href="#" class="list-group-item">Third item</a>
+            </div>
+        </div>   
+        
+        <div class="container">
+            <h2><small>To disable an item, add the </small>.disabled <small>class:</small></h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item disabled">First item</a>
+                <a href="#" class="list-group-item">Second item</a>
+                <a href="#" class="list-group-item">Third item</a>
+            </div>
+        </div>
+        
+        <div class="container">
+        	<h2><small>The classes for coloring list-items are: </small>.list-group-item-success, list-group-item-info, list-group-item-warning, 
+            <small>and </small>.list-group-item-danger<small>:</small></h2>
+            <h2>List Group With Contextual Classes</h2>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">First item</li>
+                <li class="list-group-item list-group-item-info">Second item</li>
+                <li class="list-group-item list-group-item-warning">Third item</li>
+                <li class="list-group-item list-group-item-danger">Fourth item</li>
+            </ul>
+            <h2>Linked Items With Contextual Classes</h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-success">First item</a>
+                <a href="#" class="list-group-item list-group-item-info">Second item</a>
+                <a href="#" class="list-group-item list-group-item-warning">Third item</a>
+                <a href="#" class="list-group-item list-group-item-danger">Fourth item</a>
+            </div>
+        </div>        
+        
+        <div class="container">
+            <h2><small>Classes </small>.list-group-item-heading <small>and </small>.list-group-item-text <small>which can be used as follows:</small></h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+                </a>
+                
+                <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+                </a>
+                
+                <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>Panels are created with the </small>.panel <small>class, and content inside the panel has a </small>.panel-body <small>class:
+            </small></h2>
+            <div class="panel panel-default">
+                <div class="panel-body">A Basic Panel</div>
+            </div>
+        </div>
+      
+        <div class="container">
+            <h2><small>The </small>.panel-heading <small>class adds a heading to the panel:</small></h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel Heading</div>
+            	<div class="panel-body">Panel Content</div>
+            	<div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>The </small>.panel-footer <small>class adds a footer to the panel:</small></h2>
+            <div class="panel panel-default">
+            	<div class="panel-body">Panel Content</div>
+            	<div class="panel-body">Panel Content</div>
+            	<div class="panel-footer">Panel Footer</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>To group many panels together, wrap a <code>div</code> with class </small>.panel-group <small>around them. 
+            This class also clears the bottom margin of each panel.</small></h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>To color the panel, use contextual classes (</small>.panel-default, .panel-primary, .panel-success, .panel-info, .panel-warning, 
+            <small>or </small>.panel-danger<small>):</small></h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel with panel-default class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Panel with panel-primary class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            
+                <div class="panel panel-success">
+                    <div class="panel-heading">Panel with panel-success class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-info">
+                    <div class="panel-heading">Panel with panel-info class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Panel with panel-warning class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Panel with panel-danger class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+remove p's in responsive video section and replace with comments-->       
+
+        <div class="container">
+            <h2><small>The </small>.dropdown <small>class is used to indicate a dropdown menu.</small></h2>
+            <h2><small>Use the </small>.dropdown-menu <small>class to actually build the dropdown menu.</small></h2>
+            <h2><small>To open the dropdown menu, use a <code>button</code> or <code>a</code> link with a class of </small>.dropdown-toggle 
+            <small>and </small>data-toggle="dropdown".</h2>                                       
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.divider <small>class is used to separate links inside the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.dropdown-header <small>class is used to add headers inside the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">Dropdown header 1</li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Dropdown header 2</li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.disabled <small>class is used to disable an item in the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li class="disabled"><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2><small>Add the </small>.dropdown-menu-right <small>class to </small>.dropdown-menu <small>to right-align the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example<span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>.dropup <small>class makes the dropdown menu expand upwards instead of downwards:</small></h2>
+            <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropup Example<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+		<div class="container">
+        	<h2 class="nb"><strong>Dropdown Accessibility</strong></h2>
+            <h2 class="nb">
+            	To help improve accessibility for people using screen readers, you should include the <code>role</code> and <code>aria-*</code> 
+                attributes, when creating a dropdown menu as shown in this next example:
+            </h2>
+            <p> </p>
+            <h2>.dropdown <small>class is used to indicate a dropdown menu.</small></h2>
+            <h2><small>Use the </small>.dropdown-menu <small>class to actually build the dropdown menu.</small></h2>                                         
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>        
+
+
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->

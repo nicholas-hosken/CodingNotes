@@ -28,6 +28,12 @@
 				border-top:1px dashed #000;
 				margin-top:10px;
 			}
+			
+			.carousel-inner > .item > img,
+			.carousel-inner > .item > a > img {
+				width: 10%;
+				margin: auto;
+			  }
 		</style>
   	</head>
   	<body>
@@ -718,7 +724,8 @@
                 <a href="#" class="btn btn-primary">Samsung</a>
                 <a href="#" class="btn btn-primary">Sony</a>
             </div>
-            <h2><small>Note:For </small><code>button</code> <small>elements, you must wrap each button in a .btn-group class:</small></h2>
+            <h2><small>Note:For </small><code>button</code> <small>elements, you must wrap each button in a </small>.btn-group 
+            <small>class:</small></h2>
             <div class="btn-group btn-group-justified">
                 <div class="btn-group">
 	                <button type="button" class="btn btn-primary">Apple</button>
@@ -739,9 +746,7 @@
                 <button type="button" class="btn btn-primary">Apple</button>
                 <button type="button" class="btn btn-primary">Samsung</button>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
-                	    Sony <span class="caret"></span>
-                    </button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony <span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Tablet</a></li>
                             <li><a href="#">Smartphone</a></li>
@@ -1250,7 +1255,6 @@
                 </ul>
             </div>
         </div>        
-remove p's in responsive video section and replace with comments-->       
 
         <div class="container">
             <h2><small>Collapsibles <code>button data-toggle="collapse" data-target="#demo"</code> are useful when you want to hide and show large amount of 
@@ -1377,10 +1381,1098 @@ remove p's in responsive video section and replace with comments-->
         	<h4><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_collapse.asp">Bootstrap JS Collapse Reference</a></h4>
        </div>
 
+        <div class="container">
+            <h2><small>Tabs are created with <code>ul class="nav nav-tabs"</code>:</small></h2>
+            <h3><small><strong>Tip:</strong> Also mark the current page with <code>li class="active"</code>.</small></h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Tabs With Dropdown Menu</h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1-1</a></li>
+                            <li><a href="#">Submenu 1-2</a></li>
+                            <li><a href="#">Submenu 1-3</a></li>                        
+                        </ul>
+                </li>
+                <li>
+                	<a href="#">Menu 2</a>
+                </li>
+                <li>
+                	<a href="#">Menu 3</a>
+                </li>
+            </ul>
+        </div>        
+
+        <div class="container">
+            <h3><small>Pills are created in <code>ul</code> using </small>.nav-pills<small>. Also mark the current page with <code>li class="active"</code>:7
+            </small></h3>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3><small>Add </small>.nav-stacked <small>to stack vertically.</small></h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Vertical Pills</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-md-3"> 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-md-3"> 
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-lg"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h3>Pills With Dropdown Menu</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenu 1-1</a></li>
+                        <li><a href="#">Submenu 1-2</a></li>
+                        <li><a href="#">Submenu 1-3</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Centered Tabs</h3>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+            <br>
+            <h3>Centered Pills</h3>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+        </div>
+               
+        <div class="container">
+            <h2>Dynamic Tabs</h2>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>HOME</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                    <h3>Menu 3</h3>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Dynamic Pills</h2>
+            <ul class="nav nav-pills">
+                <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>HOME</h3>
+                    <p>This example will only work if you change the dynamic tabs example into a comment.</p>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                    <h3>Menu 3</h3>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container">
+        	<h4><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp" target="_blank">Bootstrap Navigation Reference.</a></h4>
+       	</div>
+        
+        <div class="container">
+        	<h4><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_tab.asp" target="_blank">Bootstrap JS Tab Reference.</a></h4>
+       	</div>
+        
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                	<a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Basic Navbar Example</h3>
+            <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                	<a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Basic Navbar Example</h3>
+            <p>An inverted navbar is black instead of gray.</p>
+        </div>
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Fixed Navbar</h3>
+            <h1 style="color:#F00">See Navbar at the top of the screen.</h1>
+        </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+        <div class="container">
+            <h3>Fixed Navbar</h3>
+            <h1 style="color:#F00">See Navbar at the bottom of the screen.</h1>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Navbar With Dropdown</h3>
+            <p>This example adds a dropdown menu for the "Page 1" button in the navigation bar.</p>
+        </div>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Right Aligned Navbar</h3>
+            <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Collapsible Navbar</h3>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+            <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+        </div>
+
+        <div class="container">
+            <h2>Vertical (basic) form</h2>
+            <form role="form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>    
+        
+        <div class="container">
+            <h2>Inline form</h2>
+            <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>        
+
+        <div class="container">
+            <h2>Inline form with .sr-only class</h2>
+            <p>If you don't include a label for every input, screen readers will have trouble with your forms. You can hide the labels for all devices, 
+            except screen readers, by using the .sr-only class. Make the viewport larger than 768px wide to see that all of the form elements are inline, 
+            left aligned, and the labels are alongside.</p>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Horizontal form</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">          
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>        
+
+        <div class="container">
+            <h2>Form control: input</h2>
+            <p>The form below contains two input elements; one of type text and one of type password:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Form control: textarea</h2>
+            <p>The form below contains a textarea for comments:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Form control: checkbox</h2>
+            <p>The form below contains three checkboxes. The last option is disabled:</p>
+            <form role="form">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Option 1</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Option 2</label>
+                </div>
+                <div class="checkbox disabled">
+                    <label><input type="checkbox" value="" disabled>Option 3</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Form control: inline checkbox</h2>
+            <p>The form below contains three inline checkboxes:</p>
+            <form role="form">
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 2
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 3
+                </label>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Form control: radio buttons</h2>
+            <p>The form below contains three radio buttons. The last option is disabled:</p>
+            <form role="form">
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Option 1</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Option 2</label>
+                </div>
+                <div class="radio disabled">
+                    <label><input type="radio" name="optradio" disabled>Option 3</label>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Form control: inline radio buttons</h2>
+            <p>The form below contains three inline radio buttons:</p>
+            <form role="form">
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 3
+                </label>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Form control: select</h2>
+            <p>The form below contains two dropdown menus (select lists):</p>
+            <form role="form">
+                <div class="form-group">
+                <label for="sel1">Select list (select one):</label>
+                <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <br>
+                <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+                <select multiple class="form-control" id="sel2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                </div>
+            </form>
+        </div>   
+        
+        <div class="container">
+        <h2>Horizontal form with static control</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">someone@example.com</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">          
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+      	<div class="container">
+        	<h2>Bootstrap Form Control States</h2>
+            <ul>
+            	<li>INPUT FOCUS - The outline of the input is removed and a box-shadow is applied on focus</li>
+            	<li>DISABLED INPUTS - Add a disabled attribute to disable an input field</li>
+            	<li>DISABLED FIELDSETS - Add a disabled attribute to a fieldset to disable all controls within</li>
+            	<li>READONLY INPUTS - Add a readonly attribute to an input to prevent user input</li>
+            	<li>VALIDATION STATES - Bootstrap includes validation styles for error, warning, and success messages. To use, add .has-warning, .has-error, 
+                or .has-success to the parent element</li>
+            	<li>ICONS - You can add feedback icons with the .has-feedback class and an icon</li>
+            	<li>HIDDEN LABELS - Add a .sr-only class on non-visible labels</li>
+			</ul>
+         	<br>
+            <h2>Horizontal form: control states</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Focused</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" value="Click to focus...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">Disabled</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                    </div>
+                </div>
+                <fieldset disabled>
+                    <div class="form-group">
+                        <label for="disabledTextInput" class="col-sm-2 control-label">Disabled input and select list (Fieldset disabled)</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledSelect" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <select id="disabledSelect" class="form-control">
+                            <option>Disabled select</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSuccess">
+                            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputWarning">
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputError">
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+            </form>
+     	</div>
+
+        <div class="container">
+            <h2>Inline form: control states</h2>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="focusedInput">Focused</label>
+                    <input class="form-control" id="focusedInput" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Disabled</label>
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                </div>
+                <div class="form-group has-success has-feedback">
+                    <label for="inputSuccess2">Input with success</label>
+                    <input type="text" class="form-control" id="inputSuccess2">
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label for="inputWarning2">Input with warning</label>
+                    <input type="text" class="form-control" id="inputWarning2">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label for="inputError2">Input with error</label>
+                    <input type="text" class="form-control" id="inputError2">
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Input Sizing</h2>
+            <p>The form below shows input elements with different heights using .input-lg and .input-sm:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="inputdefault">Default input</label>
+                    <input class="form-control" id="inputdefault" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputlg">input-lg</label>
+                    <input class="form-control input-lg" id="inputlg" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">input-sm</label>
+                    <input class="form-control input-sm" id="inputsm" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Default select list</label>
+                    <select class="form-control" id="sel1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel2">input-lg</label>
+                    <select class="form-control input-lg" id="sel2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel3">input-sm</label>
+                    <select class="form-control input-sm" id="sel3">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </form>
+        </div>        
+        
+        <div class="container">
+            <h2>Input Sizing</h2>
+            <p>You can quickly size labels and form controls within a Horizontal form by adding .form-group-lg or .form-group-sm to the div 
+            class="form-group" element:</p>
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label" for="lg">form-group-lg</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="lg">
+                    </div>
+                </div>
+                <div class="form-group form-group-sm">
+                    <label class="col-sm-2 control-label" for="sm">form-group-sm</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="sm">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Column Sizing</h2>
+            <p>The form below shows input elements with different widths using different .col-xs-* classes:</p>
+            <form role="form">
+                <div class="form-group">
+                    <div class="col-xs-2">
+                    <label for="ex1">col-xs-2</label>
+                    <input class="form-control" id="ex1" type="text">
+                	</div>
+                    <div class="col-xs-3">
+                        <label for="ex2">col-xs-3</label>
+                        <input class="form-control" id="ex2" type="text">
+                    </div>
+                    <div class="col-xs-4">
+                        <label for="ex3">col-xs-4</label>
+                        <input class="form-control" id="ex3" type="text">
+                    </div>
+                    </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Help text</h2>
+            <p>Use the .help-block class to add a block level help text in forms:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    <span class="help-block">This is some help text that breaks onto a new line and may extend more than one line.</span>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>        
+remove p's in responsive video section and replace with comments-->       
+        
+        <div class="container">
+        	<h2>Create a Carousel</h2>
+            <br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/flower.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Flower 1</h3>
+                            <p>This is flower 1.</p>
+                        </div>
+                    </div>
+            
+                    <div class="item">
+                        <img src="images/flower2.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Flower 2</h3>
+                            <p>This is flower 2.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/jacaranda.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Jacaranda</h3>
+                            <p>This is a Jacaranda.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/protea.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Protea</h3>
+                            <p>This is a Protea.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+            <h2>Example Explained</h2>
+            <strong>The outermost <code>div</code>:</strong>
+            
+            <p>Carousels require the use of an id (in this case id="myCarousel") for carousel controls to function properly.</p>
+            
+            <p>The class="carousel" specifies that this <code>div</code> contains a carousel.</p>
+            
+            <p>The .slide class adds a CSS transition and animation effect, which makes the items slide when showing a new item. Omit this class if you do 
+            not want this effect.</p>
+            
+            <p>The data-ride="carousel" attribute tells Bootstrap to begin animating the carousel immediately when the page loads.</p>
+            
+            <strong>The "Indicators" part:</strong>
+            
+            <p>The indicators are the little dots at the bottom of each slide (which indicates how many slides there is in the carousel, and which slide the 
+            user are currently viewing).</p>
+            
+            <p>The indicators are specified in an ordered list with class .carousel-indicators.</p>
+            
+            <p>The data-target attribute points to the id of the carousel.</p>
+            
+            <p>The data-slide-to attribute specifies which slide to go to, when clicking on the specific dot.</p>
+            
+            <strong>The "Wrapper for slides" part:</strong>
+            
+            <p>The slides are specified in a <code>div</code> with class .carousel-inner.</p>
+            
+            <p>The content of each slide is defined in a <code>div</code> with class .item. This can be text or images.</p>
+            
+            <p>The .active class needs to be added to one of the slides. Otherwise, the carousel will not be visible.</p>
+            
+            <strong>The "Left and right controls" part:</strong>
+            
+            <p>This code adds "left" and "right" buttons that allows the user to go back and forth between the slides manually.</p>
+            
+            <p>The data-slide attribute accepts the keywords "prev" or "next", which alters the slide position relative to its current position.</p>        
+        </div>        
+        
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp">
+                        Complete carousel reference list
+                    </a>
+                </h4>
+		</div>        
+
+        <div class="container">       
+            <h2>The Carousel Plugin Classes</h2>
+            <table class="w3-table-all notranslate">
+              <tr>
+                <th style="width:30%;">Class</th>
+                <th style="width:70%;">Description</th>
+              </tr>
+              <tr>
+                <td>.carousel</td>
+                <td>Creates a carousel</td>
+              </tr>
+              <tr>
+                <td>.slide</td>
+                <td>Adds a CSS transition and animation effect when sliding from one item to 
+                the next. Remove this class if you do not want this effect</td>
+              </tr>
+              <tr>
+                <td>.carousel-indicators</td>
+                <td>Adds indicators for the carousel. These are the 
+                little dots at the bottom of each slide (which indicates how many slides 
+                there are in the carousel, and which slide the user are currently viewing)</td>
+              </tr>
+              <tr>
+                <td>.carousel-inner</td>
+                <td>Adds slides to the carousel</td>
+              </tr>
+              <tr>
+                <td>.item</td>
+                <td>Specifies the content of each slide</td>
+              </tr>
+              <tr>
+                <td>.left carousel-control</td>
+                <td>Adds a left button to the carousel, which allows the user to go back 
+                between the slides</td>
+              </tr>
+              <tr>
+                <td>.right carousel-control</td>
+                <td>Adds a right button to the carousel, which allows the user to go forward 
+                between the slides</td>
+              </tr>
+              <tr>
+                <td>.carousel-caption</td>
+                <td>Specifies a caption for the carousel</td>
+              </tr>
+            </table>
+		</div>
+        
+        <div class="container">
+        	<h2>Via data-* Attributes</h2>
+            <p>The <code>data-ride="carousel"</code> attribute activates the carousel.</p>
+            <p>The <code>data-slide</code> and <code>data-slide-to</code> attributes specifies which slide to go to.</p>
+            <p>The <code>data-slide</code> attribute accepts two values: <strong>prev</strong> or <strong>next</strong>, while <code>data-slide-to</code> 
+            accept numbers.</p>
+       	</div>
+        
+        <div class="container">
+            <h2>Via JavaScript</h2>
+            <p>Enable manually with Javascript in bootstrap_eg_carousel.js file. <strong>I have no idea what they mean by "enable manually".</strong></p>
+        </div>
+
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp">
+                        More info on carousel options, methods and events.
+                    </a>
+                </h4>
+		</div>        
+        
+        <div class="container">
+            <h2>Modal Example</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Some text in the modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p>Some text in the modal footer.</p>                            	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+
+                    <h3>Example Explained</h3>
+                    
+                    <p><strong>The &quot;Trigger&quot; part:</strong></p>
+                    <p>To trigger the modal window, you need to use a button or a link.</p>
+                    <p>Then include the two data-* attributes: </p>
+                    <ul>
+                        <li><code>data-toggle=&quot;modal&quot;</code> opens the modal window</li>
+                        <li><code>data-target=&quot;#myModal&quot;</code> points to the id of the modal</li>
+                    </ul>
+                    
+                    <p><strong>The &quot;Modal&quot; part:</strong></p>
+                    <p>The parent <code>&lt;div&gt;</code> of the modal must have an ID that is the same as the value of the data-target attribute used to 
+                    trigger the modal (&quot;myModal&quot;).</p>
+                    <p>The <code>.modal</code> class identifies the content of <code>&lt;div&gt;</code> as a modal and brings focus to it.</p>
+                    <p>The <code>.fade</code> class adds a transition effect which fades the modal in and out. Remove this class if you do not want this 
+                    effect.</p>
+                    <p>The attribute <code>role=&quot;dialog&quot;</code> improves accessibility for people using screen readers.</p>
+                    <!-- <p><code>aria-labelledby</code> and <code>aria-hidden</code> are used for accessibility. </p>-->
+                    <p>The <code>.modal-dialog</code> class sets the proper width and margin of the modal.</p>
+                    
+                    <p><strong>The &quot;Modal content&quot; part:</strong></p>
+                    <p>The <code>&lt;div&gt;</code> with <code>class=&quot;modal-content</code>&quot; styles the modal (border, background-color, etc.). 
+                    Inside this <code>&lt;div&gt;</code>, add the modal's header, body, and footer.</p>
+                    
+                    <p>The <code>.modal-header</code> class is used to define the style for the header of the modal. The <code>&lt;button&gt;</code> inside 	
+                    the header has a <code>data-dismiss=&quot;modal&quot;</code> attribute which closes the modal if you click on it. The <code>.close</code> 					class styles the close button, and the <code>.modal-title</code> class styles the header with a proper line-height.</p>
+                    <p>The <code>.modal-body</code> class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, 
+                    images, videos, etc.</p>
+                    <p>The <code>.modal-footer</code> class is used to define the style for the footer of the modal. Note that this area is right aligned by 
+                    default.</p>          
+  			</div>        
+        
+        <div class="container">
+            <h2>Small Modal </h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Open Small Modal</button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a small modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Large Modal</h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Open Small Modal</button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a large modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp">
+                     	Complete Bootstrap JS Modal Reference
+                    </a>
+                </h4>
+		</div>        
+
+        <div class="container">
+            <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+		</div>        
+
+        <div class="container">
+            <h3>Tooltip Example</h3>
+            <p>The data-placement attribute specifies the tooltip position.</p>
+            <ul class="list-inline">
+                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+                <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+            </ul>
+         	<p><strong>Tip: </strong>You can also use the data-placement attribute with a value of &quot;auto&quot;, which will let the browser decide the 
+            position of the tooltip. For example, if the value is &quot;auto left&quot;, the tooltip will display on the left side when possible, otherwise 
+            on the right.</p>
+        </div>    
+
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_tooltip.asp">
+                     	Complete Bootstrap JS Tooltip Reference
+                    </a>
+                </h4>
+		</div>        
+
+
+        
+        <br><br><br><br>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--JavaScript for carousel manual navigation-->
+        <script src="js/bootstrap_eg_carousel.js"></script>
     
   	</body>
 </html>

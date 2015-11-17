@@ -7,6 +7,8 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<!-- Latest compiled and minified CSS -->
     	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/scrollspy_hor.css">
+        <link rel="stylesheet" href="css/scrollspy_ver.css">
         
         <style>
 			.xx	{
@@ -36,8 +38,8 @@
 			  }
 		</style>
   	</head>
-  	<body>
-<!--
+  	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <br><br><br><br>
 
   		<div class="container">
         	<h1>This div is using the .container class</h1>
@@ -505,12 +507,12 @@
           </div>
         </div>
         
-        <p class="hidden-lg">16:9 aspect ratio</p>
+        <!--16:9 aspect ratio-->
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/V-G9Qfau6GA"></iframe>
         </div>
         
-        <p class="hidden-lg">4:3 aspect ratio</p>
+        <!--4:3 aspect ratio-->
         <div class="embed-responsive embed-responsive-4by3">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/nsVGhnZz6GM" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -615,7 +617,7 @@
         
         <div class="container">
             <h2><small>The </small>.fade <small>and </small>.in <small>classes adds a fading effect when closing the alert message. !!!NOTE: WHEN CLOSING!!!
-            </small>
+            </small></h2>
             <div class="alert alert-success fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>Success!</strong> This alert box could indicate a successful or positive action.
@@ -633,7 +635,7 @@
                 <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
             </div>
         </div>   
-        
+
         <div class="container">
             <h2>Button Styles</h2>
             <button type="button" class="btn btn-default">Default</button>
@@ -660,7 +662,7 @@
           <button type="button" class="btn btn-primary btn-sm">Small</button>
           <button type="button" class="btn btn-primary btn-xs">XSmall</button>
         </div>
-        
+       
         <div class="container">
         	<h2>.btn-block <small>to create a block level button:</small></h2>
             <h4>Block Level Buttons</h4>
@@ -684,7 +686,7 @@
         </div>
 
         <div class="container">
-            <h2>.btn-group <small>class can be used on a </small>div <small>to group series together on a single line.</h2>
+            <h2>.btn-group <small>class can be used on a </small>div <small>to group series together on a single line.</small></h2>
             <div class="btn-group">
                 <button type="button" class="btn btn-primary">Apple</button>
                 <button type="button" class="btn btn-primary">Samsung</button>
@@ -709,7 +711,7 @@
         </div>
         
         <div class="container">
-            <h2>.btn-group-vertical <small>class creates a vertical button group:</h2>
+            <h2>.btn-group-vertical <small>class creates a vertical button group:</small></h2>
             <div class="btn-group-vertical">
                 <button type="button" class="btn btn-primary">Apple</button>
                 <button type="button" class="btn btn-primary">Samsung</button>
@@ -794,7 +796,7 @@
             <span class="glyphicon glyphicon-search"></span> Search
             </button>
             </p>
-            	
+           
             <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>      
             <p>Print icon on a styled link button:
             	<a href="#" class="btn btn-success btn-lg">
@@ -1727,6 +1729,7 @@
         <div class="container">
             <h3>Collapsible Navbar</h3>
             <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+            </p>
             <p>Only when the button is clicked, the navigation bar will be displayed.</p>
         </div>
 
@@ -2149,7 +2152,6 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>        
-remove p's in responsive video section and replace with comments-->       
         
         <div class="container">
         	<h2>Create a Carousel</h2>
@@ -2429,7 +2431,7 @@ remove p's in responsive video section and replace with comments-->
                 </div>
             </div>
         </div>
-        
+       
         <div class="container">
            		<h4>
                     <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp">
@@ -2443,7 +2445,7 @@ remove p's in responsive video section and replace with comments-->
 		</div>        
 
         <div class="container">
-            <h3>Tooltip Example</h3>
+            <h3>Tooltip Example <small>This isn't working properly</small></h3>
             <p>The data-placement attribute specifies the tooltip position.</p>
             <ul class="list-inline">
                 <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
@@ -2464,15 +2466,208 @@ remove p's in responsive video section and replace with comments-->
                 </h4>
 		</div>        
 
+        <div class="container">
+            <h3>Popover Example</h3>
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+            <p><strong>This wont work without the popover.js script</strong></p>
+            <p>*** Need to work out how to stop the page jumping ***</p>
+        </div>
 
+        <div class="container">
+            <h3>Popover Example</h3>
+            <ul class="list-inline">
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Top</a></li>
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</a></li>
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Left</a></li>
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Right</a></li>
+            </ul>
+            <p><strong>Tip: </strong>You can also use the data-placement attribute with a value of &quot;auto&quot;, which will let the browser decide the 
+            position of the popover. For example, if the value is &quot;auto left&quot;, the popover will display on the left side when possible, otherwise 
+            on the right.</p>
+        </div>
+        
+        <div class="container">
+            <h3>Closing Popovers</h3>
+            <p>By default, the popover is closed when you click on the element again. However, you can use the <code>data-trigger="focus"</code> attribute 
+            which will close the popover when clicking outside the element:</p>
+            <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this 
+            popover">Click me</a>
+        </div>
+        
+        <div class="container">
+            <h3>Hover Popover</h3>
+            <p>If you want the popover to be displayed when you move the mouse pointer over the element, use the data-trigger attribute with a value of 
+            "hover":</p>
+            <a href="#" title="Header" data-toggle="popover" data-content="Some content">Click Me</a><br>
+            <a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">Hover over me</a>
+        </div>        
+        
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp">
+                     	Complete Bootstrap JS Popover Reference
+                    </a>
+                </h4>
+		</div>        
+        
+<!---------------For the following scrollspy example, you will need to change the <body> tag to:
+				<body data-spy="scroll" data-target=".navbar" data-offset="50">
+                Also need to include scrollspy_hor.css-->
+        
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#section1">Section 1</a></li>
+                            <li><a href="#section2">Section 2</a></li>
+                            <li><a href="#section3">Section 3</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#section41">Section 4-1</a></li>
+                                  <li><a href="#section42">Section 4-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>    
+        
+        <div id="section1" class="container-fluid">
+            <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section2" class="container-fluid">
+            <h1>Section 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section3" class="container-fluid">
+            <h1>Section 3</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section41" class="container-fluid">
+            <h1>Section 4 Submenu 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section42" class="container-fluid">
+            <h1>Section 4 Submenu 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        
+        <div class="container">
+            <h3>Example Explained</h3>
+                <p>Add data-spy="scroll" to the element that should be used as the scrollable area (often this is the <code>body</code> element).</p>
+                <p>Then add the data-target attribute with a value of the id or the class name of the navigation bar (.navbar). This is to make sure that the
+                navbar is connected with the scrollable area.</p>
+                <p>Note that scrollable elements must match the ID of the links inside the navbar's list items (<code>div id="section1"</code> matches 
+                <code>a href="#section1"</code>).</p>
+                <p>The optional data-offset attribute specifies the number of pixels to offset from top when calculating the position of scroll. This is 
+                useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements
+                Default is 10 pixels.</p>
+                <strong>Requires relative positioning: The element with data-spy="scroll" requires the CSS position property, with a value of "relative" to 
+                work properly.</strong>
+		</div>        
+
+<!---------------For the following scrollspy example, you will need to change the <body> tag to:
+				<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+                Also need to include scrollspy_ver.css-->
+                
+		<div class="container">
+        	<h3>A horizontal scrollspy is also available. However I dont believe there is a simple bootstrap code to have both on the same page therefore I 
+            have put the example inside a note in the same div as this sentence in the html of this page.</h3>
+<!--    
+        <div class="container">
+            <div class="row">
+                <nav class="col-sm-3" id="myScrollspy">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#section1">Section 1</a></li>
+                        <li><a href="#section2">Section 2</a></li>
+                        <li><a href="#section3">Section 3</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section41">Section 4-1</a></li>
+                                <li><a href="#section42">Section 4-2</a></li>                     
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            <div class="col-sm-9">
+                <div id="section1">    
+                    <h1>Section 1</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                <div id="section2"> 
+                    <h1>Section 2</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>        
+                <div id="section3">         
+                    <h1>Section 3</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                <div id="section41">         
+                    <h1>Section 4-1</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>      
+                <div id="section42">         
+                    <h1>Section 4-2</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                </div>
+            </div>
+        </div>
+-->        
+        </div>
+        
+        <div class="container">
+            <h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_scrollspy.asp">
+                    Complete Bootstrap JS Scrollspy Reference
+                </a>
+            </h4>
+		</div>        
+        
+        <div class="container">
+        	<h4>There is also a plugin called "Affix" which, as the name suggests, affixes an emelement to a certain part of the screen when scrolling. 
+            Unfortunately, due to the nature of other plugins such as scrollspy and fixed navbar which are already running on this page, I cant add it to
+            this example page. For a working example and full explanation (including how to use it with scrollspy) please see:</h4>
+            <h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_affix.asp">
+                   Bootstrap Affix Plugin (Advanced)
+                </a>
+            </h4>
+            <h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_affix.asp">
+                    Complete Bootstrap JS Affix Reference
+                </a>
+            </h4>
+       	</div>
+        
         
         <br><br><br><br>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <!--JavaScript for carousel manual navigation-->
+        <!-- manual navigation -->
         <script src="js/bootstrap_eg_carousel.js"></script>
-    
+        <!-- popover JS -->
+        <script src="js/bootstrap_eg_popover.js"></script>
+
   	</body>
 </html>

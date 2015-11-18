@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
         <title>Hosken's Code</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,10 +8,7 @@
         <link rel="stylesheet" href="../css/mainstyles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- TemplateBeginEditable name="head" -->
-
-<!-- TemplateEndEditable -->
-</head>
+    </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -31,15 +28,12 @@
                             <li><a href="#">Javascript</a></li>
                             <li><a href="#">jQuery</a></li>
                             <li><a href="#">PHP</a></li>
-                            <li><a href="../github.html">GitHub</a></li>
+                            <li><a href="#">GitHub</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-   		</nav>    
-        <div style="margin-top:60px"> </div>
-<!-- TemplateBeginEditable name="content" -->
-
-<!-- TemplateEndEditable -->          
-</body>
+        </nav>    
+          
+    </body>
 </html>

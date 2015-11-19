@@ -1,2 +1,15 @@
-/* CSS Document */
+.container,
+.container-fluid {
+	border-bottom:1px solid #000;
+	margin-top:15px;
+}
+
+.myheader {
+	color:#F00;
+	font-weight:bold;
+}
+
+ul > p {
+	margin:0px;
+}
 

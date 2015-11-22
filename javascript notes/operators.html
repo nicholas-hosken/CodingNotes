@@ -41,7 +41,7 @@
    		</nav>    
         <div class="container" style="margin-top:100px">
 <!-- InstanceBeginEditable name="content" -->
-        <h3>The = Operator</h3>
+        <h3>The = operator</h3>
         
         <p id="demo1"></p>
         
@@ -50,47 +50,102 @@
 			document.getElementById("demo1").innerHTML = x;
         </script>
 
-        <h3>The + Operator</h3>
+        <h3>The + operator</h3>
         <p>This operator can be used to add numbers; however it can also "concatenate" (add) strings.</p>
-        
-        <p id="demo"></p>
-        
-        <script>
-			var txt11 = "John";
-			var txt12 = "Doe";
-			document.getElementById("demo").innerHTML = txt11 + " " + txt12;
-        </script>        	
-
-        <h3>The += Operator</h3>
         
         <p id="demo2"></p>
         
         <script>
-			var x = 10;
-			x += 5;
-			document.getElementById("demo2").innerHTML = x;
-        </script>
-        
-        <p>The assignment operator += can concatenate strings.</p>
+			var txt11 = "John";
+			var txt12 = "Doe";
+			document.getElementById("demo2").innerHTML = txt11 + " " + txt12;
+        </script>        	
+
+        <h3>The += operator</h3>
         
         <p id="demo3"></p>
         
         <script>
+			var x = 10;
+			x += 5;
+			document.getElementById("demo3").innerHTML = x;
+        </script>
+        
+        <p>The assignment operator += can concatenate strings.</p>
+        
+        <p id="demo4"></p>
+        
+        <script>
 			txt21 = "What a very ";
 			txt21 += "nice day";
-			document.getElementById("demo3").innerHTML = txt21;
+			document.getElementById("demo4").innerHTML = txt21;
         </script>        
         
         <em style="font-weight:bolder">Note: Adding a number and a string, returns a string.</em>
         
-        <p id="demo4"></p>
+        <p id="demo5"></p>
         
         <script>
 			var a = 5 + 5;
 			var b = "5" + 5;
 			var c = "Hello" + 5;
-			document.getElementById("demo4").innerHTML = a + "<br>" + b + "<br>" + c;
+			document.getElementById("demo5").innerHTML = a + "<br>" + b + "<br>" + c;
         </script>        
+        
+        <h3>The -= operator subtracts a value from a variable.</h3>
+        
+        <p id="demo61"></p>
+        <p id="demo62"></p>
+
+		<script>
+			var j = 10;
+			j -= 3;
+			document.getElementById("demo61").innerHTML = j;
+			document.getElementById("demo62").innerHTML = j;
+			
+        </script>
+        
+        <h3>The *= operator multiplies a variable.</h3>
+        
+        <p id="demo71"></p>
+        <p id="demo72"></p>
+        
+		<script>
+			var k = 10;
+			k *= 5;
+			document.getElementById("demo71").innerHTML = k;
+			k *= 5;
+			document.getElementById("demo72").innerHTML = k;
+        </script>
+
+        <h3>The /= operator divides a variable.</h3>
+        
+        <p id="demo81"></p>
+        <p id="demo82"></p>
+        
+		<script>
+			var s = 10;
+			s /= 5;
+			document.getElementById("demo81").innerHTML = s;
+			s /= 5;
+			document.getElementById("demo82").innerHTML = s;
+        </script>
+        
+        <h3>The %= operator assigns a remainder to a variable.</h3>
+        
+        <p id="demo91"></p>
+        <p id="demo92"></p>
+        
+		<script>
+			var w = 29;
+			w %= 8;
+			document.getElementById("demo91").innerHTML = w;
+			w %= 5;
+			document.getElementById("demo92").innerHTML = w;
+        </script>
+   	</div>  
+      
+        
 
 <!-- InstanceEndEditable -->
 		</div>       

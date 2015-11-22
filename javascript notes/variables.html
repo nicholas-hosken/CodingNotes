@@ -2,7 +2,7 @@
 <html><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- InstanceBeginEditable name="title" -->
-        <title>Hosken's Code</title>
+        <title>Hosken's Code | Variables</title>
 <!-- InstanceEndEditable -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,16 +42,69 @@
         <div class="container" style="margin-top:100px">
 <!-- InstanceBeginEditable name="content" -->
 
-        <p>In this example, x is defined as a variable.
-        Then, x is assigned the value of 6:</p>
-        
-        <p id="demo"></p>
-        
-        <script>
-            var x;
-            x = 6;
-            document.getElementById("demo").innerHTML = x;
-        </script>
+            <h4>In this example, x is defined as a variable. Then, x is assigned the value of 1:</h4>
+            
+            <p id="demo"></p>
+            
+            <script>
+                var x;
+                x = 1;
+                document.getElementById("demo").innerHTML = x;
+            </script>
+            
+            <h4>In this example, y is defined as a variable and is assigned a value of 2 in the same line:</h4>
+    
+            <p id="demo2"></p>
+            
+            <script>
+                var y = 2;
+                document.getElementById("demo2").innerHTML = y;
+            </script>
+            
+            <h4>In this example, l(3), m(4), n(5), o(6) and p(7) are defined as variables and is assigned values all on the same line:</h4>
+    
+            <p id="demo3"></p>
+            <p id="demo4"></p>
+            <p id="demo5"></p>
+            <p id="demo6"></p>
+            <p id="demo7"></p>
+            
+            <script>
+                var l = 3, m = 4, n = 5, o = 6, p = 7;
+                document.getElementById("demo3").innerHTML = l;
+                document.getElementById("demo4").innerHTML = m;
+                document.getElementById("demo5").innerHTML = n;
+                document.getElementById("demo6").innerHTML = o;
+                document.getElementById("demo7").innerHTML = p;
+            </script>
+
+            <h4>In this example, q is declared as an undefined variable:</h4>
+
+            <p id="demo8"></p>
+            
+            <script>
+				var q;
+				document.getElementById("demo8").innerHTML = q;
+			</script>				
+				
+			<h4>Variables can also be used to do arithmetic:</h4>
+
+            <p id="demo9"></p>
+            
+            <script>
+				var z = 33 + 45 / 3;
+				document.getElementById("demo9").innerHTML = z;
+			</script>		
+            
+            <h4>Or to add strings:</h4>
+
+            <p id="demo10"></p>
+            
+            <script>
+				var a = "Jack" + " Johnson";
+				document.getElementById("demo10").innerHTML = a;
+			</script>				
+		
 
 <!-- InstanceEndEditable -->
 		</div>       

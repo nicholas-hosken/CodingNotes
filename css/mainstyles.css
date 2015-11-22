@@ -1,10 +1,15 @@
-.container,
-.container-fluid {
+.container {
+	margin-bottom: 50px;
+}
+
+.container > div,
+.container-fluid > div {
 	border-bottom:1px solid #000;
 	margin-top:15px;
 }
 
-.myheader {
+.container > div > h3,
+.container-fluid > div > h3 {
 	color:#F00;
 	font-weight:bold;
 }

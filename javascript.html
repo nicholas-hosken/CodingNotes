@@ -2,7 +2,7 @@
 <html><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- InstanceBeginEditable name="title" -->
-        <title>Hosken's Code | Javascript</title>
+        <title>Hosken's Code | JavaScript</title>
 <!-- InstanceEndEditable -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="htmlcss.html">HTML & CSS</a></li>
                             <li><a href="bootstrap_eg.html">Bootstrap</a></li>
-                            <li><a href="javascript.html">Javascript</a></li>
+                            <li><a href="javascript.html">JavaScript</a></li>
                             <li><a href="jquery.html">jQuery</a></li>
                             <li><a href="php.html">PHP</a></li>
                             <li><a href="wordpress.html">Wordpress</a></li>
@@ -42,168 +42,299 @@
         <div class="container" style="margin-top:100px">
 <!-- InstanceBeginEditable name="content" -->
 
-       	<div class="container">
-        	<h3 class="myheader">JavaScript Output</h3>
-        	<p>JavaScript does NOT have any built-in print or display functions. Therefore to "display" data we need to use one of the following</p>
-            <ul>
-            	<li><h3><a href="javascript notes/window.alert().html">window.alert()</a></h3></li>
-            	<li>
-                	<h3><a href="javascript notes/document.write().html">document.write()</a>
-                	<small>The document.write() method should be used only for testing.</small></h3></li>
-            	<li>
-                	<h3><a href="javascript notes/innerHTML.html">innerHTML</a> 
-                	<small>To "display data" in HTML, (in most cases) you will set the value of an innerHTML property.</small></h3>
-                </li>
-            	<li><h3><a href="javascript notes/console.log().html">console.log()</a></h3></li>
-          	</ul>
-      	</div>
-        
-        <div class="container">
-        	<h3 class="myheader">JavaScript Syntax</h3>
-			<p>JavaScript syntax is the set of rules, how JavaScript programs are constructed.</p>
-			<p>A computer program is a list of "instructions" to be "executed" by the computer.</p>
-			<p>In a programming language, these program instructions are called statements.</p>
-			<p>JavaScript is a programming language.</p>
-			<p>JavaScript statements are separated by semicolons.</p>
-      	</div>
-        
-        <div class="container">
-        	<h3 class="myheader">JavaScript Statements</h3>
-            <ul>JavaScript statements are composed of:
-            	<br><br>
-            	<li>Values
-                	<ul>
-                        <li>Literals (fixed values)
-                        	<ul>
-                            	<li>Numbers</li>
-                                <li>Strings (text written within "double" or 'single' quotes)</li>
-                           	</ul>
-                       	</li>
-                        <li>
-                        	<a href="javascript notes/variables.html">Variables</a> (variable values used to store data)
-                        </li>
-                    </ul>
-                </li>
-                <br>
-                <li>Operators 
-                	<ul>
-                    	<li>Arithmetic operators [ + - *  / ]</li>
-                        <li>Assignment operator [ = ]</li>
-                   	</ul>
-                </li>
-                <br>
-                <li>Expressions
-                	<ul>
-                        <p>An expression is a combination of values, variables, and operators, which computes to a value.</p>
-                        <p>The computation is called an evaluation.</p>
-                        <p>For example:</p>
-                        <p>5 * 10 evaluates to 50.</p>
-                        <p>x * 3 evaluates to 3x.</p>
-                   	</ul>
-                </li>
-                <br>
-                <li>Keywords
-                	<ul>
-                    	<p>JavaScript keywords are used to identify actions to be performed.</p>
-                        <p>The <code>var</code> keyword tells the browser to create a new variable.</p>
-                    </ul>
-                </li> 
-                <br>
-                <li>Comments
-                	<ul>
-                    	<p>Code after double slashes // or between /* and */ is treated as a comment.</p>
-                        <p>Comments are ignored, and will not be executed.</p>
-                   	</ul>
-                </li>
-           	</ul>
-      	</div>
-        
-        <div class="container">
-            <h3 class="myheader">JavaScript Identifiers</h3>
-            <p>Identifiers are names.</p>
-            <p>In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels).</p>
-            <p>The rules for legal names are much the same in most programming languages.</p>
-            <p>In JavaScript, the first character must be a letter, an underscore (_), or a dollar sign ($).</p>
-            <p>Subsequent characters may be letters, digits, underscores, or dollar signs (but not numbers).</p>
-            <br>
-            <p>All JavaScript identifiers are case sensitive and are written in lower camelCase.</p>
-       	</div>
-        
-        <div class="container">
-            <h3 class="myheader">JavaScript Keyword Summary</h3>
-            <table style="width: 100%">
-                <tr>
-                    <th style="height: 25px">Keyword</th>
-                    <th style="height: 25px">Description</th>
-                </tr>
-                
-                <tr>
-                    <td>break</td>
-                    <td>Terminates a switch or a loop</td>
-                </tr>
-                <tr>
-                    <td>continue</td>
-                    <td>Jumps out of a loop and starts at the top</td>
-                </tr>
-                <tr>
-                    <td>debugger</td>
-                    <td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
-                </tr>
-                <tr>
-                    <td>do ... while</td>
-                    <td>Executes a block of statements, and repeats the block, while a condition is true</td>
-                </tr>
-                <tr>
-                    <td>for</td>
-                    <td>Marks a block of statements to be executed, as long as a condition is true</td>
-                </tr>
-                <tr>
-                    <td>function</td>
-                    <td>Declares a function</td>
-                </tr>
-                <tr>
-                    <td>if ... else</td>
-                    <td>Marks a block of statements to be executed, depending on a condition</td>
-                </tr>
-                <tr>
-                    <td>return</td>
-                    <td>Exits a function</td>
-                </tr>
-                <tr>
-                    <td>switch</td>
-                    <td>Marks a block of statements to be executed, depending on different cases</td>
-                </tr>
-                <tr>
-                    <td>try ... catch</td>
-                    <td>Implements error handling to a block of statements</td>
-                </tr>
-                <tr>
-                    <td>var</td>
-                    <td>Declares a variable</td>
-                </tr>
-         	</table>
-                
-            <p style="font-weight:bolder">JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
-      	</div>
+			<div>
+                <h3>JavaScript Output</h3>
+                <p>JavaScript does NOT have any built-in print or display functions. Therefore to "display" data we need to use one of the following</p>
+                <ul>
+                    <li><h3><a href="javascript notes/window.alert().html">window.alert()</a></h3></li>
+                    <li>
+                        <h3><a href="javascript notes/document.write().html">document.write()</a>
+                        <small>The document.write() method should be used only for testing.</small></h3></li>
+                    <li>
+                        <h3><a href="javascript notes/innerHTML.html">innerHTML</a> 
+                        <small>To "display data" in HTML, (in most cases) you will set the value of an innerHTML property.</small></h3>
+                    </li>
+                    <li><h3><a href="javascript notes/console.log().html">console.log()</a></h3></li>
+                </ul>
+            </div>
             
-      	<div class="container">
-        	<h3 class="myheader">Declaring (Creating) JavaScript Variables</h3>
-            <p>You declare a JavaScript variable with the var keyword:</p>
-            <p>You can declare a variable and then assign it a value on a seperate line:</p>
-            <code>var dog;</code> 
-            <code>dog = "Snoopy";</code>
-            <br><br>
-            <p>Or you can declare the variable and assign a value on the same line:</p>
-            <code>var pet = "Tickles";</code>
-            <br><br>
-            <p>You can also declare more than one variable and declare their vaues all on one line:</p>
-            <code>var pooch = "Luke", colour = "grey", age = 14;</code>
-            <br><br>
-            <p>If you declare (or redeclare) a varible without assigning a value, the varible will be <strong>undefined</strong>:</p>
-            <code>var mut;</code>
-            <br><br>
-            <a href="javascript notes/variables.html">Variable Example</a>
-      	</div>
+            <div>
+                <h3>JavaScript Syntax</h3>
+                <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed.</p>
+                <p>A computer program is a list of "instructions" to be "executed" by the computer.</p>
+                <p>In a programming language, these program instructions are called statements.</p>
+                <p>JavaScript is a programming language.</p>
+                <p>JavaScript statements are separated by semicolons.</p>
+            </div>
+            
+            <div>
+                <h3>JavaScript Statements</h3>
+                <ul>JavaScript statements are composed of:
+                    <br><br>
+                    <li>Values
+                        <ul>
+                            <li>Literals (fixed values)
+                                <ul>
+                                    <li>Numbers</li>
+                                    <li>Strings (text written within "double" or 'single' quotes)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>
+                                	<a href="javascript notes/variables.html">Variables</a> 
+                                	<small style="color:#333333">(variable values used to store data)</small>
+                                </h3>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>Operators 
+                        <ul>
+                            <li>Arithmetic operators [ + - *  / ]</li>
+                            <li>Assignment operator [ = ]</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>Expressions
+                        <ul>
+                            <p>An expression is a combination of values, variables, and operators, which computes to a value.</p>
+                            <p>The computation is called an evaluation.</p>
+                            <p>For example:</p>
+                            <p>5 * 10 evaluates to 50.</p>
+                            <p>x * 3 evaluates to 3x.</p>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>Keywords
+                        <ul>
+                            <p>JavaScript keywords are used to identify actions to be performed.</p>
+                            <p>The <code>var</code> keyword tells the browser to create a new variable.</p>
+                        </ul>
+                    </li> 
+                    <br>
+                    <li>Comments
+                        <ul>
+                            <p>Code after double slashes // or between /* and */ is treated as a comment.</p>
+                            <p>Comments are ignored, and will not be executed.</p>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>JavaScript Identifiers</h3>
+                <p>Identifiers are names.</p>
+                <p>In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels).</p>
+                <p>The rules for legal names are much the same in most programming languages.</p>
+                <p>In JavaScript, the first character must be a letter, an underscore (_), or a dollar sign ($).</p>
+                <p>Subsequent characters may be letters, digits, underscores, or dollar signs (but not numbers).</p>
+                <br>
+                <p>All JavaScript identifiers are case sensitive and are written in lower camelCase.</p>
+            </div>
+            
+            <div>
+                <h3>JavaScript Keyword Summary</h3>
+                <table style="width: 100%">
+                    <tr>
+                        <th style="height: 25px">Keyword</th>
+                        <th style="height: 25px">Description</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>break</td>
+                        <td>Terminates a switch or a loop</td>
+                    </tr>
+                    <tr>
+                        <td>continue</td>
+                        <td>Jumps out of a loop and starts at the top</td>
+                    </tr>
+                    <tr>
+                        <td>debugger</td>
+                        <td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
+                    </tr>
+                    <tr>
+                        <td>do ... while</td>
+                        <td>Executes a block of statements, and repeats the block, while a condition is true</td>
+                    </tr>
+                    <tr>
+                        <td>for</td>
+                        <td>Marks a block of statements to be executed, as long as a condition is true</td>
+                    </tr>
+                    <tr>
+                        <td>function</td>
+                        <td>Declares a function</td>
+                    </tr>
+                    <tr>
+                        <td>if ... else</td>
+                        <td>Marks a block of statements to be executed, depending on a condition</td>
+                    </tr>
+                    <tr>
+                        <td>return</td>
+                        <td>Exits a function</td>
+                    </tr>
+                    <tr>
+                        <td>switch</td>
+                        <td>Marks a block of statements to be executed, depending on different cases</td>
+                    </tr>
+                    <tr>
+                        <td>try ... catch</td>
+                        <td>Implements error handling to a block of statements</td>
+                    </tr>
+                    <tr>
+                        <td>var</td>
+                        <td>Declares a variable</td>
+                    </tr>
+                </table>
+                    
+                <p style="font-weight:bolder">JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
+            </div>
+                
+            <div>
+                <h3>Declaring (Creating) JavaScript Variables</h3>
+                <p>You declare a JavaScript variable with the var keyword:</p>
+                <p>You can declare a variable and then assign it a value on a seperate line:</p>
+                <code>var dog;</code> 
+                <code>dog = "Snoopy";</code>
+                <br><br>
+                <p>Or you can declare the variable and assign a value on the same line:</p>
+                <code>var pet = "Tickles";</code>
+                <br><br>
+                <p>You can also declare more than one variable and declare their vaues all on one line:</p>
+                <code>var pooch = "Luke", colour = "grey", age = 14;</code>
+                <br><br>
+                <p>If you declare (or redeclare) a varible without assigning a value, the varible will be "undefined":</p>
+                <code>var mut;</code>
+                <br><br>
+                <a href="javascript notes/variables.html">Variable Example</a>
+            </div>
+            
+            <div>
+                <h3>JavaScript Arithmetic Operators</h3>
+                <p>Arithmetic operators are used to perform arithmetic on numbers (literals or variables).</p>
+                
+                <table class="w3-table-all notranslate">
+                    <tr>
+                        <th style="width:25%">Operator &nbsp;&nbsp;</th>
+                        <th> Description</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtraction</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Modulus</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Increment</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decrement</td>
+                    </tr>
+                </table>
+           	</div>
+			
+            <div>
+                <h3>JavaScript Assignment Operators</h3>
+                <p>Assignment operators assign values to JavaScript variables.</p>
+                
+                <table class="w3-table-all notranslate">
+                    <tr>
+                        <th>Operator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Example &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Same As</th>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>x = y</td>
+                        <td>x = y</td>
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td>x += y</td>
+                        <td>x = x + y</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>x -= y</td>
+                        <td>x = x - y</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>x *= y</td>
+                        <td>x = x * y</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>x /= y</td>
+                        <td>x = x / y</td>
+                    </tr>
+                    <tr>
+                        <td>%=</td>
+                        <td>x %= y</td>
+                        <td>x = x % y</td>
+                    </tr>
+                </table>
+                <a href="javascript notes/operators.html">Extra Handy Operator Examples</a>
+           	</div>
+            
+            <div>
+                <h3>JavaScript Comparison and Logical Operators</h3>
+                
+                <table>
+                    <tr>
+                        <th style="width:12%">Operator</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>equal to</td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>equal value and equal type</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>not equal</td>
+                    </tr>
+                    <tr>
+                        <td>!==</td>
+                        <td>not equal value or not equal type</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>greater than</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>less than</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>greater than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>less than or equal to</td>
+                    </tr>
+                </table>
+       		</div>
+            
         
 
 <!-- InstanceEndEditable -->

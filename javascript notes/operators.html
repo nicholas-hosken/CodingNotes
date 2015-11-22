@@ -2,7 +2,7 @@
 <html><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- InstanceBeginEditable name="title" -->
-        <title>Hosken's Code</title>
+        <title>Hosken's Code | </title>
 <!-- InstanceEndEditable -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,9 +41,57 @@
    		</nav>    
         <div class="container" style="margin-top:100px">
 <!-- InstanceBeginEditable name="content" -->
-<script>
-	window.alert(5 + 6);
-</script>
+        <h3>The = Operator</h3>
+        
+        <p id="demo1"></p>
+        
+        <script>
+			var x = 10;
+			document.getElementById("demo1").innerHTML = x;
+        </script>
+
+        <h3>The + Operator</h3>
+        <p>This operator can be used to add numbers; however it can also "concatenate" (add) strings.</p>
+        
+        <p id="demo"></p>
+        
+        <script>
+			var txt11 = "John";
+			var txt12 = "Doe";
+			document.getElementById("demo").innerHTML = txt11 + " " + txt12;
+        </script>        	
+
+        <h3>The += Operator</h3>
+        
+        <p id="demo2"></p>
+        
+        <script>
+			var x = 10;
+			x += 5;
+			document.getElementById("demo2").innerHTML = x;
+        </script>
+        
+        <p>The assignment operator += can concatenate strings.</p>
+        
+        <p id="demo3"></p>
+        
+        <script>
+			txt21 = "What a very ";
+			txt21 += "nice day";
+			document.getElementById("demo3").innerHTML = txt21;
+        </script>        
+        
+        <em style="font-weight:bolder">Note: Adding a number and a string, returns a string.</em>
+        
+        <p id="demo4"></p>
+        
+        <script>
+			var a = 5 + 5;
+			var b = "5" + 5;
+			var c = "Hello" + 5;
+			document.getElementById("demo4").innerHTML = a + "<br>" + b + "<br>" + c;
+        </script>        
+
 <!-- InstanceEndEditable -->
 		</div>       
 </body>

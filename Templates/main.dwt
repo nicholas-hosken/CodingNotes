@@ -2,7 +2,7 @@
 <html>
 <head>
 <!-- TemplateBeginEditable name="title" -->
-        <title>Hosken's Code</title>
+        <title>Hosken's Code | </title>
 <!-- TemplateEndEditable -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="../htmlcss.html">HTML & CSS</a></li>
                             <li><a href="../bootstrap_eg.html">Bootstrap</a></li>
-                            <li><a href="../javascript.html">Javascript</a></li>
+                            <li><a href="../javascript.html">JavaScript</a></li>
                             <li><a href="../jquery.html">jQuery</a></li>
                             <li><a href="../php.html">PHP</a></li>
                             <li><a href="../wordpress.html">Wordpress</a></li>

@@ -212,7 +212,7 @@
                 <h3>JavaScript Arithmetic Operators</h3>
                 <p>Arithmetic operators are used to perform arithmetic on numbers (literals or variables).</p>
                 
-                <table class="w3-table-all notranslate">
+                <table>
                     <tr>
                         <th style="width:25%">Operator &nbsp;&nbsp;</th>
                         <th> Description</th>
@@ -245,14 +245,26 @@
                         <td>--</td>
                         <td>Decrement</td>
                     </tr>
-                </table>
+         		</table>
+                <br>
+                <p>A typical arithmetic operation operates on two numbers.</p>
+               	<p>The two numbers can be literals: <code>var x = 100 + 50;</code></p>
+               	<p>or variables: <code>var x = a + b;</code></p>
+               	<p>or expressions: <code>var x = (100 + 50) * a;</code></p>
+                <p>The numbers (in an arithmetic operation) are called <strong>operands</strong>.</p>
+				<p>The operation (to be performed between the two operands) is defined by an <strong>operator</strong>.</p>
+                <p>The modular operator (%) takes the first number divides it by the second and returns the remainder:
+                <code>var x = 17 % 6;</code> Therefore: x = 5.</p>
+                <p>The increment operator (++) increments numbers: <code>var y = 5++</code> Therefore: y = 6.</p>
+                <p>The decrement operator (--) decrements numbers: <code>var z = 5--</code> Therefore: z = 4.</p>
+                <p>System uses BODMAS arithetic.</p>
            	</div>
 			
             <div>
                 <h3>JavaScript Assignment Operators</h3>
                 <p>Assignment operators assign values to JavaScript variables.</p>
                 
-                <table class="w3-table-all notranslate">
+                <table>
                     <tr>
                         <th>Operator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                         <th>Example &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -334,6 +346,293 @@
                     </tr>
                 </table>
        		</div>
+            
+            <div>
+                <h3>JavaScript Operator Precedence Values</h3>
+                
+                <p>The value column below designates the order in which Javascript will complete that specific operation in am expression.
+                The higher the value the sooner it will be completed.</p>
+                
+                <table>
+                   	<tr>
+                      	<th style="width:10%">Value &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      	<th style="width:15%">Operator</th>
+                      	<th>Description</th>
+                      	<th>Example</th>
+                    </tr>
+               		<tr>
+                      	<td>19</td>
+                      	<td>( )</td>
+                      	<td>Expression grouping</td>
+                      	<td>(3 + 4)</td>
+                 	</tr>
+                   	<tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                   	</tr>
+                    <tr>
+                      	<td>18</td>
+                      	<td>.</td>
+                      	<td>Member</td>
+                      	<td>person.name</td>
+                    </tr>
+                    <tr>
+                    	<td>18</td>
+                      	<td>[]</td>
+                      	<td>Member</td>
+                      	<td>person[&quot;name&quot;]</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>17</td>
+                      	<td>()</td>
+                      	<td>Function call</td>
+                      	<td>myFunction()</td>
+                    </tr>
+                    <tr>
+                      	<td>17</td>
+                      	<td>new</td>
+                      	<td>Create</td>
+                      	<td>new Date()</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>16</td>
+                      	<td>++</td>
+                      	<td>Postfix Increment</td>
+                      	<td>i++</td>
+                    </tr>
+                    <tr>
+                      	<td>16</td>
+                      	<td>--</td>
+                      	<td>Postfix Decrement</td>
+                      	<td>i--</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>15</td>
+                      	<td>++</td>
+                      	<td>Prefix Increment</td>
+                      	<td>++i</td>
+                    </tr>
+                    <tr>
+                      	<td>15</td>
+                      	<td>--</td>
+                      	<td>Prefix Decrement</td>
+                      	<td>--i</td>
+                    </tr>
+                    <tr>
+                      	<td>15</td>
+                      	<td>!</td>
+                      	<td>Logical not</td>
+                      	<td>!(x==y)</td>
+                    </tr>
+                    <tr>
+                      	<td>15</td>
+                      	<td>typeof</td>
+                      	<td>Type</td>
+                      	<td>typeof x</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>14</td>
+                      	<td>*</td>
+                      	<td>Multiplication</td>
+                      	<td>10 * 5</td>
+                    </tr>
+                    <tr>
+                      	<td>14</td>
+                      	<td>/</td>
+                      	<td>Division</td>
+                      	<td>10 / 5</td>
+                    </tr>
+                    <tr>
+                      	<td>14</td>
+                      	<td>%</td>
+                      	<td>Modulo division</td>
+                      	<td>10 % 5</td>
+                    </tr>
+                    <tr>
+                      	<td>14</td>
+                      	<td>**</td>
+                      	<td>Exponentiation</td>
+                      	<td>10 ** 2</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>13</td>
+                      	<td>+</td>
+                      	<td>Addition</td>
+                      	<td>10 + 5</td>
+                    </tr>
+                    <tr>
+                      	<td>13</td>
+                      	<td>-</td>
+                      	<td>Subtraction</td>
+                      	<td>10 - 5</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>12</td>
+                      	<td>&lt;&lt;</td>
+                      	<td>Shift left</td>
+                      	<td>x &lt;&lt; 2</td>
+                    </tr>
+                    <tr>
+                      	<td>12</td>
+                      	<td>&gt;&gt;</td>
+                      	<td>Shift right</td>
+                      	<td>x &gt;&gt; 2</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>11</td>
+                      	<td>&lt;</td>
+                      	<td>Less than</td>
+                      	<td>x &lt; y&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>11</td>
+                      	<td>&lt;=</td>
+                      	<td>Less than or equal</td>
+                      	<td>x &lt;= y</td>
+                    </tr>
+                    <tr>
+                      	<td>11</td>
+                      	<td>&gt;</td>
+                      	<td>Greater than</td>
+                      	<td>x &gt; y</td>
+                    </tr>
+                    <tr>
+                      	<td>11</td>
+                      	<td>&gt;=</td>
+                      	<td>Greater than or equal</td>
+                      	<td>x &gt;= y</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>10</td>
+                      	<td>==</td>
+                      	<td>Equal</td>
+                      	<td>x == y</td>
+                    </tr>
+                    <tr>
+                      	<td>10</td>
+                      	<td>===</td>
+                      	<td>Strict equal</td>
+                    	<td>x === y</td>
+                    </tr>
+                    <tr>
+                      	<td>10</td>
+                      	<td>!=</td>
+                      	<td>Unequal</td>
+                      	<td>x != y</td>
+                    </tr>
+                    <tr>
+                      	<td>10</td>
+                      	<td>!==</td>
+                      	<td>Strict unequal</td>
+                      	<td>x !== y</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>6</td>
+                      	<td>&amp;&amp;</td>
+                      	<td>And</td>
+                      	<td>x &amp;&amp; y</td>
+                    </tr>
+                    <tr>
+                      	<td>5</td>
+                      	<td>||</td>
+                      	<td>Or</td>
+                      	<td>x || y</td>
+                    </tr>
+                    <tr>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                      	<td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      	<td>3</td>
+                      	<td>=</td>
+                      	<td>Assignment</td>
+                      	<td>x = y</td>
+                    </tr>
+                    <tr>
+                      	<td>3</td>
+                      	<td>+=</td>
+                      	<td>Assignment</td>
+                      	<td>x += y</td>
+                    </tr>
+                    <tr>
+                      	<td>3</td>
+                      	<td>-=</td>
+                      	<td>Assignment</td>
+                      	<td>x -= y</td>
+                    </tr>
+                    <tr>
+                      	<td>3</td>
+                      	<td>*=</td>
+                      	<td>Assignment</td>
+                      	<td>x *= y</td>
+                    </tr>
+                    <tr>
+                      	<td>3</td>
+                      	<td>/=</td>
+                      	<td>Assignment</td>
+                      	<td>x /= y</td>
+                    </tr>
+                </table>
+        	</div>
+            
             
         
 

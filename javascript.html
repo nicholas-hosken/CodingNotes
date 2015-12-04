@@ -11,6 +11,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+		<style>
+			em {
+				color:#900;
+			}
+			
+			.middle {
+				text-align:center;
+			}
+			
+			.noted {
+				color:#0f0;
+			}
+		</style>
 <!-- InstanceEndEditable -->
 </head>
     <body>
@@ -28,10 +41,15 @@
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li><a href="htmlcss.html">HTML & CSS</a></li>
-                            <li><a href="bootstrap_eg.html">Bootstrap</a></li>
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
                             <li><a href="javascript.html">JavaScript</a></li>
                             <li><a href="jquery.html">jQuery</a></li>
-                            <li><a href="php.html">PHP</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="php.html">PHP
+                            <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://www.php.net/">Download</a></li>
+                                </ul>
+                            </li>
                             <li><a href="wordpress.html">Wordpress</a></li>
                             <li><a href="github.html">GitHub</a></li>
                         </ul>
@@ -39,20 +57,23 @@
                 </div>
             </div>
    		</nav>    
-        <div class="container" style="margin-top:100px">
+        <div class="thisismy container " style="margin-top:100px">
 <!-- InstanceBeginEditable name="content" -->
 
 			<div>
                 <h3>JavaScript Output</h3>
-                <p>JavaScript does NOT have any built-in print or display functions. Therefore to "display" data we need to use one of the following</p>
+                <p>JavaScript does NOT have any built-in print or display functions. Therefore to "display" data we need to use one 
+                of the following</p>
                 <ul>
                     <li><h3><a href="javascript notes/window.alert().html">window.alert()</a></h3></li>
                     <li>
                         <h3><a href="javascript notes/document.write().html">document.write()</a>
                         <small>The document.write() method should be used only for testing.</small></h3></li>
                     <li>
-                        <h3><a href="javascript notes/innerHTML.html">innerHTML</a> 
-                        <small>To "display data" in HTML, (in most cases) you will set the value of an innerHTML property.</small></h3>
+                        <h3>
+                        	<a href="javascript notes/innerHTML.html">innerHTML</a> 
+                        	<small>To "display data" in HTML, (in most cases) you will set the value of an innerHTML property.</small>
+                        </h3>
                     </li>
                     <li><h3><a href="javascript notes/console.log().html">console.log()</a></h3></li>
                 </ul>
@@ -186,7 +207,8 @@
                     </tr>
                 </table>
                     
-                <p style="font-weight:bolder">JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
+                <p style="font-weight:bolder">JavaScript keywords are reserved words. 
+                Reserved words cannot be used as names for variables.</p>
             </div>
                 
             <div>
@@ -266,8 +288,10 @@
                 
                 <table>
                     <tr>
-                        <th>Operator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                        <th>Example &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Operator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Example &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                         <th>Same As</th>
                     </tr>
                     <tr>
@@ -350,8 +374,8 @@
             <div>
                 <h3>JavaScript Operator Precedence Values</h3>
                 
-                <p>The value column below designates the order in which Javascript will complete that specific operation in am expression.
-                The higher the value the sooner it will be completed.</p>
+                <p>The value column below designates the order in which Javascript will complete that specific 
+                operation in am expression.The higher the value the sooner it will be completed.</p>
                 
                 <table>
                    	<tr>
@@ -633,9 +657,205 @@
                 </table>
         	</div>
             
+            <div>
+            	<h3>JavaScript Data Types</h3>
+                <p>You can use the JavaScript <a href="javascript notes/typeof.html">typeof</a> 
+                operator to find the type of a JavaScript variable:
+                <ul>
+                	<li>Strings <code>var answer = "He is called 'Johnny'";</code></li>
+                    <br>
+                    <li>Numbers <code>var x2 = 34;</code></li>
+                    <br>
+                    <li>Booleans <code>var x = true;</code></li>
+                    <br>
+                    <li>Arrays <code>var cars = ["Saab", "Volvo", "BMW"];</code>
+                    	<ul>
+                        	<li>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</li>
+                      	</ul>
+                    </li>
+                    <br>
+                    <li>Objects <code>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</code>
+                    	<ul>
+                        	<li>Object properties are written as name:value pairs, separated by commas.</li>
+                       	</ul>
+                    </li>
+               	</ul>
+           	</div>
             
-        
-
+            <div>
+            	<h3>JavaScript Functions</h3>
+                
+                <p>A JavaScript function is a block of code designed to perform a particular task when"something" invokes 
+                it (calls it).</p>
+                
+                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses (). 
+                Function names can contain letters, digits, underscores, and dollar signs (same rules as variables). 
+                The parentheses may include parameter names separated by commas: (parameter1,  parameter2, ...). 
+                The code to be executed, by the function, is placed inside curly brackets: {}</p>
+                <blockquote>
+                    <code>
+                        <p>function name(parameter1, parameter2, parameter3) {</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code to be executed</p>
+                        <p>}</p>
+                    </code>
+               	</blockquote>
+                <br>
+                
+                <p>Function <span style="font-weight:bolder">parameters</span> are the names listed in the function definition. 
+                Function <span style="font-weight:bolder">arguments</span> are the real values received by the function 
+                when it is invoked. Inside the function, the arguments behave as local variables.</p>
+                
+                <p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+                <ul>
+					<li>When an event occurs (when a user clicks a button)</li>
+					<li>When it is invoked (called) from JavaScript code</li>
+					<li>Automatically (self invoked)</li>
+               	</ul>
+                
+                <p>When JavaScript reaches a return statement, the function will stop executing. If the function was invoked 
+                from a statement, JavaScript will "return" to execute the code after the invoking statement. Functions often 
+                compute a return value. The return value is "returned" back to the "caller":</p>
+                <blockquote>
+                    <code>
+                        <p>var x = myFunction(4, 3);        
+                        &nbsp;&nbsp;&nbsp;&nbsp;// Function is called, return value will end up in x</p>
+                        <p>function myFunction(a, b) {</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a * b;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Function returns the product of a and b</p>
+                        <p>}</p>
+                    </code>
+                    <br>
+                    <em>Result returns: 12</em>
+                </blockquote>
+				<br>
+                                
+                <p>Functions are useful as they can be used many times with different arguments, to produce different results.</p>
+                <blockquote>
+                    <code>
+                        <p>function toCelsius(fahrenheit) {</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (5/9) * (fahrenheit-32);</p>
+                        <p>}</p>
+                        <p>document.getElementById("demo").innerHTML = toCelsius(77);</p>
+                    </code>
+                    <em>Result displays: 25</em>
+				</blockquote>
+                
+                <p>Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+                Accessing a function without () will return the function definition:</p>
+				<blockquote>                
+                    <code>
+                        <p>function toCelsius(fahrenheit) {</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (5/9) * (fahrenheit-32);</p>
+                        <p>}</p>
+                        <p>document.getElementById("demo").innerHTML = toCelsius;</p>
+                    </code>
+                    <em>Result displays: function toCelsius(f) { return (5/9) * (f-32); }</em>
+                </blockquote>
+                
+                <p>You can use functions the same way as you use variables:</p>
+                <code>var text = "The temperature is " + toCelsius(77) + " Celsius";</code>
+                <br><br><br>
+           	</div>
+            
+            <div>
+            	<h3>JavaScript Objects</h3>
+                
+                <p>Objects are variables which contain many values. These values are written as 
+                <span style="font-weight:bolder">name:value</span> pairs which are called 
+                <span style="font-weight:bolder">properties</span>.</p>
+                <blockquote><code>var car = {type:"Fiat", model:500, color:"white"};</code></blockquote>
+                <p>You can access object properties in two ways:</p>
+                <div class="row">
+                	<div class="col-sm-4">
+                        <blockquote><code class="middle">objectName.propertyName</code></blockquote>
+                	</div>
+                	<div class="col-sm-4">
+                        <p class="middle">or</p>
+                	</div>
+                	<div class="col-sm-4">             
+                        <blockquote><code class="middle">objectName["propertyName"]</code></blockquote>
+                	</div>
+               	</div>
+                <p>See the <a href="javascript notes/objects.html">objects</a> page for working examples of both.</p>
+                <p>When a JavaScript variable is declared with the keyword "new", the variable is created as an object:</p>
+                <blockquote><code>var x = new thingymagingy;</code></blockquote>
+                <p>However avoid String, Number, and Boolean objects as they complicate your code and slow down execution speed.</p>
+                <blockquote style="background-color:#f00">
+                    <p><code>var x = new String();</code> &nbsp;&nbsp;&nbsp;&nbsp; <span class="noted">// Declares x as a String 
+                    object</span></p>
+                    <p><code>var y = new Number();</code> &nbsp;&nbsp;&nbsp;&nbsp; <span class="noted">// Declares y as a Number 
+                    object</span></p>
+                    <p><code>var z = new Boolean();</code> &nbsp;&nbsp;&nbsp; <span class="noted">// Declares z as a Boolean 
+                    object</span></p>
+                </blockquote>
+          	</div>
+            
+            <div>
+            	<h3>Object Methods</h3>
+                <p>Methods are actions that can be performed on objects. Methods are stored in properties as 
+                <span style="font-weight:bolder">function definitions</span>(see the last "property" of the example below).</p>
+                <blockquote>
+                	<code>
+                        <p>var name = {</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstName:John,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastName:Doe,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age:50,</p> 
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullName:function() {return this.firstName + " " + this.lastName;}</p>
+                        <p>}</p>
+                    </code>
+              	</blockquote>
+                <p>You access an object method with the following syntax:</p>
+                <blockquote><code>objectName.methodName()</code></blockquote>
+                <p>See the <a href="javascript notes/methods.html">methods</a> page for a working example.</p>
+          	</div>
+                        
+            <div>
+				<h3>JavaScript Scope</h3>
+                <p>In JavaScript, objects and functions are also variables. In JavaScript, scope is the set of variables, objects, 
+                and functions you have access to.</p>
+                <br>
+                <p>Variables declared within a JavaScript function, become LOCAL to the function. Local variables have local scope: 
+                They can only be accessed within the function:</p>
+                <blockquote>
+                    <p class="noted">// code here can not use carName</p>
+                    <p>function myFunction() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;var carName = "Volvo";</p>
+                    <p class="noted">&nbsp;&nbsp;&nbsp;&nbsp;// code here can use carName</p>
+                    <p>}</p>
+                </blockquote>
+                <p>Local variables are created when a function starts, and deleted when the function is completed. Therefore 
+                variables of the same name can be used in different functions.</p>
+                <br>
+                <p>A variable declared outside a function, becomes GLOBAL. A global variable has global scope: All scripts and 
+                functions on a web page can access it.</p>
+                <blockquote>
+                	<p> var carName = " Volvo";</p>
+					<p class="noted">// code here can use carName</p>
+                    <p>function myFunction() {</p>
+                    <p class="noted">&nbsp;&nbsp;&nbsp;;&nbsp;// code here can use	carName</p>
+                    <p>}</p>
+               	</blockquote>
+                <p>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+                This code example will declare carName as a global variable, even if it is executed inside a function:</p>
+                <blockquote>
+                	<p class="noted">// code here can use carName</p>
+                    <p>function myFunction() {</p>
+                    <p>carName = "Volvo";</p>
+                    <p class="noted">&nbsp;&nbsp;&nbsp;;&nbsp;// code here can use carName</p>
+                   	<p>}</p>
+              	</blockquote>
+                <p>Function arguments (parameters) work as local variables inside functions.</p>  
+                <br>
+                <h2 style="color:#306">With JavaScript, the global scope is the complete JavaScript environment but in HTML, the global scope is the 
+                window object: All global variables belong to the window object.</h2>
+                <blockquote>
+                    <p class="noted">// code here can use window.carName</p>
+                    <p>function myFunction() {</p>
+                    <p>carName = "Volvo";</p>
+                    <p>}</p>
+                </blockquote>
+         	</div>
+            <h2 style="color:#306">Your global variables (or functions) can overwrite window variables (or functions). Conversely, any function, including the window object, can overwrite your global variables and functions.        	
 <!-- InstanceEndEditable -->
 		</div>       
 </body>

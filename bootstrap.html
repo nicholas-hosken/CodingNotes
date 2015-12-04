@@ -1,20 +1,1746 @@
 <!DOCTYPE html>
-<html><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-<!-- InstanceBeginEditable name="title" -->
-        <title>Hosken's Code</title>
-<!-- InstanceEndEditable -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/mainstyles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->
+<html lang="en">
+	<head>
+    	<title>Hosken's Code | Bootstrap</title>
+   		<meta charset="utf-8">
+    	<!-- Makes site responsive on mobiles -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- For scrollspy app towards the bottom of the page-->
+        <link rel="stylesheet" href="css/scrollspy_hor.css">
+        <link rel="stylesheet" href="css/scrollspy_ver.css">
+        
+        <style>
+			.xx	{
+				background-color:#0F0;
+				border:1px solid #000;
+				height:100px;
+			}
+			
+			div.container {
+				padding-bottom:15px;
+				border-bottom:1px solid #000;
+			}
+			
+			.nb {
+				color:#0F0;
+			}
+			
+			.explain {
+				border-top:1px dashed #000;
+				margin-top:10px;
+			}
+			
+			.carousel-inner > .item > img,
+			.carousel-inner > .item > a > img {
+				width: 10%;
+				margin: auto;
+			  }
+		</style>
+  	</head>
+  	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <br><br><br><br><br><br><br><br>
+        
+        
+        <div class="container">
+        	<h1>The initial layout for a bootstrap page:</h1>
+        	<div class="pre-scrollable" style="margin-left:75px">
+                <p>&lt;!DOCTYPE html&gt;</p>
+                <p>&lt;html lang="en"&gt;</p>
+                <p>&lt;head&gt;</p>
+                <p>&lt;title&gt;Bootstrap Example&lt/title&gt;</p>
+                <p>&lt;meta charset="utf-8"&gt;</p>
+                <p>&lt;!-- Makes site responsive on mobiles --&gt;</p>
+                <p>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+            	<p>&lt;!-- Latest compiled and minified Bootstrap CSS and jQuery--&gt;</p>
+		        <p>&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;</p>
+                <p>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&lt;/script&gt;</p>
+                <p>&lt;script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"&lt;/script&gt;</p>
+                <p>&lt;/head&gt;</p>
+                <p>&lt;body&gt;</p>
+        		<br><br><br><br>
+                <p>&lt;/body&gt;</p>
+                <p>&lt;/html&gt;</p>
+           	</div>
+      	</div>
+        
+        <div class="container">
+        	<h1>Grid System Rules</h1>
+            <ul>
+            	<li>Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and 
+                padding.</li>
+                <li>Use rows to create horizontal groups of columns.</li>
+                <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+                <li>Predefined classes like .row and .col-sm-4 are available for quickly making grid layouts.</li>
+                <li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first 
+                and last column via negative margin on .rows.</li>
+				<li>Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three 
+                equal columns would use three .col-sm-4</li>
+          	</ul>
+       	</div>
+        
+        <div class="container">
+        	<h1>Basic Structure of a Bootstrap Grid</h1>
+			<div class="pre-scrollable" style="margin-left:75px">
+            	<p>
+                &lt;div class=&quot;container&quot;&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;row&quot;&gt;<br>	
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;row&quot;&gt;<br>	
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+                &lt;/div&gt;
+                </p>
+    		</div>
+      	</div>
+        
+        <div class="container">
+        	<h1>Grid Options</h1>
+            <p>The following table summarizes how the Bootstrap grid system works across multiple devices:</p>
+    	    <table class="w3-table-all notranslate">
+          		<tr>
+                    <th style="width:22%;">&nbsp;</th>
+                    <th style="width:19%;">Extra small devices<br>Phones (&lt;768px)</th>
+                    <th style="width:20%;">Small devices<br>Tablets (&gt;=768px)</th>
+                    <th style="width:21%;">Medium devices<br>Desktops (&gt;=992px)</th>
+                    <th style="width:18%;">Large devices<br>Desktops (&gt;=1200px)</th>
+                </tr>
+                <tr>
+                    <td><strong>Grid behaviour</strong></td>
+                    <td>Horizontal at all times</td>
+                    <td>Collapsed to start, horizontal above breakpoints</td>
+                    <td>Collapsed to start, horizontal above breakpoints</td>
+                    <td>Collapsed to start, horizontal above breakpoints</td>        
+                </tr>
+                <tr>
+                    <td><strong>Container width</strong></td>
+                    <td>None (auto)</td>
+                    <td>750px</td>
+                    <td>970px</td>
+                    <td>1170px</td>
+                </tr>
+                <tr>
+                    <td><strong>Class prefix</strong></td>
+                    <td>.col-xs-</td>
+                    <td>.col-sm-</td>
+                    <td>.col-md-</td>
+                    <td>.col-lg-</td>
+                </tr>
+                <tr>
+                    <td><strong>Number of columns</strong></td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>    
+                </tr>
+                <tr>
+                    <td><strong>Column width</strong></td>
+                    <td>Auto</td>
+                    <td>~62px</td>
+                    <td>~81px</td>
+                    <td>~97px</td>
+                </tr>
+                <tr>
+                    <td><strong>Gutter width</strong></td>
+                    <td>30px (15px on each side of a column)</td>
+                    <td>30px (15px on each side of a column)</td>
+                    <td>30px (15px on each side of a column)</td>
+                    <td>30px (15px on each side of a column)</td>
+                </tr>
+                <tr>
+                    <td><strong>Nestable</strong></td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td><strong>Offsets</strong></td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td><strong>Column ordering</strong></td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+		</div>
+                
+  		<div class="container">
+        	<h1>This div is using the .container class</h1>
+        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit a ligula id volutpat. Ut purus augue, 
+            bibendum ac magna in, pharetra dignissim turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada 
+            fames ac turpis egestas. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac 
+            turpisegestas. Proin at odio sem. Maecenas erat ante, dapibus id odio eget, vestibulum scelerisque sapien. Aenean est 
+            sem, tincidunt sed interdum quis, feugiat vitae ante. Praesent eget urna lacus.</p>
+      	</div>
+  		<div class="container-fluid" style="border-bottom:1px solid #000">
+        	<h1>This div is using the .container-fluid class</h1>
+        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit a ligula id volutpat. Ut purus augue, 
+            bibendum ac magna in, pharetra dignissim turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada 
+            fames ac turpis egestas. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+            turpisegestas. Proin at odio sem. Maecenas erat ante, dapibus id odio eget, vestibulum scelerisque sapien. Aenean est 
+            sem, tincidunt sed interdum quis, feugiat vitae ante. Praesent eget urna lacus.</p>
+      	</div>
+ 
+        <div class="container">
+            <h1>The below uses the .col-md-4</h1>
+            <div class="row">
+                <div class="col-md-4 xx"></div>
+                <div class="col-md-4 xx">Minimize the screen to see these in action</div>
+                <div class="col-md-4 xx"></div>
+            </div>
+		</div>
+        
+        <div>
+        	<h1><small>The</small> .col-md-offset-* <small>class increases the left margin of a colomn by *.</small></h1>
+            <div class="row">
+                <div class="col-sm-4 xx col-sm-push-8">.col-sm-4 .col-sm-push-8</div>
+                <div class="col-sm-8 xx col-sm-pull-4">.col-sm-8 .col-sm-pull-4</div>
+            </div>
+		</div>            
 
-<!-- InstanceEndEditable -->
-</head>
-    <body>
+        <div class="container">
+            <h1>"small"</h1>
+            <h4>This is a heading <small>with a small tag.</small></h4>
+		</div>
+        
+        <div class="container">
+            <h1>"mark"</h1>
+            <p>Use the mark element to <mark>highlight</mark> text.</p>
+		</div>
+        
+        <div class="container">
+            <h1>Abbreviations "abbr"</h1>
+            <p>The abbr element is used to mark up an abbreviation or acronym:</p>
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        </div>
+        
+        <div class="container">
+            <h1>"blockquote" and "footer"</h1>
+            <p>The blockquote element is used to present content from another source:</p>
+            <blockquote>
+				<p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and 	
+                is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+    			<footer>From WWF's website</footer>
+  			</blockquote>
+		</div>
+        
+        <div class="container">
+            <h1>.blockquote-reverse</h1>
+            <p>To show the quote on the right use the class .blockquote-reverse:</p>
+            <blockquote class="blockquote-reverse">
+                <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and 
+                is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+                <footer>From WWF's website</footer>
+            </blockquote>
+        </div>
+        
+        <div class="container">
+            <h1>Description Lists "dl" in congunction with "dt" and "dd"</h1>    
+            <p>The dl element indicates a description list:</p>
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>- black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>- white cold drink</dd>
+                </dl>     
+        </div>
+        
+        <div class="container">
+            <h1>Code Snippets "code"</h1>
+            <p>Inline snippets of code should be embedded in the "code" element:</p>
+            <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+        </div>
+        
+        <div class="container">
+            <h1>Keyboard Inputs "kbd"</h1>
+            <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+            <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+        </div>
+        
+        <div class="container">
+            <h2>Contextual Colors: .text-muted .text-primary .text-success .text-info .text-warning .text-danger</h2>
+            <p>Use the contextual classes to provide "meaning through colors":</p>
+            <p class="text-muted">This text is muted.</p>
+            <p class="text-primary">This text is important.</p>
+            <p class="text-success">This text indicates success.</p>
+            <p class="text-info">This text represents some information.</p>
+            <p class="text-warning">This text represents a warning.</p>
+            <p class="text-danger">This text represents danger.</p>
+        </div>
+    
+    	<div class="container">
+            <h2>Contextual Backgrounds: .bg-primary .bg-success .bg-info .bg-warning .bg-danger</h2>
+            <p>Use the contextual background classes to provide "meaning through colors":</p>
+            <p class="bg-primary">This text is important.</p>
+            <p class="bg-success">This text indicates success.</p>
+            <p class="bg-info">This text represents some information.</p>
+            <p class="bg-warning">This text represents a warning.</p>
+            <p class="bg-danger">This text represents danger.</p>
+        </div>
+        
+        <div class="container">
+        	<h1>.visible-??</h1>
+            <div class="visible-lg">
+                <p>This is only visible on lg screens</p>
+            </div>
+      	</div>
+        <div class="container">
+        	<h1>.hidden-??</h1>
+            <div class="hidden-xs">
+                <p>This is not visible on xs screens</p>
+            </div>
+       	</div>
+        
+        <div class="container">
+            <h1>.lead</h1>
+            <p class="lead">This paragraph stands out.</p>
+            <p>This is a regular paragraph.</p>
+        </div>        
+        
+        <div class="container">
+            <h1>.small</h1>
+            <p class="small">This paragraph is smaller.</p>
+            <p>This is a regular paragraph.</p>
+        </div>        
+        
+        <div class="container">
+        	<div class="col-lg-6" style="border:1px dotted #000">
+                <h1>.text-left .text-right .text-center .text-justify .text-nowrap</h1>
+                <p class="text-left">Left-aligned text.</p>
+                <p class="text-right">Right-aligned text.</p>      
+                <p class="text-center">Center-aligned text.</p>
+                <p class="text-justify">Justified text. Justified text. Justified text. Justified text. Justified text. Justified text. Justified text.</p>
+                <p class="text-nowrap">No wrap text. No wrap text. No wrap text. No wrap text. No wrap text. No wrap text. No wrap text. 
+                No wrap text.</p>
+           	</div>   
+        </div>        
+
+        <div class="container">
+            <h1>.text-lowercase .text-uppercase .text-capitalize</h1>
+            <p class="text-lowercase">Lowercased text.</p>
+            <p class="text-uppercase">Uppercased text.</p>      
+            <p class="text-capitalize">Capitalized text.</p>
+        </div>        
+        
+        <div class="container">
+            <h1>.list-unstyled <small>Removes the default list-style and left margin on list items (immediate children only - can be nested):</small></h1>
+            <ul class="list-unstyled">
+                <li>Coffee</li>
+                <li>Tea
+                    <ul>
+                        <li>Black tea</li>
+                        <li>Green tea</li>
+                    </ul>
+                </li>
+                <li>Milk</li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h1>.list-inline <small>Places all list items on a single line.</small></h1>
+                <ul class="list-inline">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+        </div>
+        
+        <div class="container">
+            <h1>.dl-horizontal <small>Use this class to line up the description list side-by-side when the browser window expands:</small></h1>
+                <dl class="dl-horizontal">
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+                </dl>     
+            <p><strong>Tip:</strong> Try to resize the browser window to see the behaviour of the description list.</p>      
+        </div>
+        
+        <div class="container">
+            <h1>.pre-scrollable</h1>    
+             
+            <p>For multiple lines of code, use the pre element:</p>
+            <pre>Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks.</pre>
+            
+            <p>If you add the .pre-scrollable class, the pre element gets a max-height of 350px and provides a y-axis scrollbar:</p>
+            <pre class="pre-scrollable">Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks.</pre>
+        </div>
+        
+        <div class="container">
+            <h2>.table <small>adds basic styling (light padding and only horizontal dividers) to a table:</small></h2>            
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        
+        <div class="container">
+            <h2>.table-striped <small>adds zebra-stripes to a table:</small></h2>            
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        
+        <div class="container">
+            <h2>.table-bordered <small>class adds borders to a table:</small></h2>            
+				<table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>        
+    	</div>
+        
+       	<div class="container">
+            <h2>.table-hover <small>class enables a hover state on table rows:</small></h2>            
+				<table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>        
+    	</div>
+        
+        <div class="container">
+            <h2>.table-condensed <small>class makes a table more compact by cutting cell padding in half:</small></h2>            
+				<table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>        
+    	</div>
+
+        <div class="container">
+            <h2>Contextual Classes</h2>
+            <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and 
+            .danger.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="success">
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                    </tr>
+                    <tr class="info">
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <h2>.table-responsive <small>class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on 
+            anything larger than 768px wide, there is no difference</small></h2>
+            <div class="table-responsive">          
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Anna</td>
+                            <td>Pitt</td>
+                            <td>35</td>
+                            <td>New York</td>
+                            <td>USA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    	<div class="container">
+          <h2>.img-rounded <small>class adds rounded corners to an image (not available in IE8):</small></h2>         
+          <img src="images/flower.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> 
+        </div>    
+        
+    	<div class="container">
+          <h2>.img-circle <small>class adds rounded corners to an image (not available in IE8):</small></h2>         
+          <img src="images/flower.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+        </div>    
+        
+    	<div class="container">
+          <h2>.img-thumbnail <small>class adds rounded corners to an image (not available in IE8):</small></h2>         
+          <img src="images/flower.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
+        </div>                            
+        
+        <div class="container">
+          <h2>Image</h2>
+          <p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+          <img class="img-responsive" src="images/flower2.jpg" alt="Chania" width="460" height="345"> 
+        </div>
+        
+        <div class="container">
+          <h2>Image Gallery</h2>
+          <p>The .thumbnail class can be used to display an image gallery. Click on the images to see it in full size:</p>            
+          <div class="row">
+            <div class="col-md-4">
+              <a href="images/protea.jpg" class="thumbnail">
+                <p>Protea</p>    
+                <img src="images/protea.jpg" alt="protea" style="width:150px;height:150px">
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="images/jacaranda.jpg" class="thumbnail">
+                <p>Jacaranda</p>
+                <img src="images/jacaranda.jpg" alt="jacaranda" style="width:150px;height:150px">
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="images/tulip.jpg" class="thumbnail">
+                <p>Tulip.</p>      
+                <img src="images/tulip.jpg" alt="tulip" style="width:150px;height:150px">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container">
+          <h2>Responsive Embed</h2>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xcoF7r3x0XI"></iframe>
+          </div>
+        </div>
+        
+        <!--16:9 aspect ratio-->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/V-G9Qfau6GA"></iframe>
+        </div>
+        
+        <!--4:3 aspect ratio-->
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/nsVGhnZz6GM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <div class="container">
+      		<div class="row">
+            	<div class="col-sm-6">
+              		<h2>16:9 Responsive Aspect Ratio</h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+                    </div>
+                </div>         
+        		<div class="col-sm-6">
+  					<h2>4:3 Responsive Aspect Ratio</h2>
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+                        </div>
+                </div>
+          	</div>
+        </div>
+        
+        <div class="container">
+        	<h2>.jumbotron <small>can be put into .container if we dont want it to extend over the edges.</small></h2>
+            <div class="jumbotron">
+                <h1>Bootstrap Tutorial</h1> 
+                <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p> 
+            </div>
+            <p>This is some text.</p> 
+            <p>This is another text.</p> 
+        </div>
+        
+        <div class="container">
+	        <h2>.jumbotron <small>must be put outside all .container if we want it to extend over the edges.</small></h2>
+       	</div>
+        <div class="jumbotron">
+            <h1>Bootstrap Tutorial</h1> 
+            <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p> 
+        </div>
+        <div class="container">
+            <p>This is some text.</p> 
+            <p>This is another text.</p> 
+        </div>
+        
+        <div class="container">
+        	<h2>.page-header <small>class adds a horizontal line under the heading (+ adds some extra space around the element):</small></h2>
+            <div class="page-header">
+                <h1>Example Page Header</h1>      
+            </div>
+            <p>This is some text.</p>      
+            <p>This is another text.</p>      
+        </div>
+        
+        <div class="container">
+            <h2>.well <small>class adds a rounded border around an element with a gray background color and some padding:</small></h2>
+            <div class="well">Basic Well</div>
+        </div>
+        
+        <div class="container">
+            <h2>Well Size</h2>
+            <div class="well well-sm">.well well-sm</div>
+            <div class="well">.well</div>
+            <div class="well well-lg">well well-lg</div>
+        </div>      
+        
+        <div class="container">
+            <h2>.alerts <small>are created with the .alert class, followed by one of the four contextual classes </small>.alert-success, .alert-info, 
+            .alert-warning <small>or </small>.alert-danger:</h2>
+            <div class="alert alert-success">
+                <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div>
+            <div class="alert alert-info">
+                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+            </div>
+            <div class="alert alert-warning">
+                <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+            </div>
+            <div class="alert alert-danger">
+                <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+            </div>
+        </div>
+          
+        <div class="container">
+            <h2><small>The </small>a <small>element with </small>class="close" <small>and </small>data-dismiss="alert" <small>is used to close the alert box.
+            <br>The </small>aria-label="close" <small>attribute is used to make area more accessible to people using screen readers</small></h2>
+            <div class="alert alert-success">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div>
+            <div class="alert alert-info">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+            </div>
+            <div class="alert alert-warning">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+            </div>
+            <div class="alert alert-danger">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+            </div>
+        </div>      
+        
+        <div class="container">
+            <h2><small>The </small>.fade <small>and </small>.in <small>classes adds a fading effect when closing the alert message. !!!NOTE: WHEN CLOSING!!!
+            </small></h2>
+            <div class="alert alert-success fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div>
+            <div class="alert alert-info fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+            </div>
+            <div class="alert alert-warning fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+            </div>
+            <div class="alert alert-danger fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+            </div>
+        </div>   
+
+        <div class="container">
+            <h2>Button Styles</h2>
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button>      
+        </div>              
+        
+        <div class="container">
+            <h2><small>Button Tags can be used on </small>a, button <small> and </small>input <small> elements</small></h2>
+            <a href="#" class="btn btn-info" role="button">Link Button</a>
+            <button type="button" class="btn btn-info">Button</button>
+            <input type="button" class="btn btn-info" value="Input Button">
+            <input type="submit" class="btn btn-info" value="Submit Button">
+        </div>
+        
+        <div class="container">
+          <h2>Button Sizes</h2>
+          <button type="button" class="btn btn-primary btn-lg">Large</button>
+          <button type="button" class="btn btn-primary btn-md">Medium</button>    
+          <button type="button" class="btn btn-primary btn-sm">Small</button>
+          <button type="button" class="btn btn-primary btn-xs">XSmall</button>
+        </div>
+       
+        <div class="container">
+        	<h2>.btn-block <small>to create a block level button:</small></h2>
+            <h4>Block Level Buttons</h4>
+            <button type="button" class="btn btn-primary btn-block">Button 1</button>
+            <button type="button" class="btn btn-default btn-block">Button 2</button>
+            
+            <h4>Large Block Level Buttons (.btn-lg)</h4>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Button 1</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">Button 2</button>
+            
+            <h4>Small Block Level Buttons (.btn-sm)</h4>
+            <button type="button" class="btn btn-primary btn-sm btn-block">Button 1</button>
+            <button type="button" class="btn btn-default btn-sm btn-block">Button 2</button>
+        </div>        
+        
+        <div class="container">
+            <h2>.active <small>and </small>.disabled:</h2>
+            <button type="button" class="btn btn-success">Primary Button</button>
+            <button type="button" class="btn btn-success active">Active Primary</button>
+            <button type="button" class="btn btn-success disabled">Disabled Primary</button>
+        </div>
+
+        <div class="container">
+            <h2>.btn-group <small>class can be used on a </small>div <small>to group series together on a single line.</small></h2>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.btn-group-** <small>to size all buttons in a button group.</small></h2>
+            <h3>Large Buttons:</h3>
+            <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+            <h3>Extra Small Buttons:</h3>
+            <div class="btn-group btn-group-xs">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>.btn-group-vertical <small>class creates a vertical button group:</small></h2>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.btn-group-justified <small>will cause the buttons to span the entire width of the screen</small></h2>
+            <div class="btn-group btn-group-justified">
+                <a href="#" class="btn btn-primary">Apple</a>
+                <a href="#" class="btn btn-primary">Samsung</a>
+                <a href="#" class="btn btn-primary">Sony</a>
+            </div>
+            <h2><small>Note:For </small><code>button</code> <small>elements, you must wrap each button in a </small>.btn-group 
+            <small>class:</small></h2>
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+	                <button type="button" class="btn btn-primary">Apple</button>
+                </div>
+                <div class="btn-group">
+    	            <button type="button" class="btn btn-primary">Samsung</button>
+                </div>
+                <div class="btn-group">
+        	        <button type="button" class="btn btn-primary">Sony</button>
+                </div>            
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>Nesting Button Groups</h2>
+            <p>Nest button groups to create drop down menus:</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Tablet</a></li>
+                            <li><a href="#">Smartphone</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Split Buttons</h2>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Sony</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Tablet</a></li>
+                        <li><a href="#">Smartphone</a></li>
+                    </ul>
+            </div>
+        </div>
+		
+        <div class="container">
+            <h2>.glyphicon <small>class must be used in conjunction with the </small>glyphicon-***** <small>class</small></h2>
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp">
+                        Complete glyph reference list
+                    </a>
+                </h4>
+            
+            <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>    
+            
+            <p>Envelope icon as a link:
+                <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+            </p>
+            
+            <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+            <p>Search icon on a button:
+            	<button type="button" class="btn btn-default">
+            		<span class="glyphicon glyphicon-search"></span> Search
+            	</button>
+            </p>
+            <p>Search icon on a styled button:
+            <button type="button" class="btn btn-info">
+            <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+            </p>
+           
+            <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>      
+            <p>Print icon on a styled link button:
+            	<a href="#" class="btn btn-success btn-lg">
+            		<span class="glyphicon glyphicon-print"></span> Print 
+           	 	</a>
+            </p> 
+        </div>
+        
+        <div class="container">
+            <h2><small>Use the </small>.badge <small>class within <code>span </code>elements to create badges:</small></h2>
+            <a href="#">News <span class="badge">5</span></a><br>
+            <a href="#">Comments <span class="badge">10</span></a><br>
+            <a href="#">Updates <span class="badge">2</span></a>
+            <h2><small>Badges can also be used inside other elements, such as buttons:</small></h2>
+              <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+              <button type="button" class="btn btn-success">Success <span class="badge">3</span></button>    
+              <button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>        
+        </div>
+        
+        <div class="container">
+            <h2><small>Use the </small>.label class,  <small>followed by one of the six contextual classes </small>.label-default, .label-primary, 
+            .label-success, .label-info, .label-warning <small>or </small>.label-danger, <small>within a <code>span </code>element to create a label:</small>
+            </h2>
+            <h1>Example <span class="label label-default">New</span></h1>
+            <h2>Example <span class="label label-default">New</span></h2>
+            <h3>Example <span class="label label-default">New</span></h3>
+            <h4>Example <span class="label label-default">New</span></h4>
+            <h5>Example <span class="label label-default">New</span></h5>
+            <h6>Example <span class="label label-default">New</span></h6>
+            <p>Contextual classes can also be used to colour the label:</p>  
+                <span class="label label-default">Default Label</span>
+                <span class="label label-primary">Primary Label</span>
+                <span class="label label-success">Success Label</span>
+                <span class="label label-info">Info Label</span>
+                <span class="label label-warning">Warning Label</span>
+                <span class="label label-danger">Danger Label</span>
+        </div>       
+
+        <div class="container">
+            <h2><small>To create a default progress bar, add a </small>.progress <small>class to a <code>div </code>element.</small></h2>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2><small>Remove the </small>.sr-only <small>class from the progress bar to show a visible percentage:</small></h2>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  70%
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+          	<h2><small>contextual classes that can be used with progress bars are:</small>.progress-bar-success, .progress-bar-info, .progress-bar-warning
+			.progress-bar-danger</h2>
+          	<p>The contextual classes colors the progress bars:</p> 
+          	<div class="progress">
+            	<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+              		40% Complete (success)
+            	</div>
+          	</div>
+          	<div class="progress">
+            	<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+              	50% Complete (info)
+            	</div>
+          	</div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    60% Complete (warning)
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                70% Complete (danger)
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>.progress-bar-striped <small>class adds stripes to the progress bars:</small></h2> 
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" 
+                aria-valuemax="100" style="width:40%">
+                    40% Complete (success)
+                </div>
+            </div>
+        </div>     
+        
+        <div class="container">
+        	<h2><small>Add class </small>.active <small>to animate the progress bar:</small></h2>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" 
+                style="width:40%">
+                	40%
+                </div>
+            </div>
+     	</div>
+        
+        <div class="container">
+            <h2><small>Create a stacked progress bar by placing multiple bars into the same div with class </small>.progress:</h2> 
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+                    Free Space
+                </div>
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%">
+                    Warning
+                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">
+                    Danger
+                </div>
+            </div>
+        </div>        
+
+        <div class="container">
+            <h2>.pagination <small>class provides pagination links:</small></h2>                  
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>        
+        
+        <div class="container">
+            <h2>.active <small>class lets the user know which page he/she is on:</small></h2>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>        
+        
+        <div class="container">
+            <h2><small>Add class </small>.disabled <small>if a page is disabled for some reason:</small></h2>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="disabled"><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h2><small>Add class </small>.pagination-lg <small>for larger blocks or .pagination-sm for smaller blocks:</small></h2>
+            <ul class="pagination pagination-lg">
+            	<li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <ul class="pagination pagination-sm">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h2>.pager <small>class provides previous and next buttons (links):</small></h2>                 
+            <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>        
+        
+        <div class="container">
+            <h2><small>The </small>.previous <small>and </small>.next <small>classes align each link to the sides of the page:</small></h2>                 
+            <ul class="pager">
+                <li class="previous"><a href="#">Previous</a></li>
+                <li class="next"><a href="#">Next</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+        	<h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp">
+                    Complete Bootstrap Navigation Reference
+                </a>.
+            </h4>
+       	</div>
+                 
+        <div class="container">
+            <h2><small>To create a basic list group, use an <code>ul</code> element with class </small>.list-group, <small>and <code>li</code> elements with 
+            class </small>.list-group-item:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">First item</li>
+                <li class="list-group-item">Second item</li>
+                <li class="list-group-item">Third item</li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h2>List Group With Badges</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><span class="badge">12</span> New</li>
+                <li class="list-group-item"><span class="badge">5</span> Deleted</li>  
+                <li class="list-group-item"><span class="badge">3</span> Warnings</li>  
+            </ul>
+        </div>
+        
+        <div class="container">
+        <h2><small>To create a list group with linked items, use <code>div</code> instead of <code>ul</code> and <code>a</code> instead of <code>li</code>:
+        </small></h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">First item</a>
+                <a href="#" class="list-group-item">Second item</a>
+                <a href="#" class="list-group-item">Third item</a>
+            </div>
+        </div>   
+        
+        <div class="container">
+            <h2><small>To disable an item, add the </small>.disabled <small>class:</small></h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item disabled">First item</a>
+                <a href="#" class="list-group-item">Second item</a>
+                <a href="#" class="list-group-item">Third item</a>
+            </div>
+        </div>
+        
+        <div class="container">
+        	<h2><small>The classes for coloring list-items are: </small>.list-group-item-success, list-group-item-info, list-group-item-warning, 
+            <small>and </small>.list-group-item-danger<small>:</small></h2>
+            <h2>List Group With Contextual Classes</h2>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">First item</li>
+                <li class="list-group-item list-group-item-info">Second item</li>
+                <li class="list-group-item list-group-item-warning">Third item</li>
+                <li class="list-group-item list-group-item-danger">Fourth item</li>
+            </ul>
+            <h2>Linked Items With Contextual Classes</h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-success">First item</a>
+                <a href="#" class="list-group-item list-group-item-info">Second item</a>
+                <a href="#" class="list-group-item list-group-item-warning">Third item</a>
+                <a href="#" class="list-group-item list-group-item-danger">Fourth item</a>
+            </div>
+        </div>        
+        
+        <div class="container">
+            <h2><small>Classes </small>.list-group-item-heading <small>and </small>.list-group-item-text <small>which can be used as follows:</small></h2>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+                </a>
+                
+                <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+                </a>
+                
+                <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                <p class="list-group-item-text">List Group Item Text</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>Panels are created with the </small>.panel <small>class, and content inside the panel has a </small>.panel-body <small>class:
+            </small></h2>
+            <div class="panel panel-default">
+                <div class="panel-body">A Basic Panel</div>
+            </div>
+        </div>
+      
+        <div class="container">
+            <h2>.panel-heading <small>class adds a heading to the panel:</small></h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel Heading</div>
+            	<div class="panel-body">Panel Content</div>
+            	<div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.panel-footer <small>class adds a footer to the panel:</small></h2>
+            <div class="panel panel-default">
+            	<div class="panel-body">Panel Content</div>
+            	<div class="panel-body">Panel Content</div>
+            	<div class="panel-footer">Panel Footer</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>To group many panels together, wrap a <code>div</code> with class </small>.panel-group <small>around them. 
+            This class also clears the bottom margin of each panel.</small></h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>To color the panel, use contextual classes (</small>.panel-default, .panel-primary, .panel-success, .panel-info, .panel-warning, 
+            <small>or </small>.panel-danger<small>):</small></h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel with panel-default class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Panel with panel-primary class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            
+                <div class="panel panel-success">
+                    <div class="panel-heading">Panel with panel-success class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-info">
+                    <div class="panel-heading">Panel with panel-info class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Panel with panel-warning class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Panel with panel-danger class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2><small>The </small>.dropdown <small>class is used to indicate a dropdown menu.</small></h2>
+            <h2><small>Use the </small>.dropdown-menu <small>class to actually build the dropdown menu.</small></h2>
+            <h2><small>To open the dropdown menu, use a <code>button</code> or <code>a</code> link with a class of </small>.dropdown-toggle 
+            <small>and </small>data-toggle="dropdown".</h2>                                       
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.divider <small>class is used to separate links inside the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.dropdown-header <small>class is used to add headers inside the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">Dropdown header 1</li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Dropdown header 2</li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>.disabled <small>class is used to disable an item in the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li class="disabled"><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2><small>Add the </small>.dropdown-menu-right <small>class to </small>.dropdown-menu <small>to right-align the dropdown menu:</small></h2>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example<span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>.dropup <small>class makes the dropdown menu expand upwards instead of downwards:</small></h2>
+            <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropup Example<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+		<div class="container">
+        	<h2 class="nb"><strong>Dropdown Accessibility</strong></h2>
+            <h2 class="nb">
+            	To help improve accessibility for people using screen readers, you should include the <code>role</code> and <code>aria-*</code> 
+                attributes, when creating a dropdown menu as shown in this next example:
+            </h2>
+            <p> </p>
+            <h2>.dropdown <small>class is used to indicate a dropdown menu.</small></h2>
+            <h2><small>Use the </small>.dropdown-menu <small>class to actually build the dropdown menu.</small></h2>                                         
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials<span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>        
+
+        <div class="container">
+            <h2><small>Collapsibles <code>button data-toggle="collapse" data-target="#demo"</code> are useful when you want to hide and show large amount of 
+            content:</small></h2>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+            <div id="demo" class="collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div class="explain">
+            	<h3>.collapse <small>class indicates a collapsible element (a <code>div</code> in our example); this is the content that will be shown or 
+                hidden with a click of a button.</small></h3>
+
+				<h3><small>To control (show/hide) the collapsible content, add the <code>data-toggle="collapse"</code> attribute to an <code>a</code> or a 
+                <code>button</code> element. Then add the <code>data-target="#id"</code> attribute to connect the button with the collapsible content 
+                (<code>div id="demo"</code>).</small></h3>
+
+				<h4><strong>Note: </strong>For <code>a</code> elements, you can use the <code>href</code> attribute instead of the <code>data-target</code> 
+                attribute:</h4>
+            </div>
+            <a href="#demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+                <div id="demo" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+        </div>
+        
+        <div class="container">
+            <h2><small>By default, the collapsible content is hidden. However, you can add the </small>.in <small>class to show the content by default:
+            </small></h2>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Simple collapsible</button>
+            <div id="demo2" class="collapse in">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>  
+        
+        <div class="container">
+            <h2>Collapsible Panel</h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">Panel Body</div>
+                        <div class="panel-footer">Panel Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        
+        <div class="container">
+            <h2>Collapsible List Group</h2>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">Collapsible list group</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">One</li>
+                            <li class="list-group-item">Two</li>
+                            <li class="list-group-item">Three</li>
+                        </ul>
+                        <div class="panel-footer">Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="container">
+            <h2>Accordion Example</h2>
+            <p><strong>Note:</strong> The <code>data-parent</code> attribute makes sure that all collapsible elements under the specified parent will be 
+            closed when one of the collapsible item is shown.</p>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+             	           <a data-toggle="collapse" data-parent="#accordion" href="#collapses1">Collapsible Group 1</a>
+                        </h4>
+                    </div>
+                    <div id="collapses1" class="panel-collapse collapse in">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+              	</div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapses2">Collapsible Group 2</a>
+                        </h4>
+                    </div>
+                    <div id="collapses2" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapses3">Collapsible Group 3</a>
+                        </h4>
+                    </div>
+                    <div id="collapses3" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>        
+        
+        <div class="container">
+        	<h4><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_collapse.asp">Bootstrap JS Collapse Reference</a></h4>
+       </div>
+
+        <div class="container">
+            <h2><small>Tabs are created with <code>ul class="nav nav-tabs"</code>:</small></h2>
+            <h3><small><strong>Tip:</strong> Also mark the current page with <code>li class="active"</code>.</small></h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Tabs With Dropdown Menu</h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1-1</a></li>
+                            <li><a href="#">Submenu 1-2</a></li>
+                            <li><a href="#">Submenu 1-3</a></li>                        
+                        </ul>
+                </li>
+                <li>
+                	<a href="#">Menu 2</a>
+                </li>
+                <li>
+                	<a href="#">Menu 3</a>
+                </li>
+            </ul>
+        </div>        
+
+        <div class="container">
+            <h3><small>Pills are created in <code>ul</code> using </small>.nav-pills<small>. Also mark the current page with <code>li class="active"</code>:7
+            </small></h3>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3><small>Add </small>.nav-stacked <small>to stack vertically.</small></h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Vertical Pills</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-md-3"> 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="col-md-3"> 
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-lg"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h3>Pills With Dropdown Menu</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenu 1-1</a></li>
+                        <li><a href="#">Submenu 1-2</a></li>
+                        <li><a href="#">Submenu 1-3</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Centered Tabs</h3>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+            <br>
+            <h3>Centered Pills</h3>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+        </div>
+               
+        <div class="container">
+            <h2>Dynamic Tabs</h2>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>HOME</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                    <h3>Menu 3</h3>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Dynamic Pills</h2>
+            <ul class="nav nav-pills">
+                <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>HOME</h3>
+                    <p>This example will only work if you change the dynamic tabs example into a comment.</p>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                    <h3>Menu 3</h3>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container">
+        	<h4><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp" target="_blank">Bootstrap Navigation Reference.</a></h4>
+       	</div>
+        
+        <div class="container">
+        	<h4><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_tab.asp" target="_blank">Bootstrap JS Tab Reference.</a></h4>
+       	</div>
+        
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                	<a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Basic Navbar Example</h3>
+            <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                	<a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Basic Navbar Example</h3>
+            <p>An inverted navbar is black instead of gray.</p>
+        </div>
+        
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -39,71 +1765,1067 @@
                     </div>
                 </div>
             </div>
-   		</nav>    
-        <div class="container" style="margin-top:100px">
-<!-- InstanceBeginEditable name="content" -->
-    <h3>BS GET STARTED</h3>
-    
-    <p>The below is a cheat sheet for setting up the html page for using Bootstrap. However, it is good practice to make sure that the below 
-    libaries are the most recent.</p>
-     
-    <em><strong>&lt;!DOCTYPE html&gt;<br>
-    &lt;html lang=&quot;en&quot;&gt;<br>
-    &nbsp; &lt;head&gt;<br>
-    &nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;utf-8&quot;&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Makes site responsive on mobiles --&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Latest compiled and minified CSS --&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;
-    http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;<br>
-    &nbsp; &lt;/head&gt;<br>
-    &nbsp; &lt;body&gt;<br>
-    &nbsp;&nbsp;&nbsp;&lt;!-- jQuery library --&gt;<br>
-    &nbsp;&nbsp;&nbsp;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;<br>
-    &nbsp;&nbsp;&nbsp;&lt;!-- Latest compiled JavaScript --&gt;<br>
-    &nbsp;&nbsp;&nbsp;&lt;script src=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;<br>
-    &nbsp; &lt;/body&gt;<br>
-    &lt;/html&gt;</strong></em>
-    
-    <h3>BS Grid Basic</h3>
-    
-    <ul>The Bootstrap grid system has four classes:
-    	<li>xs (for phones)</li>
-        <li>sm (for tablets)</li>
-        <li>md (for desktops)</li>
-        <li>lg (for larger desktops)</li>
-   	</ul>
-    
-    <p>Choosing a class will cause all bigger screens to scale up the coloumns and all smaller screens to stack the coloumns on top of each 
-    other. However they neet to be in the same "row" div.</p>
-    
-    <p>The following is a basic structure of a Bootstrap grid:</p>
-    
-	<em><strong>&lt;div class=&quot;row&quot;&gt;<br>
-    &nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class=&quot;row&quot;&gt;<br>
-    &nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
-    &nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
-    &nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class=&quot;row&quot;&gt;<br>
-    &nbsp; ...<br>
-    &lt;/div&gt;</strong></em>
-    
-    <h3>BS Typography</h3>
-    
-    <p> The "small" tag is used to make a lighter secondary heading in a "H*" tag.</p>
-    <em><strong>&lt;h3&gt;This is a heading &lt;small&gt;with a small tag.&lt;/small&gt;&lt;/h3&gt;</strong></em>
-    <br><br><br>
-    <p>The "mark" tag is used to highlight words</p>
-    <em><strong>Use the mark element to &lt;mark&gt;highlight&lt;/mark&gt; text.</strong></em>
-    <br><br><br>
-    <p>The "abbr" tag is used to label abbriviations in text<p>
-    <em><strong>
-    <br><br><br>
-    <br><br><br>    
-<!-- InstanceEndEditable -->
-		</div>       
-</body>
-<!-- InstanceEnd --></html>
+        </nav>
+        <div class="container">
+            <h3>Fixed Navbar</h3>
+            <h1 style="color:#F00">See Hosken's code navbar at the top of the screen.</h1>
+        </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+        <div class="container">
+            <h3>Fixed Navbar</h3>
+            <h1 style="color:#F00">See navbar at the bottom of the screen.</h1>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Navbar With Dropdown</h3>
+            <p>This example adds a dropdown menu for the "Page 1" button in the navigation bar.</p>
+        </div>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Right Aligned Navbar</h3>
+            <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Collapsible Navbar</h3>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner 
+            (try to re-size this window).</p>
+            <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+        </div>
+
+        <div class="container">
+            <h2>Vertical (basic) form</h2>
+            <form role="form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>    
+        
+        <div class="container">
+            <h2>Inline form</h2>
+            <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>        
+
+        <div class="container">
+            <h2>Inline form with .sr-only class</h2>
+            <p>If you don't include a label for every input, screen readers will have trouble with your forms. You can hide the labels for all devices, 
+            except screen readers, by using the .sr-only class. Make the viewport larger than 768px wide to see that all of the form elements are inline, 
+            left aligned, and the labels are alongside.</p>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Horizontal form</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">          
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>        
+
+        <div class="container">
+            <h2>Form control: input</h2>
+            <p>The form below contains two input elements; one of type text and one of type password:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Form control: textarea</h2>
+            <p>The form below contains a textarea for comments:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Form control: checkbox</h2>
+            <p>The form below contains three checkboxes. The last option is disabled:</p>
+            <form role="form">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Option 1</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Option 2</label>
+                </div>
+                <div class="checkbox disabled">
+                    <label><input type="checkbox" value="" disabled>Option 3</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Form control: inline checkbox</h2>
+            <p>The form below contains three inline checkboxes:</p>
+            <form role="form">
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 2
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="">Option 3
+                </label>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Form control: radio buttons</h2>
+            <p>The form below contains three radio buttons. The last option is disabled:</p>
+            <form role="form">
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Option 1</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Option 2</label>
+                </div>
+                <div class="radio disabled">
+                    <label><input type="radio" name="optradio" disabled>Option 3</label>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Form control: inline radio buttons</h2>
+            <p>The form below contains three inline radio buttons:</p>
+            <form role="form">
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">Option 3
+                </label>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Form control: select</h2>
+            <p>The form below contains two dropdown menus (select lists):</p>
+            <form role="form">
+                <div class="form-group">
+                <label for="sel1">Select list (select one):</label>
+                <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <br>
+                <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+                <select multiple class="form-control" id="sel2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                </div>
+            </form>
+        </div>   
+        
+        <div class="container">
+        <h2>Horizontal form with static control</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">someone@example.com</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">          
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+      	<div class="container">
+        	<h2>Bootstrap Form Control States</h2>
+            <ul>
+            	<li>INPUT FOCUS - The outline of the input is removed and a box-shadow is applied on focus</li>
+            	<li>DISABLED INPUTS - Add a disabled attribute to disable an input field</li>
+            	<li>DISABLED FIELDSETS - Add a disabled attribute to a fieldset to disable all controls within</li>
+            	<li>READONLY INPUTS - Add a readonly attribute to an input to prevent user input</li>
+            	<li>VALIDATION STATES - Bootstrap includes validation styles for error, warning, and success messages. To use, add .has-warning, .has-error, 
+                or .has-success to the parent element</li>
+            	<li>ICONS - You can add feedback icons with the .has-feedback class and an icon</li>
+            	<li>HIDDEN LABELS - Add a .sr-only class on non-visible labels</li>
+			</ul>
+         	<br>
+            <h2>Horizontal form: control states</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Focused</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" value="Click to focus...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">Disabled</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                    </div>
+                </div>
+                <fieldset disabled>
+                    <div class="form-group">
+                        <label for="disabledTextInput" class="col-sm-2 control-label">Disabled input and select list (Fieldset disabled)</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledSelect" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <select id="disabledSelect" class="form-control">
+                            <option>Disabled select</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSuccess">
+                            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputWarning">
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputError">
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+            </form>
+     	</div>
+
+        <div class="container">
+            <h2>Inline form: control states</h2>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="focusedInput">Focused</label>
+                    <input class="form-control" id="focusedInput" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Disabled</label>
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                </div>
+                <div class="form-group has-success has-feedback">
+                    <label for="inputSuccess2">Input with success</label>
+                    <input type="text" class="form-control" id="inputSuccess2">
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label for="inputWarning2">Input with warning</label>
+                    <input type="text" class="form-control" id="inputWarning2">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label for="inputError2">Input with error</label>
+                    <input type="text" class="form-control" id="inputError2">
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Input Sizing</h2>
+            <p>The form below shows input elements with different heights using .input-lg and .input-sm:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="inputdefault">Default input</label>
+                    <input class="form-control" id="inputdefault" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputlg">input-lg</label>
+                    <input class="form-control input-lg" id="inputlg" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">input-sm</label>
+                    <input class="form-control input-sm" id="inputsm" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Default select list</label>
+                    <select class="form-control" id="sel1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel2">input-lg</label>
+                    <select class="form-control input-lg" id="sel2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel3">input-sm</label>
+                    <select class="form-control input-sm" id="sel3">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </form>
+        </div>        
+        
+        <div class="container">
+            <h2>Input Sizing</h2>
+            <p>You can quickly size labels and form controls within a Horizontal form by adding .form-group-lg or .form-group-sm to the div 
+            class="form-group" element:</p>
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label" for="lg">form-group-lg</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="lg">
+                    </div>
+                </div>
+                <div class="form-group form-group-sm">
+                    <label class="col-sm-2 control-label" for="sm">form-group-sm</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="sm">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Column Sizing</h2>
+            <p>The form below shows input elements with different widths using different .col-xs-* classes:</p>
+            <form role="form">
+                <div class="form-group">
+                    <div class="col-xs-2">
+                    <label for="ex1">col-xs-2</label>
+                    <input class="form-control" id="ex1" type="text">
+                	</div>
+                    <div class="col-xs-3">
+                        <label for="ex2">col-xs-3</label>
+                        <input class="form-control" id="ex2" type="text">
+                    </div>
+                    <div class="col-xs-4">
+                        <label for="ex3">col-xs-4</label>
+                        <input class="form-control" id="ex3" type="text">
+                    </div>
+                    </div>
+            </form>
+        </div>
+        
+        <div class="container">
+            <h2>Help text</h2>
+            <p>Use the .help-block class to add a block level help text in forms:</p>
+            <form role="form">
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    <span class="help-block">This is some help text that breaks onto a new line and may extend more than one line.</span>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>        
+        
+        <div class="container">
+        	<h2>Create a Carousel</h2>
+            <br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/flower.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Flower 1</h3>
+                            <p>This is flower 1.</p>
+                        </div>
+                    </div>
+            
+                    <div class="item">
+                        <img src="images/flower2.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Flower 2</h3>
+                            <p>This is flower 2.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/jacaranda.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Jacaranda</h3>
+                            <p>This is a Jacaranda.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/protea.jpg" alt="Flower" width="460" height="467">
+                        <div class="carousel-caption">
+                            <h3>Protea</h3>
+                            <p>This is a Protea.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+            <h2>Example Explained</h2>
+            <strong>The outermost <code>div</code>:</strong>
+            
+            <p>Carousels require the use of an id (in this case id="myCarousel") for carousel controls to function properly.</p>
+            
+            <p>The class="carousel" specifies that this <code>div</code> contains a carousel.</p>
+            
+            <p>The .slide class adds a CSS transition and animation effect, which makes the items slide when showing a new item. Omit this class if you do 
+            not want this effect.</p>
+            
+            <p>The data-ride="carousel" attribute tells Bootstrap to begin animating the carousel immediately when the page loads.</p>
+            
+            <strong>The "Indicators" part:</strong>
+            
+            <p>The indicators are the little dots at the bottom of each slide (which indicates how many slides there is in the carousel, and which slide the 
+            user are currently viewing).</p>
+            
+            <p>The indicators are specified in an ordered list with class .carousel-indicators.</p>
+            
+            <p>The data-target attribute points to the id of the carousel.</p>
+            
+            <p>The data-slide-to attribute specifies which slide to go to, when clicking on the specific dot.</p>
+            
+            <strong>The "Wrapper for slides" part:</strong>
+            
+            <p>The slides are specified in a <code>div</code> with class .carousel-inner.</p>
+            
+            <p>The content of each slide is defined in a <code>div</code> with class .item. This can be text or images.</p>
+            
+            <p>The .active class needs to be added to one of the slides. Otherwise, the carousel will not be visible.</p>
+            
+            <strong>The "Left and right controls" part:</strong>
+            
+            <p>This code adds "left" and "right" buttons that allows the user to go back and forth between the slides manually.</p>
+            
+            <p>The data-slide attribute accepts the keywords "prev" or "next", which alters the slide position relative to its current position.</p>        
+        </div>        
+        
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp">
+                        Complete carousel reference list
+                    </a>
+                </h4>
+		</div>        
+
+        <div class="container">       
+            <h2>The Carousel Plugin Classes</h2>
+            <table class="w3-table-all notranslate">
+              <tr>
+                <th style="width:30%;">Class</th>
+                <th style="width:70%;">Description</th>
+              </tr>
+              <tr>
+                <td>.carousel</td>
+                <td>Creates a carousel</td>
+              </tr>
+              <tr>
+                <td>.slide</td>
+                <td>Adds a CSS transition and animation effect when sliding from one item to 
+                the next. Remove this class if you do not want this effect</td>
+              </tr>
+              <tr>
+                <td>.carousel-indicators</td>
+                <td>Adds indicators for the carousel. These are the 
+                little dots at the bottom of each slide (which indicates how many slides 
+                there are in the carousel, and which slide the user are currently viewing)</td>
+              </tr>
+              <tr>
+                <td>.carousel-inner</td>
+                <td>Adds slides to the carousel</td>
+              </tr>
+              <tr>
+                <td>.item</td>
+                <td>Specifies the content of each slide</td>
+              </tr>
+              <tr>
+                <td>.left carousel-control</td>
+                <td>Adds a left button to the carousel, which allows the user to go back 
+                between the slides</td>
+              </tr>
+              <tr>
+                <td>.right carousel-control</td>
+                <td>Adds a right button to the carousel, which allows the user to go forward 
+                between the slides</td>
+              </tr>
+              <tr>
+                <td>.carousel-caption</td>
+                <td>Specifies a caption for the carousel</td>
+              </tr>
+            </table>
+		</div>
+        
+        <div class="container">
+        	<h2>Via data-* Attributes</h2>
+            <p>The <code>data-ride="carousel"</code> attribute activates the carousel.</p>
+            <p>The <code>data-slide</code> and <code>data-slide-to</code> attributes specifies which slide to go to.</p>
+            <p>The <code>data-slide</code> attribute accepts two values: <strong>prev</strong> or <strong>next</strong>, while <code>data-slide-to</code> 
+            accept numbers.</p>
+       	</div>
+        
+        <div class="container">
+            <h2>Via JavaScript</h2>
+            <p>Enable manually with Javascript in bootstrap_eg_carousel.js file. <strong>I have no idea what they mean by "enable manually".</strong></p>
+        </div>
+
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp">
+                        More info on carousel options, methods and events.
+                    </a>
+                </h4>
+		</div>        
+        
+        <div class="container">
+            <h2>Modal Example</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Some text in the modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p>Some text in the modal footer.</p>                            	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+
+                    <h3>Example Explained</h3>
+                    
+                    <p><strong>The &quot;Trigger&quot; part:</strong></p>
+                    <p>To trigger the modal window, you need to use a button or a link.</p>
+                    <p>Then include the two data-* attributes: </p>
+                    <ul>
+                        <li><code>data-toggle=&quot;modal&quot;</code> opens the modal window</li>
+                        <li><code>data-target=&quot;#myModal&quot;</code> points to the id of the modal</li>
+                    </ul>
+                    
+                    <p><strong>The &quot;Modal&quot; part:</strong></p>
+                    <p>The parent <code>&lt;div&gt;</code> of the modal must have an ID that is the same as the value of the data-target attribute used to 
+                    trigger the modal (&quot;myModal&quot;).</p>
+                    <p>The <code>.modal</code> class identifies the content of <code>&lt;div&gt;</code> as a modal and brings focus to it.</p>
+                    <p>The <code>.fade</code> class adds a transition effect which fades the modal in and out. Remove this class if you do not want this 
+                    effect.</p>
+                    <p>The attribute <code>role=&quot;dialog&quot;</code> improves accessibility for people using screen readers.</p>
+                    <!-- <p><code>aria-labelledby</code> and <code>aria-hidden</code> are used for accessibility. </p>-->
+                    <p>The <code>.modal-dialog</code> class sets the proper width and margin of the modal.</p>
+                    
+                    <p><strong>The &quot;Modal content&quot; part:</strong></p>
+                    <p>The <code>&lt;div&gt;</code> with <code>class=&quot;modal-content</code>&quot; styles the modal (border, background-color, etc.). 
+                    Inside this <code>&lt;div&gt;</code>, add the modal's header, body, and footer.</p>
+                    
+                    <p>The <code>.modal-header</code> class is used to define the style for the header of the modal. The <code>&lt;button&gt;</code> inside 	
+                    the header has a <code>data-dismiss=&quot;modal&quot;</code> attribute which closes the modal if you click on it. The <code>.close</code> 					class styles the close button, and the <code>.modal-title</code> class styles the header with a proper line-height.</p>
+                    <p>The <code>.modal-body</code> class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, 
+                    images, videos, etc.</p>
+                    <p>The <code>.modal-footer</code> class is used to define the style for the footer of the modal. Note that this area is right aligned by 
+                    default.</p>          
+  			</div>        
+        
+        <div class="container">
+            <h2>Small Modal </h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Open Small Modal</button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a small modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Large Modal</h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Open Small Modal</button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a large modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp">
+                     	Complete Bootstrap JS Modal Reference
+                    </a>
+                </h4>
+		</div>        
+
+        <div class="container">
+            <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+		</div>        
+
+        <div class="container">
+            <h3>Tooltip Example <small>This isn't working properly</small></h3>
+            <p>The data-placement attribute specifies the tooltip position.</p>
+            <ul class="list-inline">
+                <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+                <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+            </ul>
+         	<p><strong>Tip: </strong>You can also use the data-placement attribute with a value of &quot;auto&quot;, which will let the browser decide the 
+            position of the tooltip. For example, if the value is &quot;auto left&quot;, the tooltip will display on the left side when possible, otherwise 
+            on the right.</p>
+        </div>    
+
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_tooltip.asp">
+                     	Complete Bootstrap JS Tooltip Reference
+                    </a>
+                </h4>
+		</div>        
+
+        <div class="container">
+            <h3>Popover Example</h3>
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+            <p><strong>This wont work without the popover.js script</strong></p>
+            <p>*** Need to work out how to stop the page jumping ***</p>
+        </div>
+
+        <div class="container">
+            <h3>Popover Example</h3>
+            <ul class="list-inline">
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Top</a></li>
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</a></li>
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Left</a></li>
+                <li><a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Right</a></li>
+            </ul>
+            <p><strong>Tip: </strong>You can also use the data-placement attribute with a value of &quot;auto&quot;, which will let the browser decide the 
+            position of the popover. For example, if the value is &quot;auto left&quot;, the popover will display on the left side when possible, otherwise 
+            on the right.</p>
+        </div>
+        
+        <div class="container">
+            <h3>Closing Popovers</h3>
+            <p>By default, the popover is closed when you click on the element again. However, you can use the <code>data-trigger="focus"</code> attribute 
+            which will close the popover when clicking outside the element:</p>
+            <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this 
+            popover">Click me</a>
+        </div>
+        
+        <div class="container">
+            <h3>Hover Popover</h3>
+            <p>If you want the popover to be displayed when you move the mouse pointer over the element, use the data-trigger attribute with a value of 
+            "hover":</p>
+            <a href="#" title="Header" data-toggle="popover" data-content="Some content">Click Me</a><br>
+            <a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">Hover over me</a>
+        </div>        
+        
+        <div class="container">
+           		<h4>
+                    <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp">
+                     	Complete Bootstrap JS Popover Reference
+                    </a>
+                </h4>
+		</div>        
+        
+<!---------------For the following scrollspy example to work in your own code, you will need to change the <body> tag to:
+				<body data-spy="scroll" data-target=".navbar" data-offset="50">
+                Also need to include scrollspy_hor.css-->
+        
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="margin-top:50px">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#section1">Section 1</a></li>
+                            <li><a href="#section2">Section 2</a></li>
+                            <li><a href="#section3">Section 3</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#section41">Section 4-1</a></li>
+                                  <li><a href="#section42">Section 4-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>    
+        
+        <div id="section1" class="container-fluid">
+            <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section2" class="container-fluid">
+            <h1>Section 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section3" class="container-fluid">
+            <h1>Section 3</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section41" class="container-fluid">
+            <h1>Section 4 Submenu 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        <div id="section42" class="container-fluid">
+            <h1>Section 4 Submenu 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>DONT FORGET TO CHANGE THE BODY TAG AND ADD CSS</p>
+        </div>
+        
+        <div class="container">
+            <h3>Example Explained</h3>
+                <p>Add data-spy="scroll" to the element that should be used as the scrollable area (often this is the <code>body</code> element).</p>
+                <p>Then add the data-target attribute with a value of the id or the class name of the navigation bar (.navbar). This is to make sure that the
+                navbar is connected with the scrollable area.</p>
+                <p>Note that scrollable elements must match the ID of the links inside the navbar's list items (<code>div id="section1"</code> matches 
+                <code>a href="#section1"</code>).</p>
+                <p>The optional data-offset attribute specifies the number of pixels to offset from top when calculating the position of scroll. This is 
+                useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements
+                Default is 10 pixels.</p>
+                <strong>Requires relative positioning: The element with data-spy="scroll" requires the CSS position property, with a value of "relative" to 
+                work properly.</strong>
+		</div>        
+
+<!---------------For the following scrollspy example, you will need to change the <body> tag to:
+				<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+                Also need to include scrollspy_ver.css-->
+                
+		<div class="container">
+        	<h3>A vertical scrollspy is also available. However I dont believe there is a simple bootstrap code to have both on the same page therefore I 
+            have put the example inside a note in the same div as this sentence in the html of this page.</h3>
+            <h3>
+                <small>Alternatively it can be viewed here: 
+                    <a href="http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_scrollspy2&stacked=h"></a>
+                </small>
+            </h3>
+       	
+<!--    
+        <div class="container">
+            <div class="row">
+                <nav class="col-sm-3" id="myScrollspy">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#section1">Section 1</a></li>
+                        <li><a href="#section2">Section 2</a></li>
+                        <li><a href="#section3">Section 3</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section41">Section 4-1</a></li>
+                                <li><a href="#section42">Section 4-2</a></li>                     
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            <div class="col-sm-9">
+                <div id="section1">    
+                    <h1>Section 1</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                <div id="section2"> 
+                    <h1>Section 2</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>        
+                <div id="section3">         
+                    <h1>Section 3</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                <div id="section41">         
+                    <h1>Section 4-1</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>      
+                <div id="section42">         
+                    <h1>Section 4-2</h1>
+                    <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                </div>
+                </div>
+            </div>
+        </div>
+-->        
+        </div>
+        
+        <div class="container">
+            <h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_scrollspy.asp">
+                    Complete Bootstrap JS Scrollspy Reference
+                </a>
+            </h4>
+		</div>        
+        
+        <div class="container">
+        	<h4>There is also a plugin called "Affix" which, as the name suggests, affixes an emelement to a certain part of the screen when scrolling. 
+            Unfortunately, due to the nature of other plugins such as scrollspy and fixed navbar which are already running on this page, I cant add it to
+            this example page. For a working example and full explanation (including how to use it with scrollspy) please see:</h4>
+            <h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_affix.asp">
+                   Bootstrap Affix Plugin (Advanced)
+                </a>
+            </h4>
+            <h4>
+                <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_affix.asp">
+                    Complete Bootstrap JS Affix Reference
+                </a>
+            </h4>
+       	</div>
+        
+        
+        <br><br><br><br>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- manual navigation -->
+        <script src="js/bootstrap_eg_carousel.js"></script>
+        <!-- popover JS -->
+        <script src="js/bootstrap_eg_popover.js"></script>
+
+  	</body>
+</html>

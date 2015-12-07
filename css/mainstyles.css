@@ -14,6 +14,12 @@
 	font-weight:bold;
 }
 
+.container > div > h4,
+.container-fluid > div > h4 {
+	color:#000;
+	font-weight:bold;
+}
+
 ul > p {
 	margin:0px;
 }

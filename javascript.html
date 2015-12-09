@@ -652,1147 +652,1134 @@
       </table>
   	</div>
 
-            <div>
-            	<h3>JavaScript Data Types</h3>
-                <p>You can use the JavaScript <a href="javascript notes/typeof.html">typeof</a>
-                operator to find the type of a JavaScript variable:
-                <ul>
-                	<li>Strings <code>var answer = "He is called 'Johnny'";</code></li>
-                    <br>
-                    <li>Numbers <code>var x2 = 34;</code></li>
-                    <br>
-                    <li>Booleans <code>var x = true;</code></li>
-                    <br>
-                    <li>Arrays <code>var cars = ["Saab", "Volvo", "BMW"];</code>
-                    	<ul>
-                        	<li>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</li>
-                      </ul>
-                    </li>
-                    <br>
-                    <li>Objects <code>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</code>
-                    	<ul>
-                        	<li>Object properties are written as name:value pairs, separated by commas.</li>
-                      </ul>
-                    </li>
-               	</ul>
-           	</div>
-
-            <div>
-            	<h3>JavaScript Functions</h3>
-
-                <p>A JavaScript function is a block of code designed to perform a particular task when"something" invokes
-                it (calls it).</p>
-
-                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
-                Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
-                The parentheses may include parameter names separated by commas: (parameter1,  parameter2, ...).
-                The code to be executed, by the function, is placed inside curly brackets: {}</p>
-                <blockquote>
-                    <code>
-                        <p>function name(parameter1, parameter2, parameter3) {</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code to be executed</p>
-                        <p>}</p>
-                    </code>
-               	</blockquote>
-                <br>
-
-                <p>Function <span style="font-weight:bolder">parameters</span> are the names listed in the function definition.
-                Function <span style="font-weight:bolder">arguments</span> are the real values received by the function
-                when it is invoked. Inside the function, the arguments behave as local variables.</p>
-
-                <p>The code inside the function will execute when "something" invokes (calls) the function:</p>
-                <ul>
-					<li>When an event occurs (when a user clicks a button)</li>
-					<li>When it is invoked (called) from JavaScript code</li>
-					<li>Automatically (self invoked)</li>
-               	</ul>
-
-                <p>When JavaScript reaches a return statement, the function will stop executing. If the function was invoked
-                from a statement, JavaScript will "return" to execute the code after the invoking statement. Functions often
-                compute a return value. The return value is "returned" back to the "caller":</p>
-                <blockquote>
-                    <code>
-                        <p>var x = myFunction(4, 3);
-                        &nbsp;&nbsp;&nbsp;&nbsp;// Function is called, return value will end up in x</p>
-                        <p>function myFunction(a, b) {</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a * b;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Function returns the product of a and b</p>
-                        <p>}</p>
-                    </code>
-                    <br>
-                    <em>Result returns: 12</em>
-                </blockquote>
-				        <br>
-                <p>Functions are useful as they can be used many times with different arguments, to produce different results.</p>
-                <blockquote>
-                    <code>
-                        <p>function toCelsius(fahrenheit) {</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (5/9) * (fahrenheit-32);</p>
-                        <p>}</p>
-                        <p>document.getElementById("demo").innerHTML = toCelsius(77);</p>
-                    </code>
-                    <em>Result displays: 25</em>
-				</blockquote>
-                <p>Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result. Accessing a function without () will return the
-                  function definition:</p>
-				<blockquote>
-                    <code>
-                        <p>function toCelsius(fahrenheit) {</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (5/9) * (fahrenheit-32);</p>
-                        <p>}</p>
-                        <p>document.getElementById("demo").innerHTML = toCelsius;</p>
-                    </code>
-                    <em>Result displays: function toCelsius(f) { return (5/9) * (f-32); }</em>
-                </blockquote>
-
-                <p>You can use functions the same way as you use variables:</p>
-                <code>var text = "The temperature is " + toCelsius(77) + " Celsius";</code>
-                <br><br><br>
-           	</div>
-
-            <div>
-            	<h3>JavaScript Objects</h3>
-
-                <p>Objects are variables which contain many values. These values are written as <span style="font-weight:bolder">name:value</span> pairs which are called
-                <span style="font-weight:bolder">properties</span>.</p>
-                <blockquote><code>var car = {type:"Fiat", model:500, color:"white"};</code></blockquote>
-                <p>You can access object properties in two ways:</p>
-                <div class="row">
-                	<div class="col-sm-4">
-                        <blockquote><code class="middle">objectName.propertyName</code></blockquote>
-                	</div>
-                	<div class="col-sm-4">
-                        <p class="middle">or</p>
-                	</div>
-                	<div class="col-sm-4">
-                        <blockquote><code class="middle">objectName["propertyName"]</code></blockquote>
-                	</div>
-               	</div>
-                <p>See the <a href="javascript notes/objects.html">objects</a> page for working examples of both.</p>
-                <p>When a JavaScript variable is declared with the keyword "new", the variable is created as an object:</p>
-                <blockquote><code>var x = new thingymagingy;</code></blockquote>
-                <p>However avoid String, Number, and Boolean objects as they complicate your code and slow down execution speed.</p>
-                <blockquote style="background-color:#f00">
-                    <p><code>var x = new String();</code> &nbsp;&nbsp;&nbsp;&nbsp; <span class="noted">// Declares x as a String
-                    object</span></p>
-                    <p><code>var y = new Number();</code> &nbsp;&nbsp;&nbsp;&nbsp; <span class="noted">// Declares y as a Number
-                    object</span></p>
-                    <p><code>var z = new Boolean();</code> &nbsp;&nbsp;&nbsp; <span class="noted">// Declares z as a Boolean
-                    object</span></p>
-                </blockquote>
-          	</div>
-
-            <div>
-            	<h3>Object Methods</h3>
-                <p>Methods are actions that can be performed on objects. Methods are stored in properties as <span style="font-weight:bolder">function definitions</span>(see the
-                  last "property" of the example below).</p>
-                <blockquote>
-                	<code>
-                      <p>var name = {</p>
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstName:John,</p>
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastName:Doe,</p>
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age:50,</p>
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullName:function() {return this.firstName + " " + this.lastName;}</p>
-                      <p>}</p>
-                  </code>
-              	</blockquote>
-                <p>You access an object method with the following syntax:</p>
-                <blockquote><code>objectName.methodName()</code></blockquote>
-                <p>See the <a href="javascript notes/methods.html">methods</a> page for a working example.</p>
-          	</div>
-
-            <div>
-        				<h3>JavaScript Scope</h3>
-                    <p>In JavaScript, objects and functions are also variables. In JavaScript, scope is the set of variables, objects,and functions you have access to.</p>
-                    <br>
-                    <p>Variables declared within a JavaScript function, become LOCAL to the function. Local variables have local scope which means they can only be accessed within
-                      the function they were created:</p>
-                    <blockquote>
-                        <p class="noted">// code here can not use carName</p>
-                        <p>function myFunction() {</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;var carName = "Volvo";</p>
-                        <p class="noted">&nbsp;&nbsp;&nbsp;&nbsp;// code here can use carName</p>
-                        <p>}</p>
-                    </blockquote>
-                    <p>Local variables are created when a function starts, and deleted when the function is completed. Therefore variables of the same name can be used in different
-                      functions.</p>
-                    <br>
-                    <p>A variable declared outside a function, becomes GLOBAL. A global variable has global scope: All scripts and functions on a web page can access it.</p>
-                    <blockquote>
-                    	  <p> var carName = " Volvo";</p>
-    					          <p class="noted">// code here can use carName</p>
-                        <p>function myFunction() {</p>
-                        <p class="noted">&nbsp;&nbsp;&nbsp;;&nbsp;// code here can use	carName</p>
-                        <p>}</p>
-                   	</blockquote>
-                    <p>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable. This code example will declare carName as a
-                      global variable, even if it is executed inside a function:</p>
-                    <blockquote>
-                    	  <p class="noted">// code here can use carName</p>
-                        <p>function myFunction() {</p>
-                        <p>carName = "Volvo";</p>
-                        <p class="noted">&nbsp;&nbsp;&nbsp;;&nbsp;// code here can use carName</p>
-                       	<p>}</p>
-                  	</blockquote>
-                    <p>Function arguments (parameters) work as local variables inside functions.</p>
-                    <br>
-                    <h2 style="color:#306">With JavaScript, the global scope is the complete JavaScript environment but in HTML, the
-                    global scope is the window object: All global variables belong to the window object.</h2>
-                    <blockquote>
-                        <p class="noted">// code here can use window.carName</p>
-                        <p>function myFunction() {</p>
-                        <p>carName = "Volvo";</p>
-                        <p>}</p>
-                    </blockquote>
-                    <h2 style="color:#306">Your global variables (or functions) can overwrite window variables (or functions). Conversely, any function, including the window object,
-                      can overwrite your global variables and functions.</h2>
-         	  </div>
-
-            <div>
-            	<h3>Javascript Events</h3>
-                <p>An HTML event can be something the browser does, or something a user does. For example:</p>
-                <ul>
-                	<li>An HTML web page has finished loading.</li>
-        					<li>An HTML input field was changed.</li>
-        					<li>An HTML button was clicked.</li>
-               	</ul>
-                <p>JavaScript lets you execute code when events are detected.</p>
-                <p>HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.</p>
-        				<p>With single quotes:</p>
-        				<p>&lt;some-HTML-element some-event='some JavaScript'&gt;</p>
-        				<p>With double quotes:</p>
-        				<p>&lt;some-HTML-element some-event="some JavaScript"&gt;</p>
-                <blockquote>
-                	<p>JavaScript code changes the content of the element with id="demo".</p>
-                	<code>&lt;button onclick='getElementById("demo").innerHTML=Date()'&gt;The time is?&lt;/button&gt;</code>
-                  <code>&lt;p id="demo"&gt;&lt;/p&gt;</code>
-                 	<br><br><br>
-                  <p>JavaScript code changes the content of its own element (using this.innerHTML):</p>
-                  <code>&lt;button onclick="this.innerHTML=Date()"&gt;The time is?&lt;/button&gt;</code>
-               	</blockquote>
-                <p>However JavaScript code is often several lines long so it is more common to see event attributes calling functions:</p>
-                <blockquote>
-              	  <code>&lt;p&gt;Click the button to display the date.&lt;/p&gt;</code>
-        					<br><br>
-        					<code>&lt;button onclick="displayDate()"&gt;The time is?&lt;/button&gt;</code>
-        					<br><br>
-                  <code>&lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; function displayDate() {<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = Date();<br>
-                  &nbsp;&nbsp;&nbsp; }<br>
-                  &lt;/script&gt;</code>
-                  <br><br>
-                  <code>&lt;p id="demo"&gt;&lt;/p&gt;</code>
-              	</blockquote>
-                <h2>Common HTML Events</h2>
-                    <table style="width: 100%">
-                        <tr>
-                        	  <th>Event</th>
-                            <th>Description</th>
-                        </tr>
-                        <tr>
-                            <td>onchange</td>
-                            <td>An HTML element has been changed</td>
-                        </tr>
-                        <tr>
-                            <td>onclick</td>
-                            <td>The user clicks an HTML element</td>
-                        </tr>
-                        <tr>
-                            <td>onmouseover</td>
-                            <td>The user moves the mouse over an HTML element</td>
-                        </tr>
-                        <tr>
-                            <td>onmouseout</td>
-                            <td>The user moves the mouse away from an HTML element</td>
-                        </tr>
-                        <tr>
-                            <td>onkeydown</td>
-                            <td>The user pushes a keyboard key</td>
-                        </tr>
-                        <tr>
-                            <td>onload</td>
-                            <td>The browser has finished loading the page</td>
-                        </tr>
-                    </table>
-                <p>The list is much longer:
-                	  <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">W3Schools JavaScript Reference HTML DOM Events</a>.
-                </p>
-                <h2>What can JavaScript Do?</h2>
-                <p>Event handlers can be used to handle, and verify, user input, user actions, and browser actions:</p>
-                <ul>
-                    <li>Things that should be done every time a page loads.</li>
-                    <li>Things that should be done when the page is closed.</li>
-                    <li>Action that should be performed when a user clicks a button.</li>
-                    <li>Content that should be verified when a user inputs data.</li>
-                    <li>And more ...</li>
-                </ul>
-                <p>Many different methods can be used to let JavaScript work with events:</p>
-                <ul>
-                    <li>HTML event attributes can execute JavaScript code directly.</li>
-                    <li>HTML event attributes can call JavaScript functions.</li>
-                    <li>You can assign your own event handler functions to HTML elements.</li>
-                    <li>You can prevent events from being sent or being handled.</li>
-                    <li>And more ...</li>
-                </ul>
-         	  </div>
-
-            <div>
-          	  <h3>JavaScript Strings</h3>
-              <p>JavaScript strings are used for storing and manipulating text.</p>
-              <p>A JavaScript string simply stores a series of characters like "John Doe":</p>
-              <blockquote>
-                <code>
-              	  &lt;p id="demo"&gt;&lt;/p&gt;
-                  <br><br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; var dudesName = "John Doe";<br>
-                  &nbsp;&nbsp;&nbsp; var dudedetsName = "Jane Smith";
-                  <br><br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = dudesName + " and " + dudedetsName;<br>
-                  &lt;/script&gt;
-                </code>
-             	</blockquote>
-             	<p>The length of a string is found in the built in property length:</p>
-              <blockquote>
-                <code>
-                	&lt;p id="demo"&gt;&lt;/p&gt;
-                  <br><br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
-                  <br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = txt.length;<br>
-                  &lt;/script&gt;
-              	</code>
-            	</blockquote>
-              <p>To avoid JavaScript misunderstanding quotes in a string us the <b>\ escape symbol</b>:</p>
-              <blockquote>
-                <code>
-              	  &lt;p id="demo"&gt;&lt;/p&gt;
-                  <br><br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; var x = 'It\'s alright';<br>
-                  &nbsp;&nbsp;&nbsp; var y = "We are the so-called \"Vikings\" from the north.";<br>
-                  <br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;<br>
-                  &lt;/script&gt;
-              	</code>
-			        </blockquote>
-             	<p>The escape character (\) can also be used to insert other special characters in a string:</p>
-              <table>
-                <tr>
-                	<th>Code</th>
-                	<th>Outputs</th>
-                </tr>
-                <tr>
-                	<td>\'</td>
-                	<td>single quote</td>
-                </tr>
-                <tr>
-                 	<td>\&quot;</td>
-                	<td>double quote</td>
-                </tr>
-                <tr>
-                	<td>\\</td>
-                	<td>backslash</td>
-                </tr>
-                <tr>
-                	<td>\n</td>
-                	<td>new line</td>
-                </tr>
-                <tr>
-                	<td>\r</td>
-                	<td>carriage return</td>
-                </tr>
-                <tr>
-                	<td>\t</td>
-                	<td>tab</td>
-                </tr>
-                <tr>
-                	<td>\b</td>
-                	<td>backspace</td>
-                </tr>
-                <tr>
-                	<td>\f</td>
-                	<td>form feed</td>
-                </tr>
-              </table>
-              <br>
-              <p>You can also break up a code line within a text string with a single backslash:</p>
-              <blockquote>
-                <code>
-                	&lt;p id="demo"&gt;&lt;/p&gt;
-                  <br><br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "Hello \ <br>
-				          &nbsp;&nbsp;&nbsp; Dolly.";<br>
-                  &lt;/script&gt;
-              	</code>
-             	</blockquote>
-              <p>However not all browsers accept a space behind the \. It is safer (but also slower) to break a string using string addition:</p>
-              <blockquote>
-                <code>
-              	  &lt;p id="demo"&gt;&lt;/p&gt;
-                  <br><br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "Hello " +<br>
-				          &nbsp;&nbsp;&nbsp; "Polly.";<br>
-                  &lt;/script&gt;
-              	</code>
-             	</blockquote>
-              <p>Normally, JavaScript strings are primitive values, created from literals: <code>var firstName = "John"</code>. However strings can also be defined as objects with
-                the keyword new:<br> <code>var firstName = new String("John")</code>. This is rarely done as it slows down execution and can have some nasty side effects; see
-                below:</p>
-              <blockquote>
-                <code>
-              	  var x = "John";<br>
-                  var y = new String("John");
-               	</code>
-                <p>// (x == y) is true because x and y have equal values but (x === y) is not true because the === operator expects equality in both type and value.</p>
-                <br>
-                <code>
-                	var x = new String("John");<br>
-      						var y = new String("John");
-      					</code>
-      					<p>// (x == y) is false because x and y are different objects [objects can't be compared] but (x == x) is true because both are the same object.</p>
-             	</blockquote>
-              <h2>String Properties</h2>
-              <table>
-                <tr>
-                  <th style="width:24%">Property</th>
-                  <th>Description</th>
-                </tr>
-                <tr>
-                  <td>constructor</td>
-                  <td>Returns the function that created the String object's prototype</td>
-                </tr>
-                <tr>
-                  <td>length</td>
-                  <td>Returns the length of a string</td>
-                </tr>
-                <tr>
-                  <td>prototype</td>
-                  <td>Allows you to add properties and methods to an object</td>
-                </tr>
-              </table>
-              <h2>String Methods</h2>
-              <table>
-                <tr>
-                  <th style="width:24%">Method</th>
-                  <th>Description</th>
-                </tr>
-                <tr>
-                  <td>charAt()</td>
-                  <td>Returns the character at the specified index (position)</td>
-                </tr>
-                <tr>
-                  <td>charCodeAt()</td>
-                  <td>Returns the Unicode of the character at the specified index</td>
-                </tr>
-                <tr>
-                  <td>concat()</td>
-                  <td>Joins two or more strings, and returns a copy of the joined strings</td>
-                </tr>
-                <tr>
-                  <td>fromCharCode()</td>
-                  <td>Converts Unicode values to characters</td>
-                </tr>
-                <tr>
-                  <td>indexOf()</td>
-                  <td>Returns the position of the first found occurrence of a specified value in a string</td>
-                </tr>
-                <tr>
-                  <td>lastIndexOf()</td>
-                  <td>Returns the position of the last found occurrence of a specified value in a string</td>
-                </tr>
-                <tr>
-                  <td>localeCompare()</td>
-                  <td>Compares two strings in the current locale</td>
-                </tr>
-                <tr>
-                  <td>match()</td>
-                  <td>Searches a string for a match against a regular expression, and returns the matches</td>
-                </tr>
-                <tr>
-                  <td>replace()</td>
-                  <td>Searches a string for a value and returns a new string with the value replaced</td>
-                </tr>
-                <tr>
-                  <td>search()</td>
-                  <td>Searches a string for a value and returns the position of the match</td>
-                </tr>
-                <tr>
-                  <td>slice()</td>
-                  <td>Extracts a part of a string and returns a new string</td>
-                </tr>
-                <tr>
-                  <td>split()</td>
-                  <td>Splits a string into an array of substrings</td>
-                </tr>
-                <tr>
-                  <td>substr()</td>
-                  <td>Extracts a part of a string from a start position through a number of characters</td>
-                </tr>
-                <tr>
-                  <td>substring()</td>
-                  <td>Extracts a part of a string between two specified positions</td>
-                </tr>
-                <tr>
-                  <td>toLocaleLowerCase()</td>
-                  <td>Converts a string to lowercase letters, according to the host's locale</td>
-                </tr>
-                <tr>
-                  <td>toLocaleUpperCase()</td>
-                  <td>Converts a string to uppercase letters, according to the host's locale</td>
-                </tr>
-                <tr>
-                  <td>toLowerCase()</td>
-                  <td>Converts a string to lowercase letters</td>
-                </tr>
-                <tr>
-                  <td>toString()</td>
-                  <td>Returns the value of a String object</td>
-                </tr>
-                <tr>
-                  <td>toUpperCase()</td>
-                  <td>Converts a string to uppercase letters</td>
-                </tr>
-                <tr>
-                  <td>trim()</td>
-                  <td>Removes whitespace from both ends of a string</td>
-                </tr>
-                <tr>
-                  <td>valueOf()</td>
-                  <td>Returns the primitive value of a String object</td>
-                </tr>
-              </table>
-              <hr>
-
-              <h4>String HTML Wrapper Methods</h4>
-              <p>The HTML wrapper methods return the string wrapped inside the appropriate HTML tag. <span style="color:red">These are not standard methods, and may not work as
-                expected in all browsers.</span></p>
-			      </div>
-
-            <div>
-          	  <h3>JavaScript String Methods</h3>
-
-              <h4>Finding a String in a String</h4>
-              <p>The <b>indexOf()</b> method returns the index of (the position of) the first occurrence of a specified text in
-              a string.The <b>lastIndexOf()</b> method returns the index of the last occurrence of a specified text in a string:</p>
-              <blockquote>
-            	  <code>
-                  &lt;p id="p1"&gt;Please locate where 'locate' occurs!.&lt;/p&gt;<br>
-                  <br>
-                  &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
-                  <br>
-                  &lt;p id="demo1"&gt;&lt;/p&gt;<br>
-                  &lt;p id="demo2"&gt;&lt;/p&gt;<br>
-                  <br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; function myFunction() {<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = document.getElementById("p1").innerHTML;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var pos1 = str.indexOf("locate");<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var pos2 = str.lastIndexOf("locate");<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = pos1;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = pos2;<br>
-                  &nbsp;&nbsp;&nbsp; }<br>
-                  &lt;/script&gt;<br>
-             	  </code>
-            	</blockquote>
-              <p>JavaScript counts positions from zero. This means the first letter is counted as 0 and the second as 2.</p>
-              <p>Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.</p>
-              <p>Both methods accept a second parameter as the starting position for the search. ie
-             	<code>str.indexOf("locate", 8)</code></p>
-
-
-              <h4>Searching for a String in a String</h4>
-              <p>The <b>search()</b> method searches a string for a specified value and returns the position of the match. It is
-              very similar to the indexOf() method except it can take much more powerfull search values.</p>
-              <blockquote>
-            	  <code>
-                  &lt;p id="p1"&gt;Please locate where 'locate' occurs!.&lt;/p&gt;<br>
-                  <br>
-                  &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
-                  <br>
-                  &lt;p id="demo"&gt;&lt;/p&gt;<br>
-                  <br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; function myFunction() {<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = document.getElementById("p1").innerHTML;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var pos = str.search("locate");<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = pos;<br>
-                  &nbsp;&nbsp;&nbsp; }<br>
-                  &lt;/script&gt;<br>
-             	  </code>
-            	</blockquote>
-  		        <hr>
-
-              <h4>Extracting String Parts</h4>
-              <p>There are 3 methods for extracting a part of a string:</p>
-                <ul>
-                  <li>
-                  	<p><em>slice(start, end)</em></p>
-                  	<p>This method takes 2 parameters: the starting index (position), and the ending index (position). If a
-                      parameter is negative, the position is counted from the end of the string. If you omit the second
-                      parameter, the method will slice out the rest of the string:</p>
-                      <blockquote>
-                    	  <code>
-                          &lt;p id="demo1"&gt;&lt;/p&gt;<br>
-                          &lt;p id="demo2"&gt;&lt;/p&gt;<br>
-                          &lt;p id="demo3"&gt;&lt;/p&gt;<br>
-          								<br>
-          								&lt;script&gt;<br>
-                          &nbsp;&nbsp;&nbsp; var str = "Apple, Banana, Kiwi";<br>
-                          &nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = str.slice(7,13);<br>
-                          &nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = str.slice(-19,-14);<br>
-                          &nbsp;&nbsp;&nbsp; document.getElementById("demo3").innerHTML = str.slice(-4);<br>
-                          &lt;/script&gt;
-                        </code>
-                     	</blockquote>
-                  </li>
-                  <li>
-                  	<p><em>substring(start, end)</em></p>
-                  	<p>substring() is similar to slice() with the difference being that substring() cannot accept negative indexes.</p>
-                  </li>
-                  <li>
-                  	<p><em>substr(start, length)</em></p>
-                    <p>substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part. If the first parameter is negative,
-                      the position counts from the end of the string. The second parameter can not be negative, because it defines the length. If you omit the second parameter,
-                      substr() will slice out the rest of the string.</p>
-                    <blockquote>
-                  	  <code>
-                        &lt;p id="demo1"&gt;&lt;/p&gt;<br>
-        								<br>
-        								&lt;script&gt;<br>
-                        &nbsp;&nbsp;&nbsp; var str = "Apple, Banana, Kiwi";<br>
-                        &nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = str.substr(7,6);<br>
-                        &lt;/script&gt;
-                      </code>
-               	    </blockquote>
-                  </li>
-         		    </ul>
-    				  <hr>
-
-              <h4>Replacing String Content</h4>
-              <p>The replace() method replaces a specified value with another value in a string:</p>
-              <blockquote>
-              	<code>
-                  &lt;p&gt;Replace "Just Jinger" with "Jack Johnson" in the paragraph below:&lt;/p&gt;<br>
-			        	  <br>
-                  &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
-                  <br>
-                  &lt;p id="demo"&gt;I listen to Just Jinger!&lt;/p&gt;<br>
-                  <br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; function myFunction() {<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = document.getElementById("demo").innerHTML; <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var txt = str.replace("Just Jinger","Jack Johnson");<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = txt;<br>
-                  &nbsp;&nbsp;&nbsp; }<br>
-                  &lt;/script&gt;
-                </code>
-            	</blockquote>
-              <hr>
-
-              <h4>Converting to Upper and Lower Case</h4>
-              <p>A string is converted to upper case with <b>toUpperCase()</b> and to lower case with <b>toLowerCase()</b>:</p>
-              <blockquote>
-              	<code>
-                  &lt;p>Convert string to upper case:&lt;/p&gt;<br>
-                  <br>
-                  &lt;button onclick="myFunction()">Try it&lt;/button&gt;<br>
-                  <br>
-                  &lt;p id="demo1">Upper case me!&lt;/p&gt;<br>
-                  <br>
-                  &lt;p style="border-top:1px dotted #000">Convert string to lower case:&lt;/p&gt;<br>
-                  <br>
-                  &lt;button onclick="myOtherFunction()">Try it&lt;/button&gt;<br>
-                  <br>
-                  &lt;p id="demo2">Lower case me!&lt;/p&gt;<br>
-                  <br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; function myFunction() {<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var text1 = document.getElementById("demo1").innerHTML;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = text1.toUpperCase();<br>
-                  &nbsp;&nbsp;&nbsp; }<br>
-                  <br>
-                  &nbsp;&nbsp;&nbsp; function myOtherFunction() {<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var text2 = document.getElementById("demo2").innerHTML;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = text2.toLowerCase();<br>
-                  &nbsp;&nbsp;&nbsp; }<br>
-                  &lt;/script&gt;
-                </code>
-             	</blockquote>
-              <hr>
-
-              <h4>The concat() Method</h4>
-              <p><b>concat()</b> joins two or more strings and can be used instead of the plus operator. These two lines do the same:</p>
-              <blockquote>
-              	<code>
-                  &lt;p id="demo1"&gt;&lt;/p&gt;<br>
-                  &lt;p id="demo2"&gt;&lt;/p&gt;<br>
-                  <br>
-                  &lt;script&gt;<br>
-                  &nbsp;&nbsp;&nbsp; var text1 = "Hello";<br>
-                  &nbsp;&nbsp;&nbsp; var text2 = "World!";<br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = text1.concat(" ",text2);<br>
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = text1 + " " + text2;<br>
-                  &lt;/script&gt;
-               	</code>
-             	</blockquote>
-              <p>Strings cannot be changed, only replaced. Therefore all string methods return a new string (They don't modify the original string).</p>
-              <hr>
-
-              <h4>Extracting String Characters</h4>
-              <p>There are 2 safe methods for extracting string characters:</p>
-                <ul>
-                  <li>The <b>charAt()</b> Method:
-                    <p>The charAt() method returns the character at a specified index (position) in a string:</p>
-                    <blockquote>
-                      <code>
-                        &lt;p id="demo"&gt;&lt;/p&gt;<br />
-                        <br />
-                        &lt;script&gt;<br />
-                        &nbsp;&nbsp;&nbsp; var str = "HELLO WORLD";<br />
-                        &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = str.charAt(0);<br />
-                        &lt;/script&gt;
-                      </code>
-                    </blockquote>
-                  </li>
-                  <li>The <b>charCodeAt()</b> Method:
-                    <p>The charCodeAt() method returns the unicode of the character at a specified index in a string:</p>
-                    <blockquote>
-                      <code>
-                        &lt;p id="demo"&gt;&lt;/p&gt;<br />
-                        <br />
-                        &lt;script&gt;<br />
-                        &nbsp;&nbsp;&nbsp; var str = "HELLO WORLD";<br />
-                        &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = str.charCodeAt(0);<br />
-                        &lt;/script&gt;
-                      </code>
-                    </blockquote>
-                    <p>Check out this <a href="http://www.w3schools.com/charsets/ref_html_utf8.asp" target="_blank">Complete Unicode Referance</a>.</p>
-                  </li>
-                </ul>
-              <hr>
-
-              <h4>Accessing a String as an Array is Unsafe</h4>
-              <p>This is&nbsp;<strong>unsafe</strong>&nbsp;and&nbsp;<strong>unpredictable:</strong></p>
-                <ul>
-                  <li>It does not work in all browsers (not in IE5, IE6, IE7)</li>
-                  <li>It makes strings look like arrays (but they are not)</li>
-                  <li>str[0] = "H" does not give an error (but does not work)</li>
-                </ul>
-              <blockquote style="background-color:#f00">
-                <code>
-                  &lt;script&gt;<br />
-                  &nbsp;&nbsp;&nbsp; var str ="HELLO WORLD"<br />
-                  &nbsp;&nbsp;&nbsp; str[0];<br />
-                  &lt;/script&gt;
-                </code>
-              </blockquote>
-              <p>If you want to read a string as an array, convert it to an array first. (See below)</p>
-              <hr>
-
-              <h4>Converting a String to an Array</h4>
-              <p>A string can be converted to an array with the <strong>split()</strong> method:</p>
-              <blockquote>
-                <code>
-                  &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br />
-                  &lt;p id="demo"&gt;&lt;/p&gt;<br />
-                  &lt;script&gt;<br />
-                  &nbsp;&nbsp;&nbsp; function myFunction() {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var str = "a,b,c,d,e,f";<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var arr = str.split(",");<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  document.getElementById("demo").innerHTML = arr[0];<br />
-                  &nbsp;&nbsp;&nbsp; }<br />
-                  &lt;/script&gt;
-                </code>
-              </blockquote>
-              <p>If the separator is "", the returned array will be an array of single characters:</p>
-              <blockquote>
-                <code>
-                  &lt;p id="demo"&gt;&lt;/p&gt;<br />
-                  <br />
-                  &lt;script&gt;<br />
-                  &nbsp;&nbsp;&nbsp; var str = "Hello";<br />
-                  &nbsp;&nbsp;&nbsp; var arr = str.split("");<br />
-                  &nbsp;&nbsp;&nbsp; var text = "";<br />
-                  &nbsp;&nbsp;&nbsp; var i;<br />
-                  &nbsp;&nbsp;&nbsp; for (i = 0; i &lt; arr.length; i++) {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text += arr[i] + "&lt;br&gt;"<br />
-                  &nbsp;&nbsp;&nbsp; }<br />
-                  &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = text;<br />
-                   &lt;/script&gt;
-                </code>
-              </blockquote>
-
-              <h4>See the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">Complete String Reference</a>.</h4>
-            </div>
-
-            <div>
-              <h3>JavaScript Numbers</h3>
-
-              <p>JavaScript numbers can be written with, or without decimals.</p>
-              <p>Extra large or extra small numbers can be written with scientific (exponent) notation. ie. 123e5 = 1230000 and 123e-5 = 0.00123</p>
-              <p>JavaScript Numbers are Always 64-bit Floating Point are considered accurate up to 15 digits:</p>
-              <blockquote>
-                <code>
-                  <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                    &nbsp;&nbsp;&nbsp; function myFunction() {<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var x = 999999999999999; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="noted">\\returns 999999999999999</span><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var y = 9999999999999999;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="noted">\\returns 10000000000000000</span><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;<br />
-                    &nbsp;&nbsp;&nbsp; }<br />
-                    &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p>The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate but it helps to multiply and divide:</p>
-              <blockquote>
-                <code>
-                  <p>&lt;button onclick="myStandardFunction()"&gt;Try standard point arithmetic&lt;/button&gt;<br />
-                  &lt;button onclick="myDividedFunction()"&gt;Try * & /&lt;/button&gt;</p>
-                  <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
-                  &lt;p id="demo2"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; function myStandardFunction() {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; var x = 0.2 + 0.1;<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = "0.2 + 0.1 = " + x;<br />
-                  &nbsp;&nbsp; }</p>
-                  <p>&nbsp;&nbsp; function myDividedFunction() {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; var y = (0.2*10 + 0.1*10) / 10;<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + y;<br />
-                  &nbsp;&nbsp; }<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p>Numeric constants will be interperated as hexadecimal if they are preceded by <b>0x</b>:</p>
-              <blockquote>
-                <code>
-                  <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; function myFunction() {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "0xFF = " + 0xFF;<br />
-                  &nbsp;&nbsp;}<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p><b style="background-color:#F00; color:#FFF">Never write a number with a leading zero (like 07) as they may be interpreted as octal by some versions of JavaScript.
-              </b></p>
-              <p>By default, Javascript displays numbers as base 10 decimals. But you can use the <b>toString()</b> method to output numbers as base 16 (hex), base 8 (octal), or base
-                2 (binary):</p>
-              <blockquote>
-                <code>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; function myFunction() {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; var myNumber = 128;<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "128 = " + <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; myNumber + " Decimal, " +<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; myNumber.toString(16) + " Hexadecimal, " +<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; myNumber.toString(8) + " Octal, " +<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; myNumber.toString(2) + " Binary."<br />
-                  &nbsp;&nbsp; }<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <hr>
-
-              <h4>Infinity</h4>
-              <p>Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number. As will division by zero:</p>
-              <blockquote>
-                <code>
-                  <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; function myFunction() {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; var myNumber = 2; <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; var txt = "";<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; while (myNumber != Infinity) {<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myNumber = myNumber * myNumber;<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; txt = txt + myNumber + "&lt;br&gt;";<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; }<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = txt;<br />
-                  &nbsp;&nbsp; }<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p>Infinity is recognized by JavaScript as a number.</p>
-              <hr>
-
-              <h4>NaN - Not a Number</h4>
-              <p>NaN is a JavaScript reserved word indicating that a value is not a number. Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):</p>
-              <blockquote>
-                <code>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; document.getElementById("demo").innerHTML = 100 / "Apple";<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p>However, if the string contains a numeric value , the result will be a number:</p>
-              <blockquote>
-                <code>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; document.getElementById("demo").innerHTML = 100 / "10";<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p>You can use the global JavaScript function <b>isNaN()</b> to find out if a value is a number.</p>
-              <blockquote>
-                <code>
-                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                  &nbsp;&nbsp; var x = 100 / "Apple";<br />
-                  &nbsp;&nbsp; document.getElementById("demo").innerHTML = isNaN(x);<br />
-                  &lt;/script&gt;</p>
-                </code>
-              </blockquote>
-              <p>JavaScript recognizes NaN as number. Therefore <b>typeOf</b> NaN returns "number".</p>
-              <hr>
-
-              <h4>Numbers Can be Objects</h4>
-              <p>Normally JavaScript numbers are primitive values created from literals: <code>var x = 123</code>. However numbers can also be defined as objects with the keyword
-                new: <code>var y = new Number(123)</code>. This is not advised as they slow down execution speed, and produce nasty side effects (exact same effects of declaring a
-                String as an object as outlined under the JavaScript Strings section).</p>
-              <hr>
-
-              <h4>Number Properties</h4>
-              <table>
-                <tr>
-                  <th style="width:35%">Property</th>
-                  <th>Description</th>
-                </tr>
-                <tr>
-                  <td>MAX_VALUE</td>
-                  <td>Returns the largest number possible in JavaScript</td>
-                </tr>
-                <tr>
-                  <td>MIN_VALUE</td>
-                  <td>Returns the smallest number possible in JavaScript</td>
-                </tr>
-                <tr>
-                  <td>NEGATIVE_INFINITY</td>
-                  <td>Represents negative infinity (returned on overflow)</td>
-                  </tr>
-                <tr>
-                  <td>NaN</td>
-                  <td>Represents a "Not-a-Number" value</td>
-                  </tr>
-                <tr>
-                  <td>POSITIVE_INFINITY</td>
-                  <td>Represents infinity (returned on overflow)</td>
-                </tr>
-              </table>
-              <p>Number properties belongs to the JavaScript's number object wrapper called <b>Number</b>. These properties can only be accessed as <b>Number</b>.MAX_VALUE. Using
-                myOwnVariable.MAX_VALUE, where myOwnVariable is a variable, expression, or value, will return "undefined".</p>
-              <blockquote>
-                <code>
-                  <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
-                    &lt;p id="demo2"&gt;&lt;/p&gt;</p>
-                  <p>&lt;script&gt;<br />
-                    &nbsp; &nbsp;var x = 6;<br />
-                    &nbsp; &nbsp;document.getElementById("demo1").innerHTML = Number.MAX_VALUE;<br />
-                    &nbsp; &nbsp;document.getElementById("demo2").innerHTML = x.MAX_VALUE;<br />
-                    &lt;/script&gt;</p>
-                  <p>&nbsp;</p>
-                </code>
-              </blockquote>
-            </div>
-
-            <div>
-              <h3>JavaScript Number Methods</h3>
-
-              <p>All number methods can be used on any type of numbers (literals, variables, or expressions).</p>
-
-              <h4>Global Methods</h4>
-              <p>JavaScript global functions can be used on all JavaScript data types. These are the most relevant methods, when working with numbers:</p>
-              <table>
-              <tr>
-                <th style="width:25%">Method</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>Number()</td>
-                <td>Returns a number, converted from its argument.</td>
-              </tr>
-              <tr>
-                <td>parseFloat()</td>
-                <td>Parses its argument and returns a floating point number</td>
-                </tr>
-              <tr>
-                <td>parseInt()</td>
-                <td>Parses its argument and returns an integer</td>
-                </tr>
-            </table>
-            <hr>
-
-            <h4>Number Methods</h4>
-            <p>JavaScript number methods are methods that are specifically used on numbers:</p>
-            <table>
-              <tr>
-                <th style="width:25%">Method</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>toString()</td>
-                <td>Returns a number as a string</td>
-              </tr>
-              <tr>
-                <td>toExponential()</td>
-                <td>Returns a string, with a number rounded and written using exponential notation.</td>
-              </tr>
-            	<tr>
-                <td>toFixed()</td>
-                <td>Returns a string, with a number rounded and written with a specified number of decimals.</td>
-              </tr>
-              <tr>
-                <td>toPrecision()</td>
-                <td>Returns a string, with a number written with a specified length</td>
-              </tr>
-              <tr>
-                <td>valueOf()</td>
-                <td>Returns a number as a number</td>
-              </tr>
-            </table>
-            <p>All number methods return a new value. They do not change the original variable.</p>
-            <hr>
-
-            <h4>The toString() Method</h4>
-            <p><strong>toString()</strong> returns a number as a string.</p>
-            <blockquote>
-              <code>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;var x = 123;<br />
-                  &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp;x.toString() + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;(123).toString() + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;(100 + 23).toString();<br />
-                  &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-
-            <h4>The toExponential() Method</h4>
-            <p><b>toExponential()</b> returns a string, with a number rounded and written using exponential notation. This parameter defines the number of characters behind the
-              decimal point:</p>
-            <blockquote>
-              <code>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;var x = 9.656;<br />
-                  &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp;x.toExponential() + "&lt;br&gt;" + <br />
-                  &nbsp; &nbsp; &nbsp;x.toExponential(2) + "&lt;br&gt;" + <br />
-                  &nbsp; &nbsp; &nbsp;x.toExponential(4) + "&lt;br&gt;" + <br />
-                  &nbsp; &nbsp; &nbsp;x.toExponential(6);<br />
-                  &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-
-            <h4>The toFixed() Method</h4>
-            <p>The <b>toFixed()</b> method rounds a number to a given number of digits and is perfect for working with money.</p>
-            <blockquote>
-              <code>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;var x = 9.656;<br />
-                  &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp;x.toFixed(0) + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;x.toFixed(2) + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;x.toFixed(4) + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;x.toFixed(6);<br />
-                  &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-
-            <h4>The toPrecision() Method</h4>
-            <p><b>toPrecision()</b> returns a string, with a number written with a specified length:</p>
-            <blockquote>
-              <code>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;var x = 9.656;<br />
-                  &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
-                  &nbsp; &nbsp; &nbsp;x.toPrecision() + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;x.toPrecision(2) + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;x.toPrecision(4) + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp;x.toPrecision(6);<br />
-                  &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-
-            <h4>Converting Variables to Numbers</h4>
-            <p>There are 3 JavaScript functions that can be used to convert variables to numbers. These methods are not number methods, but <strong>global</strong>
-              JavaScript methods.</p>
-            <ul>
-            	<li>
-                <p>The <b>Number()</b> method<p>
-                <p><b>Number()</b>, can be used to convert JavaScript variables to numbers:</p>
-                <blockquote>
-                  <code>
-                    <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                    <p>&lt;script&gt;<br />
-                      &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
-                      &nbsp; &nbsp; &nbsp;Number(true) + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;Number(false) + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;Number(new Date()) + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;Number(" 10") + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;Number("10 ") + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;Number("10 6"); <br />
-                      &lt;/script&gt;</p>
-                  </code>
-                </blockquote>
-                <p>Used on <b>Date()</b>, the <b>Number()</b> method returns the number of milliseconds since 1.1.1970.</p>
-              </li>
-            	<li>
-                <p>The <b>parseInt()</b> method.</p>
-                <p>The global JavaScript function parseInt() converts strings to numbers:</p>
-                <blockquote>
-                  <code>
-                    <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                    <p>&lt;script&gt;<br />
-                      &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
-                      &nbsp; &nbsp; &nbsp;parseInt("10") + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;parseInt("10.33") + "&lt;br&gt;" +<br />
-                      &nbsp; &nbsp; &nbsp;parseInt("10 6") + "&lt;br&gt;" + <br />
-                      &nbsp; &nbsp; &nbsp;parseInt("10 years") + "&lt;br&gt;" + <br />
-                      &nbsp; &nbsp; &nbsp;parseInt("years 10"); <br />
-                      &lt;/script&gt;</p>
-                  </code>
-                </blockquote>
-              </li>
-
-            	<li>
-                <p>The <b>parseFloat()</b> method.</p>
-                <p><b>parseFloat()</b> parses a string and returns a number. Spaces are allowed. Only the first number is returned:
-                  <blockquote>
-                    <code>
-                      <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                      <p>&lt;script&gt;<br />
-                        &nbsp; &nbsp;var x = 123;</p>
-                      <p>&nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
-                        &nbsp; &nbsp; &nbsp;x.valueOf() + "&lt;br&gt;" +<br />
-                        &nbsp; &nbsp; &nbsp;(123).valueOf() + "&lt;br&gt;" +<br />
-                        &nbsp; &nbsp; &nbsp;(100 + 23).valueOf();<br />
-                        &lt;/script&gt;</p>
-                      </code>
-                  </blockquote>
-              </li>
+    <div>
+    	<h3>JavaScript Data Types</h3>
+      <p>You can use the JavaScript <a href="javascript notes/typeof.html">typeof</a>
+      operator to find the type of a JavaScript variable:
+        <ul>
+        	<li>Strings <code>var answer = "He is called 'Johnny'";</code></li>
+          <br>
+          <li>Numbers <code>var x2 = 34;</code></li>
+          <br>
+          <li>Booleans <code>var x = true;</code></li>
+          <br>
+          <li>Arrays <code>var cars = ["Saab", "Volvo", "BMW"];</code>
+          	<ul>
+            	<li>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</li>
             </ul>
-            <hr>
+          </li>
+          <br>
+          <li>Objects <code>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</code>
+          	<ul>
+            	<li>Object properties are written as name:value pairs, separated by commas.</li>
+            </ul>
+          </li>
+       	</ul>
+   	</div>
 
-            <h4>The valueOf() Method</h4>
-            <p><b>valueOf()</b> returns a number as a number.</p>
+    <div>
+    	<h3>JavaScript Functions</h3>
+      <p>A JavaScript function is a block of code designed to perform a particular task when"something" invokes
+      it (calls it).</p>
+      <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+      Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+      The parentheses may include parameter names separated by commas: (parameter1,  parameter2, ...).
+      The code to be executed, by the function, is placed inside curly brackets: {}</p>
+      <blockquote>
+          <code>
+              <p>function name(parameter1, parameter2, parameter3) {</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code to be executed</p>
+              <p>}</p>
+          </code>
+     	</blockquote>
+      <br>
+      <p>Function <span style="font-weight:bolder">parameters</span> are the names listed in the function definition.
+      Function <span style="font-weight:bolder">arguments</span> are the real values received by the function
+      when it is invoked. Inside the function, the arguments behave as local variables.</p>
+      <p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+        <ul>
+          <li>When an event occurs (when a user clicks a button)</li>
+          <li>When it is invoked (called) from JavaScript code</li>
+          <li>Automatically (self invoked)</li>
+       	</ul>
+      <p>When JavaScript reaches a return statement, the function will stop executing. If the function was invoked
+      from a statement, JavaScript will "return" to execute the code after the invoking statement. Functions often
+      compute a return value. The return value is "returned" back to the "caller":</p>
+      <blockquote>
+        <code>
+          <p>var x = myFunction(4, 3);
+          &nbsp;&nbsp;&nbsp;&nbsp;// Function is called, return value will end up in x</p>
+          <p>function myFunction(a, b) {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a * b;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Function returns the product of a and b</p>
+          <p>}</p>
+        </code>
+        <br>
+        <em>Result returns: 12</em>
+      </blockquote>
+      <br>
+      <p>Functions are useful as they can be used many times with different arguments, to produce different results.</p>
+      <blockquote>
+        <code>
+          <p>function toCelsius(fahrenheit) {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (5/9) * (fahrenheit-32);</p>
+          <p>}</p>
+          <p>document.getElementById("demo").innerHTML = toCelsius(77);</p>
+        </code>
+        <em>Result displays: 25</em>
+      </blockquote>
+      <p>Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result. Accessing a function without () will return the
+        function definition:</p>
+      <blockquote>
+        <code>
+          <p>function toCelsius(fahrenheit) {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (5/9) * (fahrenheit-32);</p>
+          <p>}</p>
+          <p>document.getElementById("demo").innerHTML = toCelsius;</p>
+        </code>
+        <em>Result displays: function toCelsius(f) { return (5/9) * (f-32); }</em>
+      </blockquote>
+
+      <p>You can use functions the same way as you use variables:</p>
+      <code>var text = "The temperature is " + toCelsius(77) + " Celsius";</code>
+      <br><br><br>
+   	</div>
+
+    <div>
+    	<h3>JavaScript Objects</h3>
+      <p>Objects are variables which contain many values. These values are written as <span style="font-weight:bolder">name:value</span> pairs which are called
+      <span style="font-weight:bolder">properties</span>.</p>
+      <blockquote>
+        <code>
+          var car = {type:"Fiat", model:500, color:"white"};
+        </code>
+      </blockquote>
+      <p>You can access object properties in two ways:</p>
+      <div class="row">
+      	<div class="col-sm-4">
+          <blockquote><code class="middle">objectName.propertyName</code></blockquote>
+      	</div>
+      	<div class="col-sm-4">
+          <p class="middle">or</p>
+      	</div>
+      	<div class="col-sm-4">
+          <blockquote><code class="middle">objectName["propertyName"]</code></blockquote>
+      	</div>
+     	</div>
+      <p>See the <a href="javascript notes/objects.html">objects</a> page for working examples of both.</p>
+      <p>When a JavaScript variable is declared with the keyword "new", the variable is created as an object:</p>
+      <blockquote><code>var x = new thingymagingy;</code></blockquote>
+      <p>However avoid String, Number, and Boolean objects as they complicate your code and slow down execution speed.</p>
+      <blockquote style="background-color:#f00">
+        <p><code>var x = new String();</code> &nbsp;&nbsp;&nbsp;&nbsp; <span class="noted">// Declares x as a String
+        object</span></p>
+        <p><code>var y = new Number();</code> &nbsp;&nbsp;&nbsp;&nbsp; <span class="noted">// Declares y as a Number
+        object</span></p>
+        <p><code>var z = new Boolean();</code> &nbsp;&nbsp;&nbsp; <span class="noted">// Declares z as a Boolean
+        object</span></p>
+      </blockquote>
+  	</div>
+
+    <div>
+    	<h3>Object Methods</h3>
+        <p>Methods are actions that can be performed on objects. Methods are stored in properties as <span style="font-weight:bolder">function definitions</span>(see the
+          last "property" of the example below).</p>
+        <blockquote>
+        	<code>
+            <p>var name = {</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstName:John,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastName:Doe,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age:50,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullName:function() {return this.firstName + " " + this.lastName;}</p>
+            <p>}</p>
+          </code>
+      	</blockquote>
+        <p>You access an object method with the following syntax:</p>
+        <blockquote><code>objectName.methodName()</code></blockquote>
+        <p>See the <a href="javascript notes/methods.html">methods</a> page for a working example.</p>
+  	</div>
+
+    <div>
+  		<h3>JavaScript Scope</h3>
+      <p>In JavaScript, objects and functions are also variables. In JavaScript, scope is the set of variables, objects,and functions you have access to.</p>
+      <br>
+      <p>Variables declared within a JavaScript function, become LOCAL to the function. Local variables have local scope which means they can only be accessed within
+        the function they were created:</p>
+      <blockquote>
+        <code>
+          <p class="noted">// code here can not use carName</p>
+          <p>function myFunction() {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;var carName = "Volvo";</p>
+          <p class="noted">&nbsp;&nbsp;&nbsp;&nbsp;// code here can use carName</p>
+          <p>}</p>
+        </code>
+      </blockquote>
+      <p>Local variables are created when a function starts, and deleted when the function is completed. Therefore variables of the same name can be used in different
+        functions.</p>
+      <p>A variable declared outside a function, becomes GLOBAL. A global variable has global scope: All scripts and functions on a web page can access it.</p>
+      <blockquote>
+        <code>
+      	  <p> var carName = " Volvo";</p>
+          <p class="noted">// code here can use carName</p>
+          <p>function myFunction() {</p>
+          <p class="noted">&nbsp;&nbsp;&nbsp;;&nbsp;// code here can use	carName</p>
+          <p>}</p>
+        </code>
+     	</blockquote>
+      <p>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable. This code example will declare carName as a
+        global variable, even if it is executed inside a function:</p>
+      <blockquote>
+        <code>
+      	  <p class="noted">// code here can use carName</p>
+          <p>function myFunction() {</p>
+          <p>carName = "Volvo";</p>
+          <p class="noted">&nbsp;&nbsp;&nbsp;;&nbsp;// code here can use carName</p>
+         	<p>}</p>
+        </code>
+    	</blockquote>
+      <p>Function arguments (parameters) work as local variables inside functions.</p>
+      <br>
+      <h2 style="color:#306">With JavaScript, the global scope is the complete JavaScript environment but in HTML, the
+      global scope is the window object: All global variables belong to the window object.</h2>
+      <blockquote>
+        <code>
+          <p class="noted">// code here can use window.carName</p>
+          <p>function myFunction() {</p>
+          <p>carName = "Volvo";</p>
+          <p>}</p>
+        </code>
+      </blockquote>
+      <h2 style="color:#306">Your global variables (or functions) can overwrite window variables (or functions). Conversely, any function, including the window object,
+        can overwrite your global variables and functions.</h2>
+ 	  </div>
+
+    <div>
+    	<h3>Javascript Events</h3>
+      <p>An HTML event can be something the browser does, or something a user does. For example:</p>
+        <ul>
+        	<li>An HTML web page has finished loading.</li>
+  				<li>An HTML input field was changed.</li>
+  				<li>An HTML button was clicked.</li>
+       	</ul>
+      <p>JavaScript lets you execute code when events are detected.</p>
+      <p>HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.</p>
+			<p>With single quotes:</p>
+			<p>&lt;some-HTML-element some-event='some JavaScript'&gt;</p>
+			<p>With double quotes:</p>
+			<p>&lt;some-HTML-element some-event="some JavaScript"&gt;</p>
+      <blockquote>
+      	<p>JavaScript code changes the content of the element with id="demo".</p>
+      	<code>&lt;button onclick='getElementById("demo").innerHTML=Date()'&gt;The time is?&lt;/button&gt;</code>
+        <code>&lt;p id="demo"&gt;&lt;/p&gt;</code>
+       	<br><br><br>
+        <p>JavaScript code changes the content of its own element (using this.innerHTML):</p>
+        <code>&lt;button onclick="this.innerHTML=Date()"&gt;The time is?&lt;/button&gt;</code>
+     	</blockquote>
+      <p>However JavaScript code is often several lines long so it is more common to see event attributes calling functions:</p>
+      <blockquote>
+    	  <code>&lt;p&gt;Click the button to display the date.&lt;/p&gt;</code>
+				<br><br>
+				<code>&lt;button onclick="displayDate()"&gt;The time is?&lt;/button&gt;</code>
+				<br><br>
+        <code>&lt;script&gt;<br>
+        &nbsp;&nbsp;&nbsp; function displayDate() {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = Date();<br>
+        &nbsp;&nbsp;&nbsp; }<br>
+        &lt;/script&gt;</code>
+        <br><br>
+        <code>&lt;p id="demo"&gt;&lt;/p&gt;</code>
+    	</blockquote>
+      <h2>Common HTML Events</h2>
+        <table style="width: 100%">
+          <tr>
+        	  <th>Event</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>onchange</td>
+            <td>An HTML element has been changed</td>
+          </tr>
+          <tr>
+            <td>onclick</td>
+            <td>The user clicks an HTML element</td>
+          </tr>
+          <tr>
+            <td>onmouseover</td>
+            <td>The user moves the mouse over an HTML element</td>
+          </tr>
+          <tr>
+            <td>onmouseout</td>
+            <td>The user moves the mouse away from an HTML element</td>
+          </tr>
+          <tr>
+            <td>onkeydown</td>
+            <td>The user pushes a keyboard key</td>
+          </tr>
+          <tr>
+            <td>onload</td>
+            <td>The browser has finished loading the page</td>
+          </tr>
+        </table>
+      <p>The list is much longer:
+      	  <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">W3Schools JavaScript Reference HTML DOM Events</a>.
+      </p>
+      <h2>What can JavaScript Do?</h2>
+      <p>Event handlers can be used to handle, and verify, user input, user actions, and browser actions:</p>
+        <ul>
+          <li>Things that should be done every time a page loads.</li>
+          <li>Things that should be done when the page is closed.</li>
+          <li>Action that should be performed when a user clicks a button.</li>
+          <li>Content that should be verified when a user inputs data.</li>
+          <li>And more ...</li>
+        </ul>
+      <p>Many different methods can be used to let JavaScript work with events:</p>
+        <ul>
+          <li>HTML event attributes can execute JavaScript code directly.</li>
+          <li>HTML event attributes can call JavaScript functions.</li>
+          <li>You can assign your own event handler functions to HTML elements.</li>
+          <li>You can prevent events from being sent or being handled.</li>
+          <li>And more ...</li>
+        </ul>
+ 	  </div>
+
+    <div>
+  	  <h3>JavaScript Strings</h3>
+      <p>JavaScript strings are used for storing and manipulating text.</p>
+      <p>A JavaScript string simply stores a series of characters like "John Doe":</p>
+      <blockquote>
+        <code>
+      	  &lt;p id="demo"&gt;&lt;/p&gt;
+          <br><br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; var dudesName = "John Doe";<br>
+          &nbsp;&nbsp;&nbsp; var dudedetsName = "Jane Smith";
+          <br><br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = dudesName + " and " + dudedetsName;<br>
+          &lt;/script&gt;
+        </code>
+     	</blockquote>
+     	<p>The length of a string is found in the built in property length:</p>
+      <blockquote>
+        <code>
+        	&lt;p id="demo"&gt;&lt;/p&gt;
+          <br><br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+          <br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = txt.length;<br>
+          &lt;/script&gt;
+      	</code>
+    	</blockquote>
+      <p>To avoid JavaScript misunderstanding quotes in a string us the <b>\ escape symbol</b>:</p>
+      <blockquote>
+        <code>
+      	  &lt;p id="demo"&gt;&lt;/p&gt;
+          <br><br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; var x = 'It\'s alright';<br>
+          &nbsp;&nbsp;&nbsp; var y = "We are the so-called \"Vikings\" from the north.";<br>
+          <br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;<br>
+          &lt;/script&gt;
+      	</code>
+      </blockquote>
+     	<p>The escape character (\) can also be used to insert other special characters in a string:</p>
+      <table>
+        <tr>
+        	<th>Code</th>
+        	<th>Outputs</th>
+        </tr>
+        <tr>
+        	<td>\'</td>
+        	<td>single quote</td>
+        </tr>
+        <tr>
+         	<td>\&quot;</td>
+        	<td>double quote</td>
+        </tr>
+        <tr>
+        	<td>\\</td>
+        	<td>backslash</td>
+        </tr>
+        <tr>
+        	<td>\n</td>
+        	<td>new line</td>
+        </tr>
+        <tr>
+        	<td>\r</td>
+        	<td>carriage return</td>
+        </tr>
+        <tr>
+        	<td>\t</td>
+        	<td>tab</td>
+        </tr>
+        <tr>
+        	<td>\b</td>
+        	<td>backspace</td>
+        </tr>
+        <tr>
+        	<td>\f</td>
+        	<td>form feed</td>
+        </tr>
+      </table>
+      <br>
+      <p>You can also break up a code line within a text string with a single backslash:</p>
+      <blockquote>
+        <code>
+        	&lt;p id="demo"&gt;&lt;/p&gt;
+          <br><br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "Hello \ <br>
+          &nbsp;&nbsp;&nbsp; Dolly.";<br>
+          &lt;/script&gt;
+      	</code>
+     	</blockquote>
+      <p>However not all browsers accept a space behind the \. It is safer (but also slower) to break a string using string addition:</p>
+      <blockquote>
+        <code>
+      	  &lt;p id="demo"&gt;&lt;/p&gt;
+          <br><br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "Hello " +<br>
+          &nbsp;&nbsp;&nbsp; "Polly.";<br>
+          &lt;/script&gt;
+      	</code>
+     	</blockquote>
+      <p>Normally, JavaScript strings are primitive values, created from literals: <code>var firstName = "John"</code>. However strings can also be defined as objects with
+        the keyword new:<br> <code>var firstName = new String("John")</code>. This is rarely done as it slows down execution and can have some nasty side effects; see
+        below:</p>
+      <blockquote>
+        <code>
+      	  var x = "John";<br>
+          var y = new String("John");
+       	</code>
+        <p>// (x == y) is true because x and y have equal values but (x === y) is not true because the === operator expects equality in both type and value.</p>
+        <br>
+        <code>
+        	var x = new String("John");<br>
+					var y = new String("John");
+				</code>
+				<p>// (x == y) is false because x and y are different objects [objects can't be compared] but (x == x) is true because both are the same object.</p>
+     	</blockquote>
+      <h2>String Properties</h2>
+      <table>
+        <tr>
+          <th style="width:24%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>constructor</td>
+          <td>Returns the function that created the String object's prototype</td>
+        </tr>
+        <tr>
+          <td>length</td>
+          <td>Returns the length of a string</td>
+        </tr>
+        <tr>
+          <td>prototype</td>
+          <td>Allows you to add properties and methods to an object</td>
+        </tr>
+      </table>
+      <h2>String Methods</h2>
+      <table>
+        <tr>
+          <th style="width:24%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>charAt()</td>
+          <td>Returns the character at the specified index (position)</td>
+        </tr>
+        <tr>
+          <td>charCodeAt()</td>
+          <td>Returns the Unicode of the character at the specified index</td>
+        </tr>
+        <tr>
+          <td>concat()</td>
+          <td>Joins two or more strings, and returns a copy of the joined strings</td>
+        </tr>
+        <tr>
+          <td>fromCharCode()</td>
+          <td>Converts Unicode values to characters</td>
+        </tr>
+        <tr>
+          <td>indexOf()</td>
+          <td>Returns the position of the first found occurrence of a specified value in a string</td>
+        </tr>
+        <tr>
+          <td>lastIndexOf()</td>
+          <td>Returns the position of the last found occurrence of a specified value in a string</td>
+        </tr>
+        <tr>
+          <td>localeCompare()</td>
+          <td>Compares two strings in the current locale</td>
+        </tr>
+        <tr>
+          <td>match()</td>
+          <td>Searches a string for a match against a regular expression, and returns the matches</td>
+        </tr>
+        <tr>
+          <td>replace()</td>
+          <td>Searches a string for a value and returns a new string with the value replaced</td>
+        </tr>
+        <tr>
+          <td>search()</td>
+          <td>Searches a string for a value and returns the position of the match</td>
+        </tr>
+        <tr>
+          <td>slice()</td>
+          <td>Extracts a part of a string and returns a new string</td>
+        </tr>
+        <tr>
+          <td>split()</td>
+          <td>Splits a string into an array of substrings</td>
+        </tr>
+        <tr>
+          <td>substr()</td>
+          <td>Extracts a part of a string from a start position through a number of characters</td>
+        </tr>
+        <tr>
+          <td>substring()</td>
+          <td>Extracts a part of a string between two specified positions</td>
+        </tr>
+        <tr>
+          <td>toLocaleLowerCase()</td>
+          <td>Converts a string to lowercase letters, according to the host's locale</td>
+        </tr>
+        <tr>
+          <td>toLocaleUpperCase()</td>
+          <td>Converts a string to uppercase letters, according to the host's locale</td>
+        </tr>
+        <tr>
+          <td>toLowerCase()</td>
+          <td>Converts a string to lowercase letters</td>
+        </tr>
+        <tr>
+          <td>toString()</td>
+          <td>Returns the value of a String object</td>
+        </tr>
+        <tr>
+          <td>toUpperCase()</td>
+          <td>Converts a string to uppercase letters</td>
+        </tr>
+        <tr>
+          <td>trim()</td>
+          <td>Removes whitespace from both ends of a string</td>
+        </tr>
+        <tr>
+          <td>valueOf()</td>
+          <td>Returns the primitive value of a String object</td>
+        </tr>
+      </table>
+      <hr>
+
+      <h4>String HTML Wrapper Methods</h4>
+      <p>The HTML wrapper methods return the string wrapped inside the appropriate HTML tag. <span style="color:red">These are not standard methods, and may not work as
+        expected in all browsers.</span></p>
+    </div>
+
+    <div>
+  	  <h3>JavaScript String Methods</h3>
+
+      <h4>Finding a String in a String</h4>
+      <p>The <b>indexOf()</b> method returns the index of (the position of) the first occurrence of a specified text in
+      a string.The <b>lastIndexOf()</b> method returns the index of the last occurrence of a specified text in a string:</p>
+      <blockquote>
+    	  <code>
+          &lt;p id="p1"&gt;Please locate where 'locate' occurs!.&lt;/p&gt;<br>
+          <br>
+          &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
+          <br>
+          &lt;p id="demo1"&gt;&lt;/p&gt;<br>
+          &lt;p id="demo2"&gt;&lt;/p&gt;<br>
+          <br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; function myFunction() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = document.getElementById("p1").innerHTML;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var pos1 = str.indexOf("locate");<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var pos2 = str.lastIndexOf("locate");<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = pos1;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = pos2;<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          &lt;/script&gt;<br>
+     	  </code>
+    	</blockquote>
+      <p>JavaScript counts positions from zero. This means the first letter is counted as 0 and the second as 2.</p>
+      <p>Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.</p>
+      <p>Both methods accept a second parameter as the starting position for the search. ie
+     	<code>str.indexOf("locate", 8)</code></p>
+
+
+      <h4>Searching for a String in a String</h4>
+      <p>The <b>search()</b> method searches a string for a specified value and returns the position of the match. It is
+      very similar to the indexOf() method except it can take much more powerfull search values.</p>
+      <blockquote>
+    	  <code>
+          &lt;p id="p1"&gt;Please locate where 'locate' occurs!.&lt;/p&gt;<br>
+          <br>
+          &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
+          <br>
+          &lt;p id="demo"&gt;&lt;/p&gt;<br>
+          <br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; function myFunction() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = document.getElementById("p1").innerHTML;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var pos = str.search("locate");<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = pos;<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          &lt;/script&gt;<br>
+     	  </code>
+    	</blockquote>
+      <hr>
+
+      <h4>Extracting String Parts</h4>
+      <p>There are 3 methods for extracting a part of a string:</p>
+        <ul>
+          <li>
+          	<p><em>slice(start, end)</em></p>
+          	<p>This method takes 2 parameters: the starting index (position), and the ending index (position). If a
+              parameter is negative, the position is counted from the end of the string. If you omit the second
+              parameter, the method will slice out the rest of the string:</p>
+              <blockquote>
+            	  <code>
+                  &lt;p id="demo1"&gt;&lt;/p&gt;<br>
+                  &lt;p id="demo2"&gt;&lt;/p&gt;<br>
+                  &lt;p id="demo3"&gt;&lt;/p&gt;<br>
+  								<br>
+  								&lt;script&gt;<br>
+                  &nbsp;&nbsp;&nbsp; var str = "Apple, Banana, Kiwi";<br>
+                  &nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = str.slice(7,13);<br>
+                  &nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = str.slice(-19,-14);<br>
+                  &nbsp;&nbsp;&nbsp; document.getElementById("demo3").innerHTML = str.slice(-4);<br>
+                  &lt;/script&gt;
+                </code>
+             	</blockquote>
+          </li>
+          <li>
+          	<p><em>substring(start, end)</em></p>
+          	<p>substring() is similar to slice() with the difference being that substring() cannot accept negative indexes.</p>
+          </li>
+          <li>
+          	<p><em>substr(start, length)</em></p>
+            <p>substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part. If the first parameter is negative,
+              the position counts from the end of the string. The second parameter can not be negative, because it defines the length. If you omit the second parameter,
+              substr() will slice out the rest of the string.</p>
+            <blockquote>
+          	  <code>
+                &lt;p id="demo1"&gt;&lt;/p&gt;<br>
+								<br>
+								&lt;script&gt;<br>
+                &nbsp;&nbsp;&nbsp; var str = "Apple, Banana, Kiwi";<br>
+                &nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = str.substr(7,6);<br>
+                &lt;/script&gt;
+              </code>
+       	    </blockquote>
+          </li>
+ 		    </ul>
+		  <hr>
+
+      <h4>Replacing String Content</h4>
+      <p>The replace() method replaces a specified value with another value in a string:</p>
+      <blockquote>
+      	<code>
+          &lt;p&gt;Replace "Just Jinger" with "Jack Johnson" in the paragraph below:&lt;/p&gt;<br>
+      	  <br>
+          &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
+          <br>
+          &lt;p id="demo"&gt;I listen to Just Jinger!&lt;/p&gt;<br>
+          <br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; function myFunction() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = document.getElementById("demo").innerHTML; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var txt = str.replace("Just Jinger","Jack Johnson");<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = txt;<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          &lt;/script&gt;
+        </code>
+    	</blockquote>
+      <hr>
+
+      <h4>Converting to Upper and Lower Case</h4>
+      <p>A string is converted to upper case with <b>toUpperCase()</b> and to lower case with <b>toLowerCase()</b>:</p>
+      <blockquote>
+      	<code>
+          &lt;p>Convert string to upper case:&lt;/p&gt;<br>
+          <br>
+          &lt;button onclick="myFunction()">Try it&lt;/button&gt;<br>
+          <br>
+          &lt;p id="demo1">Upper case me!&lt;/p&gt;<br>
+          <br>
+          &lt;p style="border-top:1px dotted #000">Convert string to lower case:&lt;/p&gt;<br>
+          <br>
+          &lt;button onclick="myOtherFunction()">Try it&lt;/button&gt;<br>
+          <br>
+          &lt;p id="demo2">Lower case me!&lt;/p&gt;<br>
+          <br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; function myFunction() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var text1 = document.getElementById("demo1").innerHTML;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = text1.toUpperCase();<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          <br>
+          &nbsp;&nbsp;&nbsp; function myOtherFunction() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var text2 = document.getElementById("demo2").innerHTML;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = text2.toLowerCase();<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          &lt;/script&gt;
+        </code>
+     	</blockquote>
+      <hr>
+
+      <h4>The concat() Method</h4>
+      <p><b>concat()</b> joins two or more strings and can be used instead of the plus operator. These two lines do the same:</p>
+      <blockquote>
+      	<code>
+          &lt;p id="demo1"&gt;&lt;/p&gt;<br>
+          &lt;p id="demo2"&gt;&lt;/p&gt;<br>
+          <br>
+          &lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp; var text1 = "Hello";<br>
+          &nbsp;&nbsp;&nbsp; var text2 = "World!";<br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = text1.concat(" ",text2);<br>
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = text1 + " " + text2;<br>
+          &lt;/script&gt;
+       	</code>
+     	</blockquote>
+      <p>Strings cannot be changed, only replaced. Therefore all string methods return a new string (They don't modify the original string).</p>
+      <hr>
+
+      <h4>Extracting String Characters</h4>
+      <p>There are 2 safe methods for extracting string characters:</p>
+        <ul>
+          <li>The <b>charAt()</b> Method:
+            <p>The charAt() method returns the character at a specified index (position) in a string:</p>
+            <blockquote>
+              <code>
+                &lt;p id="demo"&gt;&lt;/p&gt;<br />
+                <br />
+                &lt;script&gt;<br />
+                &nbsp;&nbsp;&nbsp; var str = "HELLO WORLD";<br />
+                &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = str.charAt(0);<br />
+                &lt;/script&gt;
+              </code>
+            </blockquote>
+          </li>
+          <li>The <b>charCodeAt()</b> Method:
+            <p>The charCodeAt() method returns the unicode of the character at a specified index in a string:</p>
+            <blockquote>
+              <code>
+                &lt;p id="demo"&gt;&lt;/p&gt;<br />
+                <br />
+                &lt;script&gt;<br />
+                &nbsp;&nbsp;&nbsp; var str = "HELLO WORLD";<br />
+                &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = str.charCodeAt(0);<br />
+                &lt;/script&gt;
+              </code>
+            </blockquote>
+            <p>Check out this <a href="http://www.w3schools.com/charsets/ref_html_utf8.asp" target="_blank">Complete Unicode Referance</a>.</p>
+          </li>
+        </ul>
+      <hr>
+
+      <h4>Accessing a String as an Array is Unsafe</h4>
+      <p>This is&nbsp;<strong>unsafe</strong>&nbsp;and&nbsp;<strong>unpredictable:</strong></p>
+        <ul>
+          <li>It does not work in all browsers (not in IE5, IE6, IE7)</li>
+          <li>It makes strings look like arrays (but they are not)</li>
+          <li>str[0] = "H" does not give an error (but does not work)</li>
+        </ul>
+      <blockquote style="background-color:#f00">
+        <code>
+          &lt;script&gt;<br />
+          &nbsp;&nbsp;&nbsp; var str ="HELLO WORLD"<br />
+          &nbsp;&nbsp;&nbsp; str[0];<br />
+          &lt;/script&gt;
+        </code>
+      </blockquote>
+      <p>If you want to read a string as an array, convert it to an array first. (See below)</p>
+      <hr>
+
+      <h4>Converting a String to an Array</h4>
+      <p>A string can be converted to an array with the <strong>split()</strong> method:</p>
+      <blockquote>
+        <code>
+          &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br />
+          &lt;p id="demo"&gt;&lt;/p&gt;<br />
+          &lt;script&gt;<br />
+          &nbsp;&nbsp;&nbsp; function myFunction() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var str = "a,b,c,d,e,f";<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var arr = str.split(",");<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  document.getElementById("demo").innerHTML = arr[0];<br />
+          &nbsp;&nbsp;&nbsp; }<br />
+          &lt;/script&gt;
+        </code>
+      </blockquote>
+      <p>If the separator is "", the returned array will be an array of single characters:</p>
+      <blockquote>
+        <code>
+          &lt;p id="demo"&gt;&lt;/p&gt;<br />
+          <br />
+          &lt;script&gt;<br />
+          &nbsp;&nbsp;&nbsp; var str = "Hello";<br />
+          &nbsp;&nbsp;&nbsp; var arr = str.split("");<br />
+          &nbsp;&nbsp;&nbsp; var text = "";<br />
+          &nbsp;&nbsp;&nbsp; var i;<br />
+          &nbsp;&nbsp;&nbsp; for (i = 0; i &lt; arr.length; i++) {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text += arr[i] + "&lt;br&gt;"<br />
+          &nbsp;&nbsp;&nbsp; }<br />
+          &nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = text;<br />
+           &lt;/script&gt;
+        </code>
+      </blockquote>
+
+      <h4>See the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">Complete String Reference</a>.</h4>
+    </div>
+
+    <div>
+      <h3>JavaScript Numbers</h3>
+
+      <p>JavaScript numbers can be written with, or without decimals.</p>
+      <p>Extra large or extra small numbers can be written with scientific (exponent) notation. ie. 123e5 = 1230000 and 123e-5 = 0.00123</p>
+      <p>JavaScript Numbers are Always 64-bit Floating Point are considered accurate up to 15 digits:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp;&nbsp;&nbsp; function myFunction() {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var x = 999999999999999; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="noted">\\returns 999999999999999</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var y = 9999999999999999;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="noted">\\returns 10000000000000000</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;<br />
+            &nbsp;&nbsp;&nbsp; }<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate but it helps to multiply and divide:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myStandardFunction()"&gt;Try standard point arithmetic&lt;/button&gt;<br />
+          &lt;button onclick="myDividedFunction()"&gt;Try * & /&lt;/button&gt;</p>
+          <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
+          &lt;p id="demo2"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; function myStandardFunction() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; var x = 0.2 + 0.1;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo1").innerHTML = "0.2 + 0.1 = " + x;<br />
+          &nbsp;&nbsp; }</p>
+          <p>&nbsp;&nbsp; function myDividedFunction() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; var y = (0.2*10 + 0.1*10) / 10;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + y;<br />
+          &nbsp;&nbsp; }<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>Numeric constants will be interperated as hexadecimal if they are preceded by <b>0x</b>:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; function myFunction() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "0xFF = " + 0xFF;<br />
+          &nbsp;&nbsp;}<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p><b style="background-color:#F00; color:#FFF">Never write a number with a leading zero (like 07) as they may be interpreted as octal by some versions of JavaScript.
+      </b></p>
+      <p>By default, Javascript displays numbers as base 10 decimals. But you can use the <b>toString()</b> method to output numbers as base 16 (hex), base 8 (octal), or base
+        2 (binary):</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; function myFunction() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; var myNumber = 128;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = "128 = " + <br />
+          &nbsp;&nbsp;&nbsp;&nbsp; myNumber + " Decimal, " +<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; myNumber.toString(16) + " Hexadecimal, " +<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; myNumber.toString(8) + " Octal, " +<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; myNumber.toString(2) + " Binary."<br />
+          &nbsp;&nbsp; }<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Infinity</h4>
+      <p>Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number. As will division by zero:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; function myFunction() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; var myNumber = 2; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp; var txt = "";<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; while (myNumber != Infinity) {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myNumber = myNumber * myNumber;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; txt = txt + myNumber + "&lt;br&gt;";<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; }<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("demo").innerHTML = txt;<br />
+          &nbsp;&nbsp; }<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>Infinity is recognized by JavaScript as a number.</p>
+      <hr>
+
+      <h4>NaN - Not a Number</h4>
+      <p>NaN is a JavaScript reserved word indicating that a value is not a number. Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; document.getElementById("demo").innerHTML = 100 / "Apple";<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>However, if the string contains a numeric value , the result will be a number:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; document.getElementById("demo").innerHTML = 100 / "10";<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>You can use the global JavaScript function <b>isNaN()</b> to find out if a value is a number.</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+          &nbsp;&nbsp; var x = 100 / "Apple";<br />
+          &nbsp;&nbsp; document.getElementById("demo").innerHTML = isNaN(x);<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>JavaScript recognizes NaN as number. Therefore <b>typeOf</b> NaN returns "number".</p>
+      <hr>
+
+      <h4>Numbers Can be Objects</h4>
+      <p>Normally JavaScript numbers are primitive values created from literals: <code>var x = 123</code>. However numbers can also be defined as objects with the keyword
+        new: <code>var y = new Number(123)</code>. This is not advised as they slow down execution speed, and produce nasty side effects (exact same effects of declaring a
+        String as an object as outlined under the JavaScript Strings section).</p>
+      <hr>
+
+      <h4>Number Properties</h4>
+      <table>
+        <tr>
+          <th style="width:35%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>MAX_VALUE</td>
+          <td>Returns the largest number possible in JavaScript</td>
+        </tr>
+        <tr>
+          <td>MIN_VALUE</td>
+          <td>Returns the smallest number possible in JavaScript</td>
+        </tr>
+        <tr>
+          <td>NEGATIVE_INFINITY</td>
+          <td>Represents negative infinity (returned on overflow)</td>
+          </tr>
+        <tr>
+          <td>NaN</td>
+          <td>Represents a "Not-a-Number" value</td>
+          </tr>
+        <tr>
+          <td>POSITIVE_INFINITY</td>
+          <td>Represents infinity (returned on overflow)</td>
+        </tr>
+      </table>
+      <p>Number properties belongs to the JavaScript's number object wrapper called <b>Number</b>. These properties can only be accessed as <b>Number</b>.MAX_VALUE. Using
+        myOwnVariable.MAX_VALUE, where myOwnVariable is a variable, expression, or value, will return "undefined".</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
+            &lt;p id="demo2"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var x = 6;<br />
+            &nbsp; &nbsp;document.getElementById("demo1").innerHTML = Number.MAX_VALUE;<br />
+            &nbsp; &nbsp;document.getElementById("demo2").innerHTML = x.MAX_VALUE;<br />
+            &lt;/script&gt;</p>
+          <p>&nbsp;</p>
+        </code>
+      </blockquote>
+    </div>
+
+    <div>
+      <h3>JavaScript Number Methods</h3>
+
+      <p>All number methods can be used on any type of numbers (literals, variables, or expressions).</p>
+
+      <h4>Global Methods</h4>
+      <p>JavaScript global functions can be used on all JavaScript data types. These are the most relevant methods, when working with numbers:</p>
+      <table>
+        <tr>
+          <th style="width:25%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Number()</td>
+          <td>Returns a number, converted from its argument.</td>
+        </tr>
+        <tr>
+          <td>parseFloat()</td>
+          <td>Parses its argument and returns a floating point number</td>
+          </tr>
+        <tr>
+          <td>parseInt()</td>
+          <td>Parses its argument and returns an integer</td>
+          </tr>
+      </table>
+      <hr>
+
+      <h4>Number Methods</h4>
+      <p>JavaScript number methods are methods that are specifically used on numbers:</p>
+      <table>
+        <tr>
+          <th style="width:25%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>toString()</td>
+          <td>Returns a number as a string</td>
+        </tr>
+        <tr>
+          <td>toExponential()</td>
+          <td>Returns a string, with a number rounded and written using exponential notation.</td>
+        </tr>
+      	<tr>
+          <td>toFixed()</td>
+          <td>Returns a string, with a number rounded and written with a specified number of decimals.</td>
+        </tr>
+        <tr>
+          <td>toPrecision()</td>
+          <td>Returns a string, with a number written with a specified length</td>
+        </tr>
+        <tr>
+          <td>valueOf()</td>
+          <td>Returns a number as a number</td>
+        </tr>
+      </table>
+      <p>All number methods return a new value. They do not change the original variable.</p>
+      <hr>
+
+      <h4>The toString() Method</h4>
+      <p><strong>toString()</strong> returns a number as a string.</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var x = 123;<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp;x.toString() + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;(123).toString() + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;(100 + 23).toString();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>The toExponential() Method</h4>
+      <p><b>toExponential()</b> returns a string, with a number rounded and written using exponential notation. This parameter defines the number of characters behind the
+        decimal point:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var x = 9.656;<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp;x.toExponential() + "&lt;br&gt;" + <br />
+            &nbsp; &nbsp; &nbsp;x.toExponential(2) + "&lt;br&gt;" + <br />
+            &nbsp; &nbsp; &nbsp;x.toExponential(4) + "&lt;br&gt;" + <br />
+            &nbsp; &nbsp; &nbsp;x.toExponential(6);<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>The toFixed() Method</h4>
+      <p>The <b>toFixed()</b> method rounds a number to a given number of digits and is perfect for working with money.</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var x = 9.656;<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp;x.toFixed(0) + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;x.toFixed(2) + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;x.toFixed(4) + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;x.toFixed(6);<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>The toPrecision() Method</h4>
+      <p><b>toPrecision()</b> returns a string, with a number written with a specified length:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var x = 9.656;<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
+            &nbsp; &nbsp; &nbsp;x.toPrecision() + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;x.toPrecision(2) + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;x.toPrecision(4) + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;x.toPrecision(6);<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Converting Variables to Numbers</h4>
+      <p>There are 3 JavaScript functions that can be used to convert variables to numbers. These methods are not number methods, but <strong>global</strong>
+        JavaScript methods.</p>
+      <ul>
+      	<li>
+          <p>The <b>Number()</b> method<p>
+          <p><b>Number()</b>, can be used to convert JavaScript variables to numbers:</p>
+          <blockquote>
+            <code>
+              <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+              <p>&lt;script&gt;<br />
+                &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
+                &nbsp; &nbsp; &nbsp;Number(true) + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;Number(false) + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;Number(new Date()) + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;Number(" 10") + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;Number("10 ") + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;Number("10 6"); <br />
+                &lt;/script&gt;</p>
+            </code>
+          </blockquote>
+          <p>Used on <b>Date()</b>, the <b>Number()</b> method returns the number of milliseconds since 1.1.1970.</p>
+        </li>
+      	<li>
+          <p>The <b>parseInt()</b> method.</p>
+          <p>The global JavaScript function parseInt() converts strings to numbers:</p>
+          <blockquote>
+            <code>
+              <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+              <p>&lt;script&gt;<br />
+                &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
+                &nbsp; &nbsp; &nbsp;parseInt("10") + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;parseInt("10.33") + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp; &nbsp;parseInt("10 6") + "&lt;br&gt;" + <br />
+                &nbsp; &nbsp; &nbsp;parseInt("10 years") + "&lt;br&gt;" + <br />
+                &nbsp; &nbsp; &nbsp;parseInt("years 10"); <br />
+                &lt;/script&gt;</p>
+            </code>
+          </blockquote>
+        </li>
+
+      	<li>
+          <p>The <b>parseFloat()</b> method.</p>
+          <p><b>parseFloat()</b> parses a string and returns a number. Spaces are allowed. Only the first number is returned:
             <blockquote>
               <code>
                 <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
@@ -1803,381 +1790,535 @@
                   &nbsp; &nbsp; &nbsp;(123).valueOf() + "&lt;br&gt;" +<br />
                   &nbsp; &nbsp; &nbsp;(100 + 23).valueOf();<br />
                   &lt;/script&gt;</p>
-              </code>
+                </code>
             </blockquote>
-            <p>In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object). The valueOf() method is used internally in JavaScript to convert
-              Number objects to primitive values. <b>There is no reason to use it in your code</b>. In JavaScript, all data types have a valueOf() and a toString() method.</p>
-            <hr>
-          </div>
+        </li>
+      </ul>
+      <hr>
 
-          <div>
-            <h3>JavaScript Math Object</h3>
-            <p>The Math object allows you to perform mathematical tasks on numbers and includes several mathematical methods.</p>
-            <p>Math has no constructor. No methods have to create a Math object first.</p>
+      <h4>The valueOf() Method</h4>
+      <p><b>valueOf()</b> returns a number as a number.</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var x = 123;</p>
+          <p>&nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
+            &nbsp; &nbsp; &nbsp;x.valueOf() + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;(123).valueOf() + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp;(100 + 23).valueOf();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object). The valueOf() method is used internally in JavaScript to convert
+        Number objects to primitive values. <b>There is no reason to use it in your code</b>. In JavaScript, all data types have a valueOf() and a toString() method.</p>
+      <hr>
+    </div>
 
-            <h4>Math.random()</h4>
-            <p>One common use of the Math object is to create random number from 0 up to (but not including) 1:</p>
+    <div>
+      <h3>JavaScript Math Object</h3>
+      <p>The Math object allows you to perform mathematical tasks on numbers and includes several mathematical methods.</p>
+      <p>Math has no constructor. No methods have to create a Math object first.</p>
+
+      <h4>Math.random()</h4>
+      <p>One common use of the Math object is to create random number from 0 up to (but not including) 1:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;function myFunction() {<br />
+              &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = Math.random();<br />
+            }<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Math.min() and Math.max()</h4>
+      <p><b>Math.min()</b> and <b>Math.max()</b> can be used to find the lowest or highest value in a list of arguments:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
+            &lt;p id="demo2"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;function myFunction() {<br />
+            &nbsp; &nbsp; &nbsp;document.getElementById("demo1").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;Math.min(0, 150, 30, 20, -8, -200);<br />
+            &nbsp; &nbsp; &nbsp;document.getElementById("demo2").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;Math.max(0, 150, 30, 20, -8, -200);<br />
+            &nbsp; &nbsp;}<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Math.round()</h4>
+      <p><b>Math.round()</b> rounds a number to the nearest integer:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;function myFunction() {<br />
+            &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = Math.round(4.4);<br />
+            &nbsp; &nbsp;}<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Math.floor()</h4>
+      <p><b>Math.floor()</b> rounds a number <b>down</b> to the nearest interger:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;function myFunction() {<br />
+            &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = Math.floor(4.7);<br />
+            &nbsp; &nbsp;}<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+      <p><b>Math.floor()</b> and <b>Math.random()</b> can be used together to return a random number between 0 and 10:</p>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;function myFunction() {<br />
+            &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;Math.floor(Math.random() * 11);<br />
+          }<br />
+          &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Math Constants</h4>
+      <p>JavaScript provides 8 mathematical constants that can be accessed with the Math object:</p>
+      <table>
+        <tr>
+          <th style="width:55%">Constant</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Math.E</td>
+          <td>Euler's number</td>
+        </tr>
+        <tr>
+          <td>Math.PI</td>
+          <td>PI</td>
+        </tr>
+        <tr>
+          <td>Math.SQRT2</td>
+          <td>square root of 2</td>
+        </tr>
+        <tr>
+          <td>Math.SQRT1_2</td>
+          <td>square root of 1/2</td>
+        </tr>
+        <tr>
+          <td>Math.LN2</td>
+          <td>logarithm of 2</td>
+        </tr>
+        <tr>
+          <td>Math.LN10</td>
+          <td>logarithm of 10</td>
+        </tr>
+        <tr>
+          <td>Math.LOG2E</td>
+          <td>2 logarithm of E</td>
+        </tr>
+        <tr>
+          <td>Math.LOG10E</td>
+          <td>10 logarithm of E</td>
+        </tr>
+      </table>
+      <blockquote>
+        <code>
+          <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;function myFunction() {<br />
+              &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.E + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.PI + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.SQRT2 + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.SQRT1_2 + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.LN2 + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.LN10 + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.LOG2E + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Math.LOG10E + "&lt;br&gt;";<br />
+            }<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Math Object Methods</h4>
+      <table>
+        <tr>
+          <th style="width:20%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>abs(x)</td>
+          <td>Returns the absolute value of x</td>
+        </tr>
+        <tr>
+          <td>acos(x)</td>
+          <td>Returns the arccosine of x, in radians</td>
+        </tr>
+        <tr>
+          <td>asin(x)</td>
+          <td>Returns the arcsine of x, in radians</td>
+        </tr>
+        <tr>
+          <td>atan(x)</td>
+          <td>Returns the arctangent of x as a numeric value between
+      	-PI/2 and PI/2 radians</td>
+        </tr>
+        <tr>
+          <td>atan2(y,x)</td>
+          <td>Returns the arctangent of the quotient of its arguments</td>
+        </tr>
+        <tr>
+          <td>ceil(x)</td>
+          <td>Returns x, rounded upwards to the
+      	nearest integer</td>
+        </tr>
+        <tr>
+          <td>cos(x)</td>
+          <td>Returns the cosine of x (x is in radians)</td>
+        </tr>
+        <tr>
+          <td>exp(x)</td>
+          <td>Returns the value of E<sup>x</sup></td>
+        </tr>
+        <tr>
+          <td>floor(x)</td>
+          <td>Returns x, rounded downwards to the
+      	nearest integer</td>
+        </tr>
+        <tr>
+          <td>log(x)</td>
+          <td>Returns the natural logarithm (base E) of x</td>
+        </tr>
+        <tr>
+          <td>max(x,y,z,...,n)</td>
+          <td>Returns the number with the highest value</td>
+        </tr>
+        <tr>
+          <td>min(x,y,z,...,n)</td>
+          <td>Returns the number with the lowest value</td>
+        </tr>
+        <tr>
+          <td>pow(x,y)</td>
+          <td>Returns the value of x to the power of y</td>
+        </tr>
+        <tr>
+          <td>random()</td>
+          <td>Returns a random number between 0 and 1</td>
+        </tr>
+        <tr>
+          <td>round(x)</td>
+          <td>Rounds x to the nearest integer</td>
+        </tr>
+        <tr>
+          <td>sin(x)</td>
+          <td>Returns the sine of x (x is in radians)</td>
+        </tr>
+        <tr>
+          <td>sqrt(x)</td>
+          <td>Returns the square root of x</td>
+        </tr>
+        <tr>
+          <td>tan(x)</td>
+          <td>Returns the tangent of an angle</td>
+        </tr>
+      </table>
+      <hr>
+
+      <p>For a complete reference, see the <a href="http://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank">complete Math object reference</a>.</p>
+    </div>
+
+    <div>
+      <h3>JavaScript Dates</h3>
+      <p>The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds)</p>
+
+      <h4>JavaScript Date Formats</h4>
+      <p>A JavaScript date can be written as a string:<br />
+      <em>Tue Dec 08 2015 23:40:23 GMT-0500 (Eastern Standard Time)</em><br />
+      or as a number:<br />
+      <em>1449636023144</em><br />
+      Dates written as numbers, specifies the number of milliseconds since January 1, 1970, 00:00:00.</p>
+      <hr>
+
+      <h4>Displaying Dates</h4>
+      <p>The script below says: assign the value of Date() to the content (innerHTML) of the element with id="demo".</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = Date();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Creating Date Objects</h4>
+      <p>The Date object lets us work with dates. A date consists of a year, a month, a day, an hour, a minute, a second, and milliseconds. Date objects are created with the
+        <b>new Date()</b> constructor.</p>
+      <p>There are 4 ways of initiating a date:</p>
+        <ul>
+          <li>
+            <p><b>new Date()</b></p>
+            <p>Using new Date(), creates a new date object with the current date and time:</p>
             <blockquote>
               <code>
-                <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
                 <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
                 <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;function myFunction() {<br />
-                    &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = Math.random();<br />
-                  }<br />
+                  &nbsp; &nbsp;var d = new Date();<br />
+                  &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
                   &lt;/script&gt;</p>
               </code>
             </blockquote>
-            <hr>
-
-            <h4>Math.min() and Math.max()</h4>
-            <p><b>Math.min()</b> and <b>Math.max()</b> can be used to find the lowest or highest value in a list of arguments:</p>
+          </li>
+          <li>
+            <p><b>new Date(dateString)</b></p>
+            <p>Using new Date(date string), creates a new date object from the specified date and time:</p>
             <blockquote>
               <code>
-                <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+                <p>&lt;script&gt;<br />
+                  &nbsp; &nbsp;var d = new Date("December 09, 2015 00:00:00");<br />
+                  &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
+                  &lt;/script&gt;</p>
+              </code>
+            </blockquote>
+          </li>
+          <li>
+            <p><b>Date(*milliseconds*)</b></p>
+            <p>Using new Date(*milliseconds*), creates a new date object as zero time plus the number. Zero time is 01 January 1970 00:00:00 UTC.
+              The number is specified in milliseconds:</p>
+            <blockquote>
+              <code>
+                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+                <p>&lt;script&gt;<br />
+                  &nbsp; &nbsp;var d = new Date(1449637740000);<br />
+                  &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
+                  &lt;/script&gt;</p>
+              </code>
+            </blockquote>
+          </li>
+          <li>
+            <p><b>new Date(year, month, day, hours, minutes, seconds, milliseconds)</b></p>
+            <p>Using new Date(7 numbers), creates a new date object with the specified date and time. JavaScript counts months from 0 to 11. January is 0. December is 11.
+            The 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order:</p>
+            <blockquote>
+              <code>
+                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+                <p>&lt;script&gt;<br />
+                  &nbsp; &nbsp;var d = new Date(99,5,24,11,33,30,0);<br />
+                  &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
+                  &lt;/script&gt;</p>
+              </code>
+            </blockquote>
+            <p>Variants of the above example allow us to omit the four final numbers>
+              <blockquote>
+                <code>
+                  <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+                  <p>&lt;script&gt;<br />
+                    &nbsp; &nbsp;var d = new Date(99,5,24);<br />
+                    &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
+                    &lt;/script&gt;</p>
+                </code>
+              </blockquote>
+          </li>
+        </ul>
+      <hr>
+
+      <h4>Displaying Dates</h4>
+      <p>Date objects are static, not dynamic. The computer time is ticking, but date objects, once created, are not.</p>
+      <p>When you display a date object in HTML, it is automatically converted to a string, with the <b>toString()</b> method:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo1"&gt;&lt;/p&gt;</p>
+          <p>&lt;p id="demo2"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var d = new Date();<br />
+            &nbsp; &nbsp;document.getElementById("demo1").innerHTML = d;<br />
+            &nbsp; &nbsp;document.getElementById("demo2").innerHTML = d.toString();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>The <b>toUTCString()</b> method converts a date to a UTC string (a date display standard).</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var d = new Date();<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = d.toUTCString();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>The <b>toDateString()</b> method converts a date to a more readable format:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var d = new Date();<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = d.toDateString();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Time Zones</h4>
+      <p>When setting a date, without specifying the time zone, JavaScript will use the browser's time zone. When getting a date, without specifying the time zone, the result is
+        converted to the browser's time zone.</p>
+    </div>
+
+    <div>
+      <h3>JavaScript Date Formats</h3>
+      <h4>JavaScript Date Output</h4>
+      <p>Independent of input format, JavaScript will (by default) output dates in full
+      text string format:</p>
+      <blockquote>
+        <code>
+          Wed Mar 25 2015 01:00:00 GMT+0100 (W. Europe Standard Time)
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>JavaScript Date Input</h4>
+      <p>There are generally 4 types of JavaScript date formats:</p>
+        <ul>
+          <li>
+            <p><b>ISO Dates</b></p>
+            <p>ISO 8601 is the international standard for the representation of dates and times. The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format
+            It can be written without specifying the day (YYYY-MM), month and day (YYYY) or it can evenbe written with added hours, minutes, and seconds (YYY-MM-DDTHH:MM:SS).
+            <b>Remember there will appear to be a discrepancy but this is due to the time difference between UTC time and the browser time</b>:</p>
+            <blockquote>
+             <code>
+               <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
+                 &lt;p id="demo2"&gt;&lt;/p&gt;<br />
+                 &lt;p id="demo3"&gt;&lt;/p&gt;<br />
+                 &lt;p id="demo4"&gt;&lt;/p&gt;</p>
+               <p>&lt;script&gt;<br />
+                 &nbsp; &nbsp;document.getElementById("demo1").innerHTML = new Date("2015-03-25");<br />
+                 &nbsp; &nbsp;document.getElementById("demo2").innerHTML = new Date("2015-03");<br />
+                 &nbsp; &nbsp;document.getElementById("demo3").innerHTML = new Date("2015");<br />
+                 &nbsp; &nbsp;document.getElementById("demo4").innerHTML = new Date("2015-03-25T12:00:00");<br />
+                 &lt;/script&gt;</p>
+              </code>
+            </blockquote>
+          </li>
+          <li>
+            <p><b>Long Dates</b></p>
+            <p>Long dates are most often written with a "MMM DD YYYY" syntax like this:</p>
+            <blockquote>
+              <code>
+                <p>var d = new Date("Jan 25 2015");<br />
+                  var d = new Date("25 January 2015");<br />
+                  var d = new Date("2015 Mar 13");</p>
+              </code>
+            </blockquote>
+            <p>Note that the month can be written in full (January), or abbreviated (Jan)</p>
+          </li>
+          <li>
+            <p><b>Short Dates</b></p>
+            <p>Short dates are most often written with a "MM/DD/YYYY" or "MM-DD-YYYY" syntax but JavaScript will also accept "YYYY/MM/DD" or "YYYY-MM-DD":
+            <blockquote>
+              <code>
+                <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
+                &lt;p id="demo2"&gt;&lt;/p&gt;</p>
+                <p>&lt;script&gt;<br />
+                  &nbsp; &nbsp; document.getElementById("demo1").innerHTML = new Date("03/25/2015"); <span class="noted">\\This returns browser time???</span><br />
+                  &nbsp; &nbsp; document.getElementById("demo2").innerHTML = new Date("2015-03-25"); <span class="noted">\\This returns UTC time???</span><br/>
+                  &lt;/script&gt;</p>
+              </code>
+            </blockquote>
+          </li>
+          <li>
+            <p><b>Full Date Format</b></p>
+            <p>JavaScript will accept date strings in "full JavaScript format" but will ignore errors both in the day name and in the time parentheses:</p>
+            <blockquote>
+              <code>
                 <p>&lt;p id="demo1"&gt;&lt;/p&gt;<br />
                   &lt;p id="demo2"&gt;&lt;/p&gt;</p>
                 <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;function myFunction() {<br />
-                  &nbsp; &nbsp; &nbsp;document.getElementById("demo1").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.min(0, 150, 30, 20, -8, -200);<br />
-                  &nbsp; &nbsp; &nbsp;document.getElementById("demo2").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.max(0, 150, 30, 20, -8, -200);<br />
-                  &nbsp; &nbsp;}<br />
+                  &nbsp; &nbsp;document.getElementById("demo1").innerHTML = <br />
+                  &nbsp; &nbsp; &nbsp;new Date("Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)");<br />
+                  &nbsp; &nbsp;document.getElementById("demo2").innerHTML =<br />
+                  &nbsp; &nbsp; &nbsp;new Date("Fri Mar 25 2015 09:56:24 GMT+0100 (Tokyo Time)");<br />
                   &lt;/script&gt;</p>
               </code>
             </blockquote>
-            <hr>
+          </li>
+        </ul>
+      <hr>
 
-            <h4>Math.round()</h4>
-            <p><b>Math.round()</b> rounds a number to the nearest integer:</p>
-            <blockquote>
-              <code>
-                <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;function myFunction() {<br />
-                  &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = Math.round(4.4);<br />
-                  &nbsp; &nbsp;}<br />
-                  &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-
-            <h4>Math.floor()</h4>
-            <p><b>Math.floor()</b> rounds a number <b>down</b> to the nearest interger:</p>
-            <blockquote>
-              <code>
-                <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;function myFunction() {<br />
-                  &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = Math.floor(4.7);<br />
-                  &nbsp; &nbsp;}<br />
-                  &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-            <p><b>Math.floor()</b> and <b>Math.random()</b> can be used together to return a random number between 0 and 10:</p>
-            <blockquote>
-              <code>
-                <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-                <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                <p>&lt;script&gt;<br />
-                  &nbsp; &nbsp;function myFunction() {<br />
-                  &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.floor(Math.random() * 11);<br />
-                }<br />
-                &lt;/script&gt;</p>
-              </code>
-            </blockquote>
-            <hr>
-
-            <h4>Math Constants</h4>
-            <p>JavaScript provides 8 mathematical constants that can be accessed with the Math object:</p>
-            <table>
-              <tr>
-                <th style="width:55%">Constant</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>Math.E</td>
-                <td>Euler's number</td>
-              </tr>
-              <tr>
-                <td>Math.PI</td>
-                <td>PI</td>
-              </tr>
-              <tr>
-                <td>Math.SQRT2</td>
-                <td>square root of 2</td>
-              </tr>
-              <tr>
-                <td>Math.SQRT1_2</td>
-                <td>square root of 1/2</td>
-              </tr>
-              <tr>
-                <td>Math.LN2</td>
-                <td>logarithm of 2</td>
-              </tr>
-              <tr>
-                <td>Math.LN10</td>
-                <td>logarithm of 10</td>
-              </tr>
-              <tr>
-                <td>Math.LOG2E</td>
-                <td>2 logarithm of E</td>
-              </tr>
-              <tr>
-                <td>Math.LOG10E</td>
-                <td>10 logarithm of E</td>
-              </tr>
-          </table>
-          <blockquote>
-            <code>
-              <p>&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
-              <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-              <p>&lt;script&gt;<br />
-                &nbsp; &nbsp;function myFunction() {<br />
-                  &nbsp; &nbsp; &nbsp;document.getElementById("demo").innerHTML = <br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.E + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.PI + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.SQRT2 + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.SQRT1_2 + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.LN2 + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.LN10 + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.LOG2E + "&lt;br&gt;" +<br />
-                  &nbsp; &nbsp; &nbsp; &nbsp;Math.LOG10E + "&lt;br&gt;";<br />
-                }<br />
-                &lt;/script&gt;</p>
-            </code>
-          </blockquote>
-          <hr>
-
-          <h4>Math Object Methods</h4>
-          <table>
-            <tr>
-              <th style="width:20%">Method</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>abs(x)</td>
-              <td>Returns the absolute value of x</td>
-            </tr>
-            <tr>
-              <td>acos(x)</td>
-              <td>Returns the arccosine of x, in radians</td>
-            </tr>
-            <tr>
-              <td>asin(x)</td>
-              <td>Returns the arcsine of x, in radians</td>
-            </tr>
-            <tr>
-              <td>atan(x)</td>
-              <td>Returns the arctangent of x as a numeric value between
-          	-PI/2 and PI/2 radians</td>
-            </tr>
-            <tr>
-              <td>atan2(y,x)</td>
-              <td>Returns the arctangent of the quotient of its arguments</td>
-            </tr>
-            <tr>
-              <td>ceil(x)</td>
-              <td>Returns x, rounded upwards to the
-          	nearest integer</td>
-            </tr>
-            <tr>
-              <td>cos(x)</td>
-              <td>Returns the cosine of x (x is in radians)</td>
-            </tr>
-            <tr>
-              <td>exp(x)</td>
-              <td>Returns the value of E<sup>x</sup></td>
-            </tr>
-            <tr>
-              <td>floor(x)</td>
-              <td>Returns x, rounded downwards to the
-          	nearest integer</td>
-            </tr>
-            <tr>
-              <td>log(x)</td>
-              <td>Returns the natural logarithm (base E) of x</td>
-            </tr>
-            <tr>
-              <td>max(x,y,z,...,n)</td>
-              <td>Returns the number with the highest value</td>
-            </tr>
-            <tr>
-              <td>min(x,y,z,...,n)</td>
-              <td>Returns the number with the lowest value</td>
-            </tr>
-            <tr>
-              <td>pow(x,y)</td>
-              <td>Returns the value of x to the power of y</td>
-            </tr>
-            <tr>
-              <td>random()</td>
-              <td>Returns a random number between 0 and 1</td>
-            </tr>
-            <tr>
-              <td>round(x)</td>
-              <td>Rounds x to the nearest integer</td>
-            </tr>
-            <tr>
-              <td>sin(x)</td>
-              <td>Returns the sine of x (x is in radians)</td>
-            </tr>
-            <tr>
-              <td>sqrt(x)</td>
-              <td>Returns the square root of x</td>
-            </tr>
-            <tr>
-              <td>tan(x)</td>
-              <td>Returns the tangent of an angle</td>
-            </tr>
-          </table>
-          <hr>
-
-          <p>For a complete reference, see the <a href="http://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank">complete Math object reference</a>.</p>
-        </div>
-
-        <div>
-          <h3>JavaScript Dates</h3>
-          <p>The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds)</p>
-
-          <h4>JavaScript Date Formats</h4>
-          <p>A JavaScript date can be written as a string:<br />
-          <em>Tue Dec 08 2015 23:40:23 GMT-0500 (Eastern Standard Time)</em><br />
-          or as a number:<br />
-          <em>1449636023144</em><br />
-          Dates written as numbers, specifies the number of milliseconds since January 1, 1970, 00:00:00.</p>
-          <hr>
-
-          <h4>Displaying Dates</h4>
-          <p>The script below says: assign the value of Date() to the content (innerHTML) of the element with id="demo".</p>
-          <blockquote>
-            <code>
-              <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-              <p>&lt;script&gt;<br />
-                &nbsp; &nbsp;document.getElementById("demo").innerHTML = Date();<br />
-                &lt;/script&gt;</p>
-            </code>
-          </blockquote>
-          <hr>
-
-          <h4>Creating Date Objects</h4>
-          <p>The Date object lets us work with dates. A date consists of a year, a month, a day, an hour, a minute, a second, and milliseconds. Date objects are created with the
-            <b>new Date()</b> constructor.</p>
-          <p>There are 4 ways of initiating a date:</p>
-            <ul>
-              <li>
-                <p><b>new Date()</b></p>
-                <p>Using new Date(), creates a new date object with the current date and time:</p>
-                <blockquote>
-                  <code>
-                    <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                    <p>&lt;script&gt;<br />
-                      &nbsp; &nbsp;var d = new Date();<br />
-                      &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
-                      &lt;/script&gt;</p>
-                  </code>
-                </blockquote>
-              </li>
-              <li>
-                <p><b>new Date(dateString)</b></p>
-                <p>Using new Date(date string), creates a new date object from the specified date and time:</p>
-                <blockquote>
-                  <code>
-                    <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                    <p>&lt;script&gt;<br />
-                      &nbsp; &nbsp;var d = new Date("December 09, 2015 00:00:00");<br />
-                      &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
-                      &lt;/script&gt;</p>
-                  </code>
-                </blockquote>
-              </li>
-              <li>
-                <p><b>Date(*milliseconds*)</b></p>
-                <p>Using new Date(*milliseconds*), creates a new date object as zero time plus the number. Zero time is 01 January 1970 00:00:00 UTC.
-                  The number is specified in milliseconds:</p>
-                <blockquote>
-                  <code>
-                    <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                    <p>&lt;script&gt;<br />
-                      &nbsp; &nbsp;var d = new Date(1449637740000);<br />
-                      &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
-                      &lt;/script&gt;</p>
-                  </code>
-                </blockquote>
-              </li>
-              <li>
-                <p><b>new Date(year, month, day, hours, minutes, seconds, milliseconds)</b></p>
-                <p>Using new Date(7 numbers), creates a new date object with the specified date and time. JavaScript counts months from 0 to 11. January is 0. December is 11.
-                The 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order:</p>
-                <blockquote>
-                  <code>
-                    <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                    <p>&lt;script&gt;<br />
-                      &nbsp; &nbsp;var d = new Date(99,5,24,11,33,30,0);<br />
-                      &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
-                      &lt;/script&gt;</p>
-                  </code>
-                </blockquote>
-                <p>Variants of the above example allow us to omit the four final numbers>
-                  <blockquote>
-                    <code>
-                      <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-                      <p>&lt;script&gt;<br />
-                        &nbsp; &nbsp;var d = new Date(99,5,24);<br />
-                        &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
-                        &lt;/script&gt;</p>
-                    </code>
-                  </blockquote>
-              </li>
-            </ul>
-          <hr>
-
-          <h4>Displaying Dates</h4>
-          <p>Date objects are static, not dynamic. The computer time is ticking, but date objects, once created, are not.</p>
-          <p>When you display a date object in HTML, it is automatically converted to a string, with the <b>toString()</b> method:</p>
-          <blockquote>
-            <code>
-              <p>&lt;p id="demo1"&gt;&lt;/p&gt;</p>
-              <p>&lt;p id="demo2"&gt;&lt;/p&gt;</p>
-              <p>&lt;script&gt;<br />
-                &nbsp; &nbsp;var d = new Date();<br />
-                &nbsp; &nbsp;document.getElementById("demo1").innerHTML = d;<br />
-                &nbsp; &nbsp;document.getElementById("demo2").innerHTML = d.toString();<br />
-                &lt;/script&gt;</p>
-            </code>
-          </blockquote>
-          <p>The <b>toUTCString()</b> method converts a date to a UTC string (a date display standard).</p>
-          <blockquote>
-            <code>
-              <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-              <p>&lt;script&gt;<br />
-                &nbsp; &nbsp;var d = new Date();<br />
-                &nbsp; &nbsp;document.getElementById("demo").innerHTML = d.toUTCString();<br />
-                &lt;/script&gt;</p>
-            </code>
-          </blockquote>
-          <p>The <b>toDateString()</b> method converts a date to a more readable format:</p>
-          <blockquote>
-            <code>
-              <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
-              <p>&lt;script&gt;<br />
-                &nbsp; &nbsp;var d = new Date();<br />
-                &nbsp; &nbsp;document.getElementById("demo").innerHTML = d.toDateString();<br />
-                &lt;/script&gt;</p>
-            </code>
-          </blockquote>
-          <hr>
-
-          <h4>Time Zones</h4>
-          <p>When setting a date, without specifying the time zone, JavaScript will use the browser's time zone. When getting a date, without specifying the time zone, the result is
-            converted to the browser's time zone.</p>
-          <hr>
-
+      <h4>Time Zones</h4>
+      <p>JavaScript accepts these time zones:</p>
+      <table class="w3-table-all notranslate">
+       <tr>
+        <th>Time Zone</th>
+        <th>Description</th>
+       </tr>
+       <tr>
+        <td>UTC</td>
+        <td>Coordinated Universal Time</td>
+       </tr>
+       <tr>
+        <td>GMT</td>
+        <td>Greenwich Mean Time</td>
+       </tr>
+       <tr>
+        <td>EDT</td>
+        <td>(US) Eastern Daylight Time</td>
+       </tr>
+       <tr>
+        <td>CDT</td>
+        <td>(US) Central Daylight Time</td>
+       </tr>
+       <tr>
+        <td>MDT</td>
+        <td>(US) Mountain Daylight Time</td>
+       </tr>
+       <tr>
+        <td>PDT</td>
+        <td>(US) Pacific Daylight Time</td>
+       </tr>
+       <tr>
+        <td>EST</td>
+        <td>(US) Eastern Standard Time</td>
+       </tr>
+       <tr>
+        <td>CST</td>
+        <td>(US) Central Standard Time</td>
+       </tr>
+       <tr>
+        <td>MST</td>
+        <td>(US) Mountain Standard Time</td>
+       </tr>
+       <tr>
+        <td>PST</td>
+        <td>(US) Pacific Standard Time</td>
+       </tr>
+      </table>
+      <br />
+      <p>When setting a date, without specifying the time zone, JavaScript will use
+      the browser's time zone.</p>
+      <p>When getting a date, without specifying the time zone, the result is
+      converted to the browser's time zone.</p>
+      <p>In other words: If a date/time is created in GMT (Greenwich Mean Time), the
+      date/time will be converted to CDT (Central US Daylight Time) if a user browses
+      from central US.</p>
 
 
 

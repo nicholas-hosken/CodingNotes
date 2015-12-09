@@ -2255,7 +2255,8 @@
                   &nbsp; &nbsp;document.getElementById("demo1").innerHTML = <br />
                   &nbsp; &nbsp; &nbsp;new Date("Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)");<br />
                   &nbsp; &nbsp;document.getElementById("demo2").innerHTML =<br />
-                  &nbsp; &nbsp; &nbsp;new Date("Fri Mar 25 2015 09:56:24 GMT+0100 (Tokyo Time)");<br />
+                  &nbsp; &nbsp; &nbsp;new Date("Fri Mar 25 2015 09:56:24 GMT+0100 (Tokyo Time)");
+                  <span class="noted">\\ Mar 25 was a wed and GMT+0100 is W. Europe Standard Time)</span><br />
                   &lt;/script&gt;</p>
               </code>
             </blockquote>
@@ -2319,6 +2320,220 @@
       <p>In other words: If a date/time is created in GMT (Greenwich Mean Time), the
       date/time will be converted to CDT (Central US Daylight Time) if a user browses
       from central US.</p>
+    </div>
+
+    <div>
+      <h3>JavaScript Date Methods</h3>
+      <p>Date methods let you get and set date values (years, months, days, hours, minutes, seconds, milliseconds).</p>
+
+      <h4>Date Get Methods</h4>
+      <p>Get methods are used for getting a part of a date. Here are the most common
+      (alphabetically):</p>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>getDate()</td>
+          <td>Get the day as a number (1-31)</td>
+        </tr>
+        <tr>
+          <td>getDay()</td>
+          <td>Get the weekday as a number (0-6) [Sunday being 0]</td>
+        </tr>
+        <tr>
+          <td>getFullYear()</td>
+          <td>Get the four digit year (yyyy)</td>
+        </tr>
+        <tr>
+          <td>getHours()</td>
+          <td>Get the hour (0-23)</td>
+        </tr>
+        <tr>
+          <td>getMilliseconds()</td>
+          <td>Get the milliseconds (0-999)</td>
+        </tr>
+        <tr>
+          <td>getMinutes()</td>
+          <td>Get the minutes (0-59)</td>
+        </tr>
+        <tr>
+          <td>getMonth()</td>
+          <td>Get the month (0-11)</td>
+        </tr>
+        <tr>
+          <td>getSeconds()</td>
+          <td>Get the seconds (0-59)</td>
+        </tr>
+        <tr>
+          <td>getTime()</td>
+          <td>Get the time (milliseconds since January 1, 1970)</td>
+        </tr>
+      </table>
+      <hr>
+
+      <h4>Using Date Get Methods</h4>
+      <p>getTime() returns the number of milliseconds since January 1, 1970:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var d = new Date();<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = d.getTime();<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Date Set Methods</h4>
+      <p>Set methods are used for setting a part of a date. Here are the most common (alphabetically):</p>
+      <table class="w3-table-all notranslate">
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>setDate()</td>
+          <td>Set the day as a number (1-31)</td>
+        </tr>
+        <tr>
+          <td>setFullYear()</td>
+          <td>Set the year (optionally month and day)</td>
+        </tr>
+        <tr>
+          <td>setHours()</td>
+          <td>Set the hour (0-23)</td>
+        </tr>
+        <tr>
+          <td>setMilliseconds()</td>
+          <td>Set the milliseconds (0-999)</td>
+        </tr>
+        <tr>
+          <td>setMinutes()</td>
+          <td>Set the minutes (0-59)</td>
+        </tr>
+        <tr>
+          <td>setMonth()</td>
+          <td>Set the month (0-11)</td>
+        </tr>
+        <tr>
+          <td>setSeconds()</td>
+          <td>Set the seconds (0-59)</td>
+        </tr>
+        <tr>
+          <td>setTime()</td>
+          <td>Set the time (milliseconds since January 1, 1970)</td>
+        </tr>
+      </table>
+      <hr>
+
+      <h4>The setFullYear() Method</h4>
+      <p>setFullYear() sets a date object to a specific date. In this example, to January 14, 2020:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var d = new Date();<br />
+            &nbsp; &nbsp;d.setFullYear(2020, 0, 14);<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = d;<br />
+            &lt;/script&gt;</p>
+          <p>&lt;/body&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Date Input - Parsing Dates</h4>
+      <p>If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds. Date.parse() returns the number of milliseconds between the date and
+         January 1, 1970:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var msec = Date.parse("March 21, 2012");<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = msec;<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <p>You can then use the number of milliseconds to convert it to a date object:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var msec = Date.parse("March 21, 2012");<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = msec;<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>Compare Dates</h4>
+      <p>The following example compares today's date with January 14, 2100:</p>
+      <blockquote>
+        <code>
+          <p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+          <p>&lt;script&gt;<br />
+            &nbsp; &nbsp;var today, someday, text;<br />
+            &nbsp; &nbsp;today = new Date();<br />
+            &nbsp; &nbsp;someday = new Date();<br />
+            &nbsp; &nbsp;someday.setFullYear(2100, 0, 14);</p>
+          <p>&nbsp; &nbsp;if (someday &gt; today) {<br />
+            &nbsp; &nbsp; &nbsp;text = "Today is before January 14, 2100.";<br />
+            &nbsp; &nbsp;} else {<br />
+            &nbsp; &nbsp; &nbsp;text = "Today is after January 14, 2100.";<br />
+            &nbsp; &nbsp;}<br />
+            &nbsp; &nbsp;document.getElementById("demo").innerHTML = text;<br />
+            &lt;/script&gt;</p>
+        </code>
+      </blockquote>
+      <hr>
+
+      <h4>UTC Date Methods</h4>
+      <p>UTC date methods are used for working UTC dates (Univeral Time Zone dates):</p>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>getUTCDate()</td>
+          <td>Same as getDate(), but returns the UTC date</td>
+        </tr>
+        <tr>
+          <td>getUTCDay()</td>
+          <td>Same as getDay(), but returns the UTC day</td>
+        </tr>
+        <tr>
+          <td>getUTCFullYear()</td>
+          <td>Same as getFullYear(), but returns the UTC year</td>
+        </tr>
+        <tr>
+          <td>getUTCHours()</td>
+          <td>Same as getHours(), but returns the UTC hour</td>
+        </tr>
+        <tr>
+          <td>getUTCMilliseconds()</td>
+          <td>Same as getMilliseconds(), but returns the UTC millisecons</td>
+        </tr>
+        <tr>
+          <td>getUTCMinutes()</td>
+          <td>Same as getMinutes(), but returns the UTC minutes</td>
+        </tr>
+        <tr>
+          <td>getUTCMonth()</td>
+          <td>Same as getMonth(), but returns the UTC month</td>
+        </tr>
+        <tr>
+          <td>getUTCSeconds()</td>
+          <td>Same as getSeconds(), but returns the UTC seconds</td>
+        </tr>
+      </table>
+      <hr>
+
+      <p>For a complete reference, visit the <a href="http://www.w3schools.com/jsref/jsref_obj_date.asp">Complete JavaScript Date Reference</a>.</p>
+
+
+
 
 
 

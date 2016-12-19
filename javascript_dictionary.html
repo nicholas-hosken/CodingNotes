@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="title" -->
+        <title>Hosken's Code | Javascript Dictionary</title>
+<!-- InstanceEndEditable -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/mainstyles.css">
+  <link rel="icon" type="image/ico" href="images/hosken.png"/>
+
+<!-- InstanceBeginEditable name="head" -->
+	<style>
+		.container > div,
+		.container-fluid > div {
+			border-bottom:none;
+			margin-top:15px;
+		}
+		
+		.js {
+			color:#00e18a;
+		}				
+	</style>
+<!-- InstanceEndEditable -->
+</head>
+	<body>
+
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="container-fluid">
+      	<div class="navbar-header" style="border:none">
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+	        </button>
+            <a class="navbar-brand" href="index.html" style="color:red;">Hosken's
+	            <span style="color:#fff">Code</span>
+            </a>
+        </div>
+       	<div style="border:none">
+        	<div class="collapse navbar-collapse" id="myNavbar">
+          	<ul class="nav navbar-nav">
+              <li><a href="htmlcss.html">HTML & CSS</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+              <li class="dropdown">
+              	<a class="dropdown-toggle" data-toggle="dropdown">JavaScript
+                	<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript.html">Notes</a></li>
+                  <li><a href="javascript-eg.html" target="_blank">Working Examples</a></li>
+                  <li><a href="javascript_dictionary.html">Dictionary</a></li>                  
+                </ul>
+              </li>
+              <li><a href="jquery.html">jQuery</a></li>
+              <li><a href="sql.html">SQL</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">PHP
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="php.html">Notes</a></li>
+                  <li><a href="http://www.php.net/" target="_blank">Download</a></li>
+                </ul>
+              </li>
+              <li><a href="wordpress.html">Wordpress</a></li>
+              <li><a href="github.html">GitHub</a></li>
+              </ul>
+          </div>
+	      </div>
+  		</div>
+		</nav>
+         
+    <div class="thisismy container " style="margin-top:100px">
+<!-- InstanceBeginEditable name="content" -->
+
+      <div class="container">
+        <h1>Dictionary</h1>
+
+<!--------------------------------------------------A-------------------------------------------------->
+          <h2>A</h2>
+    
+            <strong>And</strong>
+            <p>The logical operator and is written in JavaScript like this: &&. It evaluates to true when both expressions are true; if they're not, it evaluates to false.</p>
+            <blockquote>
+              <code>
+                <p>true && true;    // => true</p>
+                <p>true && false;   // => false</p>
+                <p>false && true;   // => false</p>
+                <p>false && false;  // => false</p>
+              </code>
+            </blockquote>
+          
+            <strong>Array</strong>
+            <p>Arrays are able to store lists of data. When an array contains elements of differnt data types (Eg: var myArray = [24, true, "string"]) it is called a "heterogeneous array". You can even put other arrays inside the array.</p>
+            <p>Objects can also be added to an array provided that they are declared first or we write the necessary JS to "push" them into the array.</p> 
+            <p>Each item in the array is numbered (the first item being 0), this makes calling a particular item from the array much easier.</p>
+            <blockquote>
+              <code>
+                <p>var junk = ["Mad Men", "Lost", 33, 44];</p>
+								<p>console.log(junk[3]);></p>
+                <br />
+                <p>var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Cancun", "London", "Port Elizabeth"];</p>
+                <p>for (var i = 0; i < cities.length; i++) {</p>
+                <p>&nbsp;&nbsp;console.log("I would like to visit " + cities[i]);</p>
+                <p>};</p>
+              </code>
+            </blockquote>
+          
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------B-------------------------------------------------->
+          <h2>B</h2>
+
+            <strong>Boolean Operators</strong>
+            <p>Booleans are used to comparing two items of code and will return either true (which is equal to 1) or false (which is equal to 2)</p>
+            <p>List of comparison operators:</p>
+						<ul>
+            	<li>&gt; Greater than</li>
+              <li>&lt; Less than</li>
+              <li>&lt;= Greater than or equal to</li>
+              <li>&lt;= Less than or equal to</li>
+              <li>=== Equal to</li>
+              <li>!== Not equal to</li>
+            </ul>
+            <blockquote>
+              <code>
+                <p>"I'm coding like a champ".length > 10</p>
+                <p>"Goody Donaldson".length >=  8</p>
+                <p>8*2 === 16</p>
+              </code>
+            </blockquote>       
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------C-------------------------------------------------->         
+          <h2>C</h2>
+          
+            <strong>Comments</strong>
+            <p>The // sign is for comments. A comment is a line of text that JavaScript won't try to run as code. It's for humans to read.</p>
+            <blockquote>
+              <code>
+                <p>// This is a comment that the computer will ignore.</p>
+                <p>// It is for your eyes only!</p>
+              </code>
+            </blockquote>
+            <br />
+            
+            <strong class="js">confirm</strong>
+            <p>These boxes can be used on websites to confirm things with users. You've probably seen them pop up when you try to delete important things or leave a website with unsaved changes.</p>
+            <blockquote>
+              <code>
+                <p>confirm("This is an example of using JS to create some interaction on a website. Click OK to continue!")</p>
+                <p></p>
+              </code>
+            </blockquote>
+            
+            <strong class="js">console.log()</strong>
+            <p>console.log() will take whatever is inside the parentheses and log it to the console below your code. This is commonly known as <strong>Printing Out</strong></p>
+            <blockquote>
+              <code>
+                <p>console.log(2 * 5);</p>
+				<p>console.log("Hello");</p>
+              </code>
+            </blockquote>
+            
+            <strong>Constructor</strong>
+            <p>We can use the constructor keyword "new" to make a new object when it is followed by "Object()" constructor. <span style="color:blue">// What are the other in-built Javascript constructors?</span></p>
+            <blockquote>
+              <code>
+                <p>var objectName = new Object();</p>
+              </code>
+            </blockquote>
+            <p>Alternatively, we can build our own constructor which already has properties built in.</p>
+            <blockquote>
+              <code>
+                <p>function Person(name,age) {</p>
+                <p>&nbsp;&nbsp;this.name = name;</p>
+                <p>&nbsp;&nbsp;this.age = age;</p>
+                <p>};</p>
+                <br />
+                <p>var bob = new Person("Bob Smith", 30);</p>
+                <p>var susan = new Person("Susan Jordan", 25);</p>
+              </code>
+            </blockquote>
+            
+          
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------D-------------------------------------------------->
+          <h2>D</h2>
+
+            <strong class="js">do / While</strong>
+            <p>Sometimes you want to make sure your loop runs at least one time no matter what. When this is the case, you want a modified while loop called a do/while loop.</p>
+            <blockquote>
+              <code>
+                <p>var loopCondition = false;
+
+do {
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");	
+} while (loopCondition);</p>
+              </code>
+            </blockquote>
+          
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------E-------------------------------------------------->
+          <h2>E</h2>
+          
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------F-------------------------------------------------->          
+          <h2>F</h2>
+          
+            <strong class="js">for</strong>
+            <p>The for loop is used to get the computer to run a specific piece of code over and over again while changing a certain variable(s) each time it is run.</p>
+            <blockquote>
+              <code>
+                <p>for (var i=1; i&lt;11; i++) {</p>
+                <p>&nbsp;&nbsp;console.log(i);</p>
+                <p>};</p>
+              </code>
+            </blockquote>          
+          
+            <strong class="js">function</strong>
+            <p>A function is created inside a variable and is created to be used as a shortcut term when are going to use the same piece of code over and over again. The inputs, if any, are put in round braces ( ) and are used in code between the curly braces { } when triggered.</p>
+            <blockquote>
+              <code>
+                <p>var divideByThree = function(number) {
+    						<p>&nbsp;&nbsp;var val = number/3;
+	              <p>&nbsp;&nbsp;console.log(val);
+                <p>};</p>
+                <br />
+                <p>divideByThree(333);</p>
+              </code>
+            </blockquote>
+          
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------G-------------------------------------------------->          
+          <h2>G</h2>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------H-------------------------------------------------->          
+          <h2>H</h2>
+
+            <strong>Heterogeneous Array</strong>
+            <p>When an array contains elements of differnt data types it is called a "heterogeneous array".</p>
+            <blockquote>
+              <code>
+                <p>var myArray = [24, true, "string"];</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+<!--------------------------------------------------I-------------------------------------------------->          
+          <h2>I</h2>
+            <strong class="js">if</strong>
+            <p>An "if" statement is made up of the if keyword, a condition inside a pair of braces ( ), and a pair of curly braces { }. If the answer to the condition is true, the code inside the curly braces will run.</p>
+            <blockquote>
+              <code>
+                <p>if ("Griffen".length === 7) {</p>
+    						<p>console.log("Give him a bone!");</p>
+								<p>};</p>
+              </code>
+            </blockquote>
+            
+            <strong class="js">if / else</strong>
+            <p>Same as an "if" statement except that if the condition insidet the braces ( ) is false, the code inside the else curly braces { } will run.</p>
+            <blockquote>
+              <code>
+                <p>if (5 === 6 ) {</p>
+    						<p>&nbsp;&nbsp;console.log("Let's go down the first road!");</p>
+								<p>} else {</p>
+    						<p>&nbsp;&nbsp;console.log("Let's go down the second road!");  </p>  
+								<p>}</p>
+              </code>
+            </blockquote>
+            
+            <strong class="js">isNaN</strong>
+            <p>If you call isNaN (is not a number) on something, it checks to see if that thing is not a number.</p>
+            <blockquote>
+              <code>
+                <p>isNaN('berry'); // => true</p>
+                <p>isNaN(NaN); // => true</p>
+                <p>isNaN(undefined); // => true</p>
+                <p>isNaN(42);  // => false</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------J-------------------------------------------------->
+          <h2>J</h2>
+
+            <strong>Jagged Array</strong>
+            <p>A jagged array is an array whose elements are arrays. The elements of a jagged array can be of different dimensions and sizes.</p>
+            <blockquote>
+              <code>
+                <p>var jagged = [[0,1,2],[3,4]];</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------K-------------------------------------------------->
+          <h2>K</h2>
+
+            <strong>Key</strong>
+            <p>A key is the name used to create and call an element inside and object.</p>
+            <blockquote>
+              <code>
+                <p>var phonebookEntry = {</p>
+                <p>&nbsp;&nbsp;address: 44 Script Street, <span style="color:blue">//KEY: address</span></p>
+                <p>&nbsp;&nbsp;spouse: 'Jackie Montalvo', <span style="color:blue">//KEY: spouse</span></p>
+                <p>};</p>
+                <br />
+                <p>phonebookEntry.name = 'Oxnard Montalvo'; <span style="color:blue">//KEY: name</span></p>
+                <p>phonebookEntry.number = '(555) 555-5555'; <span style="color:blue">//KEY: number</span></p>
+                <p>phonebookEntry.phone = function() { <span style="color:blue">//KEY: phone</span></p>
+                <p>&nbsp;&nbsp;console.log('Calling ' + this.name + ' at ' + this.number + '...');</p>
+                <p>};</p>
+                <br />
+                <p>phonebookEntry.phone();</p>
+              </code>
+            </blockquote>
+            <p>You can add keys to your object after you've created it in two ways:<p>
+            <blockquote>
+              <code>
+                <p>myObj["name"] = "Charlie";</p>
+                <p>myObj.name = "Charlie"; <span style="color:blue">//BETTER METHOD AS IT IS SHORTER</span></p>
+              </code>
+            </blockquote>
+            
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>            
+
+<!--------------------------------------------------L-------------------------------------------------->
+          <h2>L</h2>
+  
+            <strong class="js">length</strong>
+            <p>Calling length on a string will return the number of characters in the string. Calling length on an array will return the number of elements in the array.</p>
+            <blockquote>
+              <code>
+                <p>"Nicholas".length</p>
+              </code>
+            </blockquote>
+
+            <strong>Logical Operators</strong>
+            <p>JavaScript has three logical operators: and (&&), or (||), and not (!). These are used to check several variables at once.</p>
+            <blockquote>
+              <code>
+                <p>var1 && var2</p>
+                <p>var3 || var4</p>
+                <p>!var5</p>
+              </code>
+            </blockquote>
+            
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+            
+<!--------------------------------------------------M-------------------------------------------------->
+          <h2>M</h2>
+
+            <strong class="js">Math.floor</strong>
+            <p>Math.floor returns a number representing the largest integer less than or equal to the specified number.</p>
+            <blockquote>
+              <code>
+                <p>Math.floor(4.5454345433453454) // Equates to 4</p>
+                <p>Math.floor(-4.5454345433453454) // Equates to -5</p>
+                Math.floor(4) // Equates to 4
+              </code>
+            </blockquote>
+
+            <strong class="js">Math.random</strong>
+            <p>If we declare a variable and make it equal to Math.random(), that variable will equal a number between 0 and 1.</p>
+            <blockquote>
+              <code>
+              <p>var computerChoice = Math.random();</p>
+								<p>console.log(computerChoice);</p>
+              </code>
+            </blockquote>
+
+            <strong>Method</strong>
+            <p>A method is similar to a function which is associated with an object.</p>
+            <blockquote>
+              <code>
+                <p>var bob = new Object();</p> 
+								<p>bob.name = "Bob Smith";</p>
+								<p>bob.age = 30;</p>
+                <br />
+                <p>bob.setAge = function (newAge){</p>
+  							<p>&nbsp;&nbsp;bob.age = newAge;</p>
+								<p>};</p>
+              </code>
+            </blockquote>
+            
+            <p>A method differs from a normal function in that it can make calculations based on its objects properties.</p>
+            <blockquote>
+              <code>
+                <p>var bob = new Object();</p>
+								<p>bob.name = "Bob Smith";</p>
+								<p>bob.age = 30;</p>
+                <br />
+                <p>bob.getYearOfBirth = function () {</p>
+  							<p>return 2014 - bob.age;</p>
+								<p>};</p>
+                <p>console.log(bob.getYearOfBirth());</p>
+              </code>
+            </blockquote>
+            
+
+            <strong>Modulo</strong>
+            <p>When % is placed between two numbers, the computer will divide the first number by the second, and then return the remainder of that division. So if we do 23 % 10, we divide 23 by 10 which equals 2 with 3 left over. </p>
+            <p>So 23 % 10 evaluates to 3.</p>
+            <blockquote>
+              <code>
+                <p>14 % 3</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------N-------------------------------------------------->
+          
+          <h2>N</h2>
+          
+            <strong>Not</strong>
+            <p>The logical operator not is written in JavaScript like this: !. It makes true expressions false, and vice-versa.</p>
+            <blockquote>
+              <code>
+                <p>!true;   // => false</p>
+                <p>!false;  // => true</p>
+              </code>
+            </blockquote>
+
+            <strong>Numbers</strong>
+            <p>To make a number in your code, just write a number as numerals without quotes.</p>
+            <blockquote>
+              <code>
+                <p>42</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------O-------------------------------------------------->          
+          <h2>O</h2>
+
+            <strong>Object</strong>
+            <p>You can also think of objects as combinations of key-value pairs (like arrays), only their keys don't have to be numbers like 0, 1, or 2: they can be strings and variables.</p>
+            <blockquote>
+              <code>
+                <p>var phonebookEntry = {};</p>
+                <br />
+                <p>phonebookEntry.name = 'Oxnard Montalvo';</p>
+                <p>phonebookEntry.number = '(555) 555-5555';</p>
+                <p>phonebookEntry.phone = function() {</p>
+                <p>&nbsp;&nbsp;console.log('Calling ' + this.name + ' at ' + this.number + '...');</p>
+                <p>};</p>
+                <br />
+                <p>phonebookEntry.phone();</p>
+              </code>
+            </blockquote>
+
+            <strong>Object Constructor</strong>
+            <p>An object constructor tells JavaScript: "I want you to make me a new thing, and I want that thing to be an Object."</p>
+            <blockquote>
+              <code>
+                <p>var myObj = new Object();</p>
+              </code>
+            </blockquote>
+
+            <strong>Object Literal Notation</strong>
+            <p>Literal notation is just creating an object with curly braces, like this:</p>
+            <blockquote>
+              <code>
+                <p>var myObj = {</p>
+                <p>&nbsp;&nbsp;type: 'fancy',</p>
+                <p>&nbsp;&nbsp;disposition: 'sunny',</p>
+              	<p>};</p>
+              </code>
+            </blockquote>
+
+            <strong>Or</strong>
+            <p>The logical operator or is written in JavaScript like this: ||. It evaluates to true when one or the other or both expressions are true; if they're not, it evaluates to false.</p>
+            <blockquote>
+              <code>
+                <p>true || true;     // => true</p>
+                <p>true || false;    // => true</p>
+                <p>false || true;    // => true</p>
+                <p>false || false;   // => false</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------P-------------------------------------------------->
+
+          <h2>P</h2>
+  
+            <strong class="js">prompt</strong>
+            <p>You can ask for input from the user with a prompt.</p>
+            <blockquote>
+              <code>
+                <p>prompt("Where are you from?");</p>
+              </code>
+            </blockquote>
+
+            <strong class="js">push</strong>
+            <p> Just like strings and arrays have a .length method, arrays have a .push() method that adds the thing between parentheses to the end of the array.</p>
+            <blockquote>
+              <code>
+                <p>newArray = [];</p>
+                <p>newArray.push('hello');</p>
+                <p>newArray[0];   // equals 'hello'</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------Q-------------------------------------------------->  
+          <h2>Q</h2>
+          
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------R-------------------------------------------------->          
+          <h2>R</h2>
+            <strong class="js">return</strong>
+            <p>The return keyword is used to save the outcome of a piece of code to a variable. This differs from console.log() which only sends the outcome to the console (which can be viewed by pressing F12) for viewing there.</p>
+            <blockquote>
+              <code>
+                <p>var border = function(width, height) {</p>
+                <p>&nbsp;&nbsp;return (width * 2)+(height * 2);</p>
+                <p>};</p>
+                
+                <p>var newNumber = border(12,18);</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------S-------------------------------------------------->
+          <h2>S</h2>
+  
+            <strong>Scope</strong>
+            <p>Variables defined outside a function are accessible anywhere once they have been declared. They are called global variables and their scope is global.</p>
+            <p>Variables defined inside a function are local variables. They cannot be accessed outside of that function.</p>
+            <blockquote>
+              <code>
+                <p>var my_number = 7; //this variable has global scope</p>
+
+                <p>var timesTwo = function(number) {</p>
+                <p>&nbsp;&nbsp;var my_number = number * 2;</p>
+                <p>&nbsp;&nbsp;console.log("Inside the function my_number is: ");</p>
+                <p>&nbsp;&nbsp;console.log(my_number);</p>
+                <p>};</p>
+                
+                <p>timesTwo(7);</p>
+                
+                <p>console.log("Outside the function my_number is: ");</p>
+                <p>console.log(my_number);</p>
+              </code>
+            </blockquote>
+
+            <strong>String</strong>
+            <p>Written either between single (') or double (") quotation marks. Will be understood by the computer as plain text.</p>
+            <blockquote>
+              <code>
+                <p>"This is my string"</p>
+              </code>
+            </blockquote>
+            
+            <strong class="js">substring</strong>
+            <p>Sometimes you don't want to display the entire string, just a part of it. This preview is a substring of the original string. Be aware that Javascript counts the first character of a string as 0 and spaces are also counted.</p>
+            <blockquote>
+              <code>
+                <p>"Hello World".substring(0,4);</p>
+              </code>
+            </blockquote>
+
+            <strong class="js">Switch</strong>
+            <p>As you might imagine, if you have a lot of choices you want to cover in a program, it might be annoying to type else if () ten times. That's why JavaScript has the switch statement!</p>
+						<p>Switch allows you to preset a number of options (called cases), then check an expression to see if it matches any of them. If there's a match, the program will perform the action for the matching case; if there's no match, it can execute a default option.</p>
+            <blockquote>
+              <code>
+                <p>var lunch = prompt("What do you want for lunch?","Type your lunch choice here");</p>
+								<br />       
+                <p>switch(lunch){
+                <p>&nbsp;&nbsp;case 'sandwich':
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Sure thing! One sandwich, coming up.");
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;break;
+                <p>&nbsp;&nbsp;case 'soup':
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Got it! Tomato's my favorite.");
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;break;
+                <p>&nbsp;&nbsp;case 'salad':
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Sounds good! How about a caesar salad?");
+                <p>&nbsp;&nbsp;break;
+                <p>&nbsp;&nbsp;case 'pie':
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Pie's not a meal!");
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;break;
+                <p>&nbsp;&nbsp;default:
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");
+                <p>}</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------T-------------------------------------------------->
+
+          <h2>T</h2>
+
+            <strong class="js">this</strong>
+            <p>We can make a method work for many different objects by using the keyword "this". It acts as a placeholder and will refer to whichever object called that method when the method is actually used.</p>
+            <blockquote>
+              <code>
+                <p>var setAge = function(newAge) {</p>
+                <p>&nbsp;&nbsp;this.age = newAge;</p>
+                <p>};</p>
+                <br />
+                <p>var bob = new Object();</p>
+                <p>bob.age = 30;</p>
+                <br />
+                <p>bob.setAge = setAge; <span style="color:blue">// This means whenever we type bob.setAge( ), this.age in the setAge method will refer to bob.age.</p>
+                <br />
+                <p>bob.setAge(50);</p>
+              </code>
+            </blockquote>
+
+            <strong class="js">toLowerCase</strong>
+            <p>Converts the user's answer to ALL CAPS before saving it. This helps eliminate problems that might crop up if your program tests for 'yes' but your user typed in 'YES' or 'Yes'. The input becomes all caps before we test, so we only have to test for all caps!</p>
+            <blockquote>
+              <code>
+                <p>var user = prompt("You find £1,000,000 on a bus. Do you TAKE it, LEAVE it or REPORT it?").toLowerCase();</p>
+              </code>
+            </blockquote>
+
+            <strong class="js">toUpperCase</strong>
+            <p>Converts the user's answer to ALL CAPS before saving it. This helps eliminate problems that might crop up if your program tests for 'YES' but your user typed in 'yes' or 'Yes'. The input becomes all caps before we test, so we only have to test for all caps!</p>
+            <blockquote>
+              <code>
+                <p>var user = prompt("You find £1,000,000 on a bus. Do you TAKE it, LEAVE it or REPORT it?").toUpperCase();</p>
+              </code>
+            </blockquote>
+
+            <strong>Two-Dimensional Array</strong>
+            <p>You can nest arrays inside other arrays. An array nested in another array (so just one level deep) is called a two-dimensional array</p>
+            <blockquote>
+              <code>
+                <p>var twoDimensional = [[1, 2], [3, 4]];</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+              </code>
+            </blockquote>
+
+
+<!--------------------------------------------------U-------------------------------------------------->
+
+          <h2>U</h2>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------V-------------------------------------------------->
+          <h2>V</h2>
+
+            <strong class="js">var</strong>
+            <p>To do more complex coding, we need a way to 'save' the values from our coding. We do this by defining a variable with a specific, case-sensitive name. Once you create (or declare) a variable as having a particular name, you can then call up that value by typing the variable name. To change the value of the variable just equate it to the desired value as shown below.</p>
+            <blockquote>
+              <code>
+                <p>var myAge = 31;</p>
+								<p>console.log(myAge);</p>
+                <p>myAge = 32</p>
+								<p>console.log(myAge);</p>                
+              </code>
+            </blockquote>
+
+            <strong>Variable (Global)</strong>
+            <p>Variables defined outside a function are accessible anywhere once they have been declared. They are called global variables and their scope is global.</p>
+            <blockquote>
+              <code>
+              	<p>var xy = 3;	<span style="color:blue">//GLOBAL VARIABLE</span></p>
+                <br />
+                <p>var divideByThree = function (number) {</p>
+    						<p>&nbsp;&nbsp;var val = number / xy; <span style="color:blue">//LOCAL VARIABLE</span></p>
+	              <p>&nbsp;&nbsp;console.log(val);</p>
+                <p>};</p>
+                <br />
+                <p>divideByThree(333);</p>
+              </code>
+            </blockquote>            
+
+            <strong>Variable (Local)</strong>
+            <p>Variables defined inside a function are local variables. They cannot be accessed outside of that function.</p>
+						<blockquote>
+              <code>
+              	<p>var xy = 3;	<span style="color:blue">//GLOBAL VARIABLE</span></p>
+                <br />
+                <p>var divideByThree = function (number) {</p>
+    						<p>&nbsp;&nbsp;var val = number / xy; <span style="color:blue">//LOCAL VARIABLE</span></p>
+	              <p>&nbsp;&nbsp;console.log(val);</p>
+                <p>};</p>
+                <br />
+                <p>divideByThree(333);</p>
+              </code>
+            </blockquote>     
+                 
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------W-------------------------------------------------->
+          <h2>W</h2>
+
+            <strong class="js">while</strong>
+            <p>When you are createing a loop but you are unsure beforehand how many repetitions you will need, you should use a while loop.</p>
+            <blockquote>
+              <code>
+                <p>var coinFace = Math.floor(Math.random() * 2);</p>
+                <br />
+                <p>while(coinFace === 0){</p>
+                <p>&nbsp;&nbsp;console.log("Heads! Flipping again...");</p>
+                <p>&nbsp;&nbsp;var coinFace = Math.floor(Math.random() * 2);</p>
+                <p>};</p>
+                <br />                
+                <p>console.log("Tails! Done flipping.");</p>
+              </code>
+            </blockquote>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------X-------------------------------------------------->
+          <h2>X</h2>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------Y-------------------------------------------------->
+          <h2>Y</h2>
+
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+
+<!--------------------------------------------------Z-------------------------------------------------->
+          <h2>Z</h2>
+            <strong></strong>
+            <p></p>
+            <blockquote>
+              <code>
+                <p></p>
+                <p></p>
+              </code>
+            </blockquote>
+          
+      </div>
+    
+    
+
+<!-- InstanceEndEditable -->
+		</div>       
+</body>
+<!-- InstanceEnd --></html>
